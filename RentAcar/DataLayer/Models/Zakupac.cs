@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataLayer
+namespace DataLayer.Models
 {
-    public class Class1
+    public class Zakupac
     {
+        public int ID { get; set; }
+        public string Ime { get; set; }
     }
 }

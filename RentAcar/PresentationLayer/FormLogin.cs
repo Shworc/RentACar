@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,12 +22,13 @@ namespace PresentationLayer
         {
             try
             {
-                if (!(usertxt.Text == string.Empty))
+                if (!(textBoxUsername.Text == string.Empty))
                 {
-                    if (!(passtxt.Text == string.Empty))
+                    if (!(textBoxPassword.Text == string.Empty))
                     {
-                        String str = "server=MUNESH-PC;database=windowapp;UID=sa;password=123";
-                        String query = "select * from data where username = '" + usertxt.Text + "'and password = '" + this.passtxt.Text + "'";
+                        //String str = "server=(localdb)\\ProjectsV13;database=RentacarDB;UID=True;Password=True";
+                        String str = "Data Source=(localdb)\\ProjectsV13;Initial Catalog=RentacarDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+                        String query = "select * from Zakupac where Ime = '" + textBoxUsername.Text + "'and Password = '" + this.textBoxPassword.Text + "'";
                         SqlConnection con = new SqlConnection(str);
                         SqlCommand cmd = new SqlCommand(query, con);
                         SqlDataReader dbr;
@@ -39,9 +41,9 @@ namespace PresentationLayer
                         }
                         if (count == 1)
                         {
-                            this.hide();
-                            Form2 f2 = new form2(); //this is the change, code for redirect  
-                            f2.ShowDialog();
+                            this.Hide();
+                            Form1 f1 = new Form1(); //this is the change, code for redirect  
+                            f1.ShowDialog();
                         }
                         else if (count > 1)
                         {

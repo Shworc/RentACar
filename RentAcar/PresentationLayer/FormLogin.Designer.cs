@@ -35,6 +35,8 @@ namespace PresentationLayer
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.buttonSubmit = new System.Windows.Forms.Button();
+            this.buttonRegistration = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +51,7 @@ namespace PresentationLayer
             this.groupBoxLogin.Size = new System.Drawing.Size(200, 100);
             this.groupBoxLogin.TabIndex = 0;
             this.groupBoxLogin.TabStop = false;
-            this.groupBoxLogin.Text = "groupBox1";
+            this.groupBoxLogin.Text = "Login";
             // 
             // textBoxPassword
             // 
@@ -93,11 +95,31 @@ namespace PresentationLayer
             this.buttonSubmit.UseVisualStyleBackColor = true;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
+            // buttonRegistration
+            // 
+            this.buttonRegistration.Location = new System.Drawing.Point(616, 33);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegistration.TabIndex = 2;
+            this.buttonRegistration.Text = "Registracija";
+            this.buttonRegistration.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(587, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Registracija novog korisnika";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonRegistration);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.groupBoxLogin);
             this.Name = "FormLogin";
@@ -106,6 +128,7 @@ namespace PresentationLayer
             this.groupBoxLogin.ResumeLayout(false);
             this.groupBoxLogin.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -117,5 +140,7 @@ namespace PresentationLayer
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.Button buttonRegistration;
+        private System.Windows.Forms.Label label1;
     }
 }

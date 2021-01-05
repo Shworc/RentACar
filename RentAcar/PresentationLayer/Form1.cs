@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer;
+using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,29 @@ namespace PresentationLayer
 {
     public partial class Form1 : Form
     {
+        private readonly RezervacijaBusiness rezervacijaBusiness;
+
+
         public Form1()
         {
+            this.rezervacijaBusiness = new RezervacijaBusiness();
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBoxReserve_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
+            listBoxReserve.Items.Clear();
+
+            foreach (Rezervacija r in reserve)
+            {
+                listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " - " + r.ZakupacID + " " + r.AutomobilID);
+            }
         }
     }
 }

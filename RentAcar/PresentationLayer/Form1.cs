@@ -12,8 +12,12 @@ namespace PresentationLayer
 {
     public partial class Form1 : Form
     {
+        private readonly RezervacijaBusiness rezervacijaBusiness;
+
+
         public Form1()
         {
+            this.rezervacijaBusiness = new RezervacijaBusiness();
             InitializeComponent();
         }
 

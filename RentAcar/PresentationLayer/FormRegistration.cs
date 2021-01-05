@@ -1,4 +1,5 @@
-﻿using DataLayer.Models;
+﻿using DataLayer;
+using DataLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace PresentationLayer
                 {
                     SqlCommand sqlCommand = new SqlCommand();
                     sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandText = string.Format("INSERT INTO Teams VALUES ('{0}','{1}')",
+                    sqlCommand.CommandText = string.Format("INSERT INTO Zakupac VALUES ('{0}','{1}')",
                         z.Ime, z.Password);
 
                     sqlConnection.Open();
@@ -36,5 +37,7 @@ namespace PresentationLayer
                 }
             }
         }
+
+        
     }
 }

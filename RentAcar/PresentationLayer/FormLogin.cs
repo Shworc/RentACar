@@ -76,5 +76,12 @@ namespace PresentationLayer
         {
 
         }
+
+        private void buttonRegistration_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRegistration f3 = new FormRegistration(); //redirect na registraciju korisnika
+            f3.ShowDialog();
+        }
     }
 }

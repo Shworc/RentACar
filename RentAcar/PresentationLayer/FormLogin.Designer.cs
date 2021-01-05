@@ -103,6 +103,7 @@ namespace PresentationLayer
             this.buttonRegistration.TabIndex = 2;
             this.buttonRegistration.Text = "Registracija";
             this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
             // label1
             // 

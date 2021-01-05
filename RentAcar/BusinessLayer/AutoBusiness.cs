@@ -1,4 +1,5 @@
-﻿using DataLayer.Models;
+﻿using DataLayer;
+using DataLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,20 +10,20 @@ namespace BusinessLayer
 {
     public class AutoBusiness
     {
-        private readonly RezervacijaRepository rezervacijaRepository;
+        private readonly AutoRepository autoRepository;
 
         public List<Automobile> GetAllAutos()
         {
-            return this.rezervacijaRepository.GetAllRezervations();
+            return this.autoRepository.GetAllAutos();
         }
 
-        public bool InsertAutos(Automobile a)
+        /*public bool InsertAutos(Automobile a)
         {
-            if (this.rezervacijaRepository.InsertAutomobile(a) > 0)
+            if (this.autoRepository.InsertAutomobile(a) > 0)
             {
                 return true;
             }
             return false;
-        }
+        }*/
     }
 }

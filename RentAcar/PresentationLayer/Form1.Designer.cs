@@ -114,6 +114,7 @@ namespace PresentationLayer
             this.listBoxReserve.Name = "listBoxReserve";
             this.listBoxReserve.Size = new System.Drawing.Size(363, 303);
             this.listBoxReserve.TabIndex = 9;
+            this.listBoxReserve.SelectedIndexChanged += new System.EventHandler(this.listBoxReserve_SelectedIndexChanged);
             // 
             // Form1
             // 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    class AutoRepository
+    public class AutoRepository
     {
         public List<Automobile> GetAllAutos()
         {

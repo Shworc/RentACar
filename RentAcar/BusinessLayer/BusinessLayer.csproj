@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AutoBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RezervacijaBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">

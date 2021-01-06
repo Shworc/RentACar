@@ -31,12 +31,24 @@ namespace PresentationLayer
         private void listBoxReserve_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
-            listBoxReserve.Items.Clear();
+            //listBoxReserve.Items.Clear();
 
             foreach (Rezervacija r in reserve)
             {
-                listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " - " + r.ZakupacID + " " + r.AutomobilID);
+                listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
             }
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLogin f2 = new FormLogin(); //redirect na registraciju korisnika
+            f2.ShowDialog();
         }
     }
 }

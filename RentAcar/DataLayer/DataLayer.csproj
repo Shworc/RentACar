@@ -54,6 +54,7 @@
     <Compile Include="Models\Zakupac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RezervacijaRepository.cs" />
+    <Compile Include="ZakupacRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

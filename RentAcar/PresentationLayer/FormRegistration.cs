@@ -38,6 +38,17 @@ namespace PresentationLayer
             }
         }
 
-        
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            //this.Close();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLogin f2 = new FormLogin(); //redirect na registraciju korisnika
+            f2.ShowDialog();
+        }
     }
 }

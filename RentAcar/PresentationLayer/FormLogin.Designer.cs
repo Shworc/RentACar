@@ -37,6 +37,7 @@ namespace PresentationLayer
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonRegistration = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.groupBoxLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,11 +115,22 @@ namespace PresentationLayer
             this.label1.TabIndex = 3;
             this.label1.Text = "Registracija novog korisnika";
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(615, 381);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 5;
+            this.buttonExit.Text = "Izlaz";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRegistration);
             this.Controls.Add(this.buttonSubmit);
@@ -143,5 +155,6 @@ namespace PresentationLayer
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Button buttonRegistration;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

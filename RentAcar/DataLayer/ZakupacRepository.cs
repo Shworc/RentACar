@@ -16,7 +16,7 @@ namespace DataLayer
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = string.Format("INSERT INTO Teams VALUES ('{0}','{1}')",
+                sqlCommand.CommandText = string.Format("INSERT INTO Zakupac VALUES ('{0}','{1}')",
                     z.Ime, z.Password);
 
                 sqlConnection.Open();

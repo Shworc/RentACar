@@ -10,7 +10,7 @@ namespace DataLayer
 {
     public class ZakupacRepository
     {
-        int InsertZakupac(Zakupac z)
+        public int InsertZakupac(Zakupac z)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {

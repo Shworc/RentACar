@@ -30,13 +30,16 @@ namespace PresentationLayer
 
         private void listBoxReserve_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
+            
+                List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
             //listBoxReserve.Items.Clear();
-
-            foreach (Rezervacija r in reserve)
-            {
-                listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
-            }
+            
+                foreach (Rezervacija r in reserve)
+                {
+                    listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
+                }
+           
+            
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

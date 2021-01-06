@@ -1,4 +1,5 @@
-﻿using DataLayer;
+﻿using BusinessLayer;
+using DataLayer;
 using DataLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -15,14 +16,23 @@ namespace PresentationLayer
 {
     public partial class FormRegistration : Form
     {
+        private readonly ZakupacBusiness zakupacBusiness; //kacenje na rezervaciju biznis
         public FormRegistration()
         {
+            this.zakupacBusiness = new ZakupacBusiness();
             InitializeComponent();
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            int InsertZakupac(Zakupac z)
+            Zakupac z = new Zakupac();
+            z.Ime = textBoxName.Text;
+            z.Password = textBoxPassword.Text;
+
+            zakupacBusiness.InsertZakupac(z); //boool mozemo da testiramo
+            
+
+            /*int InsertZakupac(Zakupac z)
             {
                 using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
                 {
@@ -35,7 +45,7 @@ namespace PresentationLayer
 
                     return sqlCommand.ExecuteNonQuery();
                 }
-            }
+            }*/
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

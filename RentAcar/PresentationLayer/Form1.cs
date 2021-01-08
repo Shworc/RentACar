@@ -44,10 +44,19 @@ namespace PresentationLayer
                     listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
                 }
         }
-        
 
-        
-    private void ButtonExit_Click(object sender, EventArgs e)
+        /* 
+         * SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija
+            JOIN Zakupac 
+            ON Rezervacija.ZakupacID = Zakupac.Id
+            JOIN Automobil
+            ON Rezervacija.AutomobilID = Automobil.Id
+            WHERE ZakupacID = '1'
+        */
+
+
+
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

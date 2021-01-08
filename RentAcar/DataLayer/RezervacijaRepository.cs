@@ -34,31 +34,63 @@ namespace DataLayer
             return results;
         }
 
-        public int InsertAutomobile(Automobile a)
+        /*public List<Rezervacija> GetAllRezervations()
         {
-            var result = DBConnection.EditData(string.Format("INSERT INTO Automobil VALUES ('{0}', '{1}')",
-                    a.Marka, a.Naziv));
-            DBConnection.CloseConnection();
+            List<Rezervacija> results = new List<Rezervacija>();
 
-            return result;
-        }
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString)) // konekcija ka bazi
+            {
+                SqlCommand sqlCommand = new SqlCommand(); // sql obj
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "SELECT * FROM Rezervacija";
 
-        public int InsertZakupac(Zakupac z)
-        {
-            var result = DBConnection.EditData(string.Format("INSERT INTO Zakupac VALUES ('{0}', '{1}')",
-                    z.Ime, z.Password));
-            DBConnection.CloseConnection();
+                sqlConnection.Open(); // otvaranje konekcije
 
-            return result;
-        }
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
-        public int InsertRezervacija(Rezervacija r)
-        {
-            var result = DBConnection.EditData(string.Format("INSERT INTO Rezervacija VALUES ('{0}', '{1}', {2}, {3})",
-                    r.DatumOd, r.DatumDo, r.ZakupacID, r.AutomobilID));
-            DBConnection.CloseConnection();
+                while (sqlDataReader.Read())
+                {
+                    Rezervacija r = new Rezervacija();
+                    r.Id = sqlDataReader.GetInt32(0);
+                    r.DatumOd = sqlDataReader.GetDateTime(1);
+                    r.DatumDo = sqlDataReader.GetDateTime(2);
+                    r.ZakupacID = sqlDataReader.GetInt32(3);
+                    r.AutomobilID = sqlDataReader.GetInt32(4);
 
-            return result;
+                    results.Add(r);
+                }
+
+                //DBConnection.CloseConnection();
+
+                return results;
+            }
+        }*/
+
+            public int InsertAutomobile(Automobile a)
+            {
+                var result = DBConnection.EditData(string.Format("INSERT INTO Automobil VALUES ('{0}', '{1}')",
+                        a.Marka, a.Naziv));
+                DBConnection.CloseConnection();
+
+                return result;
+            }
+
+            public int InsertZakupac(Zakupac z)
+            {
+                var result = DBConnection.EditData(string.Format("INSERT INTO Zakupac VALUES ('{0}', '{1}')",
+                        z.Ime, z.Password));
+                DBConnection.CloseConnection();
+
+                return result;
+            }
+
+            public int InsertRezervacija(Rezervacija r)
+            {
+                var result = DBConnection.EditData(string.Format("INSERT INTO Rezervacija VALUES ('{0}', '{1}', {2}, {3})",
+                        r.DatumOd, r.DatumDo, r.ZakupacID, r.AutomobilID));
+                DBConnection.CloseConnection();
+
+                return result;
+            }
         }
     }
-}

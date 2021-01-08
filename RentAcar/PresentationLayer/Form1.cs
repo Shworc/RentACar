@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using DataLayer.Models;
+using DataLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,29 +26,45 @@ namespace PresentationLayer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            GetAllRezervations();
         }
 
-        private void listBoxReserve_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListBoxReserve_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-                List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
-            //listBoxReserve.Items.Clear();
+        }
+        private void GetAllRezervations() 
+        {
+
+            List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
+            listBoxReserve.Items.Clear();
             
                 foreach (Rezervacija r in reserve)
                 {
                     listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
                 }
-           
-            
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        /*private void GetAllRezervations()
+        {
+
+            List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
+        listBoxReserve.Items.Clear();
+            
+                foreach (Rezervacija r in reserve)
+                {
+                    listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
+                }
+}*/
+        
+
+        
+    private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormLogin f2 = new FormLogin(); //redirect na registraciju korisnika

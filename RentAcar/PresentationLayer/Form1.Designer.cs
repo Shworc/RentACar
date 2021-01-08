@@ -116,7 +116,7 @@ namespace PresentationLayer
             this.listBoxReserve.Name = "listBoxReserve";
             this.listBoxReserve.Size = new System.Drawing.Size(363, 277);
             this.listBoxReserve.TabIndex = 9;
-            this.listBoxReserve.SelectedIndexChanged += new System.EventHandler(this.listBoxReserve_SelectedIndexChanged);
+            this.listBoxReserve.SelectedIndexChanged += new System.EventHandler(this.ListBoxReserve_SelectedIndexChanged);
             // 
             // buttonBack
             // 
@@ -126,7 +126,7 @@ namespace PresentationLayer
             this.buttonBack.TabIndex = 10;
             this.buttonBack.Text = "Nazad";
             this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // buttonExit
             // 
@@ -136,7 +136,7 @@ namespace PresentationLayer
             this.buttonExit.TabIndex = 11;
             this.buttonExit.Text = "Izlaz";
             this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // Form1
             // 

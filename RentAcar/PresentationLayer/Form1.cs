@@ -44,18 +44,6 @@ namespace PresentationLayer
                     listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
                 }
         }
-
-        /*private void GetAllRezervations()
-        {
-
-            List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
-        listBoxReserve.Items.Clear();
-            
-                foreach (Rezervacija r in reserve)
-                {
-                    listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
-                }
-}*/
         
 
         

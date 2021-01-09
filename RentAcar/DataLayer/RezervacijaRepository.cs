@@ -34,6 +34,29 @@ namespace DataLayer
             return results;
         }
 
+
+        public List<Rezervacija> GetRezervacijaById()
+        {
+            List<Rezervacija> results = new List<Rezervacija>();
+
+            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija JOIN Zakupac ON Rezervacija.ZakupacID = Zakupac.Id ON Rezervacija.AutomobilID = Automobil.Id WHERE Zakupac.Ime = (['textBoxUsername]')");
+
+            while (sqlDataReader.Read())
+            {
+                Rezervacija r = new Rezervacija();
+                r.Id = sqlDataReader.GetInt32(0);
+                r.DatumOd = sqlDataReader.GetDateTime(1);
+                r.DatumDo = sqlDataReader.GetDateTime(2);
+                r.ZakupacID = sqlDataReader.GetInt32(3);
+                r.AutomobilID = sqlDataReader.GetInt32(4);
+
+                results.Add(r);
+            }
+
+            DBConnection.CloseConnection();
+
+            return results;
+        }
         /*public List<Rezervacija> GetAllRezervations()
         {
             List<Rezervacija> results = new List<Rezervacija>();

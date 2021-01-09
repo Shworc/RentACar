@@ -35,7 +35,7 @@ namespace DataLayer
         }
 
 
-        public List<Rezervacija> GetRezervacijaById()
+        public List<Rezervacija> GetRezervacijaById(String textBoxUsername)
         {
             List<Rezervacija> results = new List<Rezervacija>();
 

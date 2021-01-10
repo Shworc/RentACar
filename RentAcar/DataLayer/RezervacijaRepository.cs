@@ -38,19 +38,25 @@ namespace DataLayer
         public List<Rezervacija> GetRezervacijaById(String textBoxUsername)
         {
             List<Rezervacija> results = new List<Rezervacija>();
+            List<Zakupac> results1 = new List<Zakupac>();
 
             SqlDataReader sqlDataReader = DBConnection.GetData("SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija JOIN Zakupac ON Rezervacija.ZakupacID = Zakupac.Id ON Rezervacija.AutomobilID = Automobil.Id WHERE Zakupac.Ime = (['textBoxUsername]')");
 
             while (sqlDataReader.Read())
             {
                 Rezervacija r = new Rezervacija();
+                Zakupac r1 = new Zakupac();
                 r.Id = sqlDataReader.GetInt32(0);
                 r.DatumOd = sqlDataReader.GetDateTime(1);
                 r.DatumDo = sqlDataReader.GetDateTime(2);
                 r.ZakupacID = sqlDataReader.GetInt32(3);
                 r.AutomobilID = sqlDataReader.GetInt32(4);
+                r1.ID = sqlDataReader.GetInt32(5);
+                r1.Ime = sqlDataReader.GetString(6);
+                r1.Password = sqlDataReader.GetString(7);
 
                 results.Add(r);
+                results1.Add(r1);
             }
 
             DBConnection.CloseConnection();

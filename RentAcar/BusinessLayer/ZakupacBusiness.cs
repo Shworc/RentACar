@@ -8,22 +8,21 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class AutoBusiness
+    public class ZakupacBusiness
     {
-        private readonly AutoRepository autoRepository;
+        private readonly ZakupacRepository zakupacRepository;
 
-        public List<Automobile> GetAllAutos()
+        public ZakupacBusiness()
         {
-            return this.autoRepository.GetAllAutos();
+            this.zakupacRepository = new ZakupacRepository();
         }
-
-        /*public bool InsertAutos(Automobile a)
+        public bool InsertZakupac(Zakupac r)
         {
-            if (this.autoRepository.InsertAutomobile(a) > 0)
+            if (this.zakupacRepository.InsertZakupac(r) > 0)
             {
                 return true;
             }
             return false;
-        }*/
+        }
     }
 }

@@ -34,6 +34,8 @@ namespace PresentationLayer
             this.labelName = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -78,11 +80,33 @@ namespace PresentationLayer
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(76, 382);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 5;
+            this.buttonBack.Text = "Nazad";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(616, 382);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 6;
+            this.buttonExit.Text = "Izlaz";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // FormRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelName);
@@ -102,5 +126,7 @@ namespace PresentationLayer
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

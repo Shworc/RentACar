@@ -37,6 +37,8 @@ namespace PresentationLayer
             this.labelEdit = new System.Windows.Forms.Label();
             this.labelDelete = new System.Windows.Forms.Label();
             this.listBoxReserve = new System.Windows.Forms.ListBox();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonReserve
@@ -85,9 +87,9 @@ namespace PresentationLayer
             this.labelReserve.AutoSize = true;
             this.labelReserve.Location = new System.Drawing.Point(44, 294);
             this.labelReserve.Name = "labelReserve";
-            this.labelReserve.Size = new System.Drawing.Size(198, 13);
+            this.labelReserve.Size = new System.Drawing.Size(225, 13);
             this.labelReserve.TabIndex = 5;
-            this.labelReserve.Text = "*Za rezervaciju kliknite na zeleno dugme";
+            this.labelReserve.Text = "*Za novu rezervaciju kliknite na zeleno dugme";
             // 
             // labelEdit
             // 
@@ -112,15 +114,37 @@ namespace PresentationLayer
             this.listBoxReserve.FormattingEnabled = true;
             this.listBoxReserve.Location = new System.Drawing.Point(394, 88);
             this.listBoxReserve.Name = "listBoxReserve";
-            this.listBoxReserve.Size = new System.Drawing.Size(363, 303);
+            this.listBoxReserve.Size = new System.Drawing.Size(363, 277);
             this.listBoxReserve.TabIndex = 9;
-            this.listBoxReserve.SelectedIndexChanged += new System.EventHandler(this.listBoxReserve_SelectedIndexChanged);
+            this.listBoxReserve.SelectedIndexChanged += new System.EventHandler(this.ListBoxReserve_SelectedIndexChanged);
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(47, 382);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 10;
+            this.buttonBack.Text = "Nazad";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(681, 381);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 11;
+            this.buttonExit.Text = "Izlaz";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.listBoxReserve);
             this.Controls.Add(this.labelDelete);
             this.Controls.Add(this.labelEdit);
@@ -147,6 +171,8 @@ namespace PresentationLayer
         private System.Windows.Forms.Label labelEdit;
         private System.Windows.Forms.Label labelDelete;
         private System.Windows.Forms.ListBox listBoxReserve;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
 

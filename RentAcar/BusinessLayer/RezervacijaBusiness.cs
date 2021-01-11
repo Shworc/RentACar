@@ -23,11 +23,12 @@ namespace BusinessLayer
             return this.rezervacijaRepository.GetAllRezervations();
         }
 
-        public List<Rezervacija> GetRezervacijaById(int ZakupacID)
+       /* public List<Rezervacija> GetRezervacijaById()
         {
-            return this.GetAllRezervations().FirstOrDefault(r1 => r1.ZakupacID == r1.Id);
-        }
 
+            return List < Zakupac > this.GetAllRezervations().Where(r1 => r1.ZakupacID == r1.Id);
+        }
+       */
         public bool InsertRezervacija(Rezervacija r)
         {
             if (this.rezervacijaRepository.InsertRezervacija(r) > 0)

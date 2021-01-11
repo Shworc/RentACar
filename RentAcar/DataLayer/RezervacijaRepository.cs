@@ -40,7 +40,7 @@ namespace DataLayer
             List<Rezervacija> results = new List<Rezervacija>();
             List<Zakupac> results1 = new List<Zakupac>();
 
-            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija JOIN Zakupac ON Rezervacija.ZakupacID = Zakupac.Id ON Rezervacija.AutomobilID = Automobil.Id WHERE Zakupac.Ime = (['textBoxUsername]')");
+            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija JOIN Zakupac ON Rezervacija.ZakupacID = Zakupac.Id ON Rezervacija.AutomobilID = Automobil.Id WHERE Zakupac.Ime = " + textBoxUsername);
 
             while (sqlDataReader.Read())
             {

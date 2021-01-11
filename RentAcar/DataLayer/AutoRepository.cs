@@ -28,5 +28,15 @@ namespace DataLayer
 
             return results;
         }
+
+        public int InsertAutomobile(Automobile a)
+        {
+            var result = DBConnection.EditData(string.Format("INSERT INTO Automobil VALUES ('{0}', '{1}')",
+                    a.Marka, a.Naziv));
+            DBConnection.CloseConnection();
+
+            return result;
+        }
+
     }
 }

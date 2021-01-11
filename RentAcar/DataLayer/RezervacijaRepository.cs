@@ -95,24 +95,7 @@ namespace DataLayer
             }
         }*/
 
-            public int InsertAutomobile(Automobile a)
-            {
-                var result = DBConnection.EditData(string.Format("INSERT INTO Automobil VALUES ('{0}', '{1}')",
-                        a.Marka, a.Naziv));
-                DBConnection.CloseConnection();
-
-                return result;
-            }
-
-            public int InsertZakupac(Zakupac z)
-            {
-                var result = DBConnection.EditData(string.Format("INSERT INTO Zakupac VALUES ('{0}', '{1}')",
-                        z.Ime, z.Password));
-                DBConnection.CloseConnection();
-
-                return result;
-            }
-
+           
             public int InsertRezervacija(Rezervacija r)
             {
                 var result = DBConnection.EditData(string.Format("INSERT INTO Rezervacija VALUES ('{0}', '{1}', {2}, {3})",

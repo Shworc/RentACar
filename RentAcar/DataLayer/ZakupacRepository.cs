@@ -10,7 +10,7 @@ namespace DataLayer
 {
     public class ZakupacRepository
     {
-        public int InsertZakupac(Zakupac z)
+       /* public int InsertZakupac(Zakupac z)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
@@ -23,6 +23,18 @@ namespace DataLayer
 
                 return sqlCommand.ExecuteNonQuery();
             }
-        }
+        }*/
+
+        
+          
+            public int InsertZakupac(Zakupac z)
+            {
+                var result = DBConnection.EditData(string.Format("INSERT INTO Zakupac VALUES ('{0}', '{1}')",
+                        z.Ime, z.Password));
+                DBConnection.CloseConnection();
+
+                return result;
+            }
+         
     }
 }

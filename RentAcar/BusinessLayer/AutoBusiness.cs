@@ -17,13 +17,13 @@ namespace BusinessLayer
             return this.autoRepository.GetAllAutos();
         }
 
-        /*public bool InsertAutos(Automobile a)
+        public bool InsertAutos(Automobile a)
         {
             if (this.autoRepository.InsertAutomobile(a) > 0)
             {
                 return true;
             }
             return false;
-        }*/
+        }
     }
 }

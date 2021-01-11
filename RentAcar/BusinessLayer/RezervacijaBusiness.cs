@@ -11,6 +11,7 @@ namespace BusinessLayer
     public class RezervacijaBusiness
     {
         private readonly RezervacijaRepository rezervacijaRepository;
+        private readonly ZakupacRepository zakupacRepository;
 
         public RezervacijaBusiness()
         {
@@ -20,6 +21,11 @@ namespace BusinessLayer
         public List<Rezervacija> GetAllRezervations()
         {
             return this.rezervacijaRepository.GetAllRezervations();
+        }
+
+        public List<Rezervacija> GetRezervacijaById(int ZakupacID)
+        {
+            return this.GetAllRezervations().FirstOrDefault(r1 => r1.ZakupacID == r1.Id);
         }
 
         public bool InsertRezervacija(Rezervacija r)

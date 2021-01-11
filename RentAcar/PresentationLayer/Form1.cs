@@ -24,6 +24,10 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
+        public Form1(List<Zakupac> list)
+        {
+            return this.listBoxReserve = list;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             GetAllRezervations();

@@ -51,6 +51,7 @@ namespace PresentationLayer
             this.buttonReserve.TabIndex = 0;
             this.buttonReserve.Text = "Rezervacija";
             this.buttonReserve.UseVisualStyleBackColor = false;
+            this.buttonReserve.Click += new System.EventHandler(this.buttonReserve_Click);
             // 
             // buttonDelete
             // 
@@ -116,7 +117,6 @@ namespace PresentationLayer
             this.listBoxReserve.Name = "listBoxReserve";
             this.listBoxReserve.Size = new System.Drawing.Size(363, 277);
             this.listBoxReserve.TabIndex = 9;
-            this.listBoxReserve.SelectedIndexChanged += new System.EventHandler(this.ListBoxReserve_SelectedIndexChanged);
             // 
             // buttonBack
             // 

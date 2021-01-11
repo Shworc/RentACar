@@ -29,10 +29,6 @@ namespace PresentationLayer
             GetAllRezervations();
         }
 
-        private void ListBoxReserve_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
         private void GetAllRezervations() 
         {
 
@@ -41,10 +37,10 @@ namespace PresentationLayer
             
                 foreach (Rezervacija r in reserve)
                 {
-                    listBoxReserve.Items.Add(r.Id + ". " + r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
+                    listBoxReserve.Items.Add(r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
                 }
         }
-
+        
         /* 
          * SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija
             JOIN Zakupac 
@@ -66,6 +62,11 @@ namespace PresentationLayer
             this.Hide();
             FormLogin f2 = new FormLogin(); //redirect na registraciju korisnika
             f2.ShowDialog();
+        }
+
+        private void buttonReserve_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

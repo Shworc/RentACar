@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataLayer;
+using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,34 @@ namespace PresentationLayer
         {
             InitializeComponent();
         }
+
+        public List<Zakupac> GetZakupacById()
+
+        {
+
+            List<Zakupac> results1 = new List<Zakupac>();
+            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT * FROM Zakupac");
+
+            while (sqlDataReader.Read())
+            {
+                Zakupac r1 = new Zakupac();
+                r1.ID = sqlDataReader.GetInt32(0);
+                //r1.Ime = sqlDataReader.GetString(1);
+                //r1.Password = sqlDataReader.GetString(2);
+
+                results1.Add(r1);
+            }
+
+            DBConnection.CloseConnection();
+
+            return results1;
+        }
+
+        public List<Zakupac> GetZakupacId(String textBoxUsername)
+        {
+            return this.GetZakupacById().Where(r1 => r1.Ime == textBoxUsername).ToList();
+        }
+
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
@@ -42,7 +72,7 @@ namespace PresentationLayer
                         if (count == 1)
                         {
                             this.Hide();
-                            Form1 f1 = new Form1(); //this is the change, code for redirect  
+                            Form1 f1 = new Form1(textBoxUsername); //this is the change, code for redirect  
                             f1.ShowDialog();
                         }
                         else if (count > 1)
@@ -70,7 +100,7 @@ namespace PresentationLayer
                 MessageBox.Show(es.Message);
             }
         
-    }
+        }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {

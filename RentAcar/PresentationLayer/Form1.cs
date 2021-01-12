@@ -21,15 +21,19 @@ namespace PresentationLayer
         public Form1()
         {
             this.rezervacijaBusiness = new RezervacijaBusiness();
+            
             InitializeComponent();
         }
 
-        public Form1(List<Zakupac> list)
+        public Form1(String Id)
         {
-            return this.listBoxReserve = list;
+            InitializeComponent();
+            //this.listBoxReserve.Text = Id;
         }
+       
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             GetAllRezervations();
         }
 

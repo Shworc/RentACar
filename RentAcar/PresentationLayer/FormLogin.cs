@@ -58,13 +58,14 @@ namespace PresentationLayer
                     {
                         //String str = "server=(localdb)\\ProjectsV13;database=RentacarDB;UID=True;Password=True";
                         String str = "Data Source=(localdb)\\ProjectsV13;Initial Catalog=RentacarDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-                        String query = "select * from Zakupac where Ime = '" + textBoxUsername.Text + "'and Password = '" + this.textBoxPassword.Text + "'";
+                        String query = "select * from Zakupac where Ime = '" + this.textBoxUsername.Text + "'and Password = '" + this.textBoxPassword.Text + "'";
                         SqlConnection con = new SqlConnection(str);
                         SqlCommand cmd = new SqlCommand(query, con);
                         SqlDataReader dbr;
                         con.Open();
                         dbr = cmd.ExecuteReader();
                         int count = 0;
+
                         while (dbr.Read())
                         {
                             count = count + 1;
@@ -72,7 +73,7 @@ namespace PresentationLayer
                         if (count == 1)
                         {
                             this.Hide();
-                            Form1 f1 = new Form1(textBoxUsername); //this is the change, code for redirect  
+                            Form1 f1 = new Form1(); //this is the change, code for redirect  
                             f1.ShowDialog();
                         }
                         else if (count > 1)

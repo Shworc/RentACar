@@ -74,6 +74,7 @@ namespace PresentationLayer
                         {
                             this.Hide();
                             Form1 f1 = new Form1(); //this is the change, code for redirect  
+                            f1.formLogin = this;
                             f1.ShowDialog();
                         }
                         else if (count > 1)

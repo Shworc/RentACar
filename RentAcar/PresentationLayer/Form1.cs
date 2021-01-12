@@ -16,6 +16,7 @@ namespace PresentationLayer
     public partial class Form1 : Form
     {
         private readonly RezervacijaBusiness rezervacijaBusiness;
+        public FormLogin formLogin;
 
 
         public Form1()
@@ -23,12 +24,6 @@ namespace PresentationLayer
             this.rezervacijaBusiness = new RezervacijaBusiness();
             
             InitializeComponent();
-        }
-
-        public Form1(String Id)
-        {
-            InitializeComponent();
-            //this.listBoxReserve.Text = Id;
         }
        
         private void Form1_Load(object sender, EventArgs e)

@@ -12,6 +12,11 @@ namespace BusinessLayer
     {
         private readonly ZakupacRepository zakupacRepository;
 
+
+        public List<Zakupac> GetAllZakupci()
+        {
+            return this.zakupacRepository.GetAllZakupci();
+        }
         public ZakupacBusiness()
         {
             this.zakupacRepository = new ZakupacRepository();

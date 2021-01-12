@@ -60,5 +60,10 @@ namespace PresentationLayer
             FormLogin f2 = new FormLogin(); //redirect na registraciju korisnika
             f2.ShowDialog();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.zakupacBusiness.GetAllZakupci();
+        }
     }
 }

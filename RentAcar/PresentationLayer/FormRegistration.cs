@@ -74,7 +74,7 @@ namespace PresentationLayer
 
             foreach (Zakupac z in zakupac)
             {
-                listBoxZakupci.Items.Add(z.ID + " - " + z.Ime + " - " + z.Password);
+                listBoxZakupci.Items.Add(z.ID + "." + z.Ime + " - " + z.Password);
             }
         }
 
@@ -90,7 +90,7 @@ namespace PresentationLayer
             z.Ime = textBoxName.Text;
             z.Password = textBoxPassword.Text;
 
-            z.ID = int.Parse(listBoxZakupci.SelectedItem.ToString().Split('-')[0]);
+            z.ID = int.Parse(listBoxZakupci.SelectedItem.ToString().Split('.')[0]);
 
             bool result = this.zakupacBusiness.UpdateZakupac(z);
         }

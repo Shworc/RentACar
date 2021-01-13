@@ -59,7 +59,7 @@ namespace DataLayer
 
         public int UpdateZakupac(Zakupac z)
         {
-            var result = DBConnection.EditData(string.Format("UPDATE Zakupac SET Ime = '{0}', Password = '{1}')" + "WHERE ID={3}",
+            var result = DBConnection.EditData(string.Format("UPDATE Zakupac SET Ime ='{0}', Password ='{1}'" + "WHERE ID={2}", 
                     z.Ime, z.Password, z.ID));
             DBConnection.CloseConnection();
 

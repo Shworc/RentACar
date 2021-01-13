@@ -16,9 +16,15 @@ namespace PresentationLayer
 {
     public partial class FormRegistration : Form
     {
-        private readonly ZakupacBusiness zakupacBusiness; //kacenje na rezervaciju biznis
+        private readonly ZakupacBusiness zakupacBusiness; //kacenje na zakupac biznis
+
+        /*private void FormRegistration_Load(object sender, EventArgs e)
+        {
+            GetAllZakupci();
+        }*/
         public FormRegistration()
         {
+            GetAllZakupci();
             this.zakupacBusiness = new ZakupacBusiness();
             InitializeComponent();
         }
@@ -61,9 +67,15 @@ namespace PresentationLayer
             f2.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void GetAllZakupci()
         {
-            this.zakupacBusiness.GetAllZakupci();
+            List<Zakupac> zakupac = this.zakupacBusiness.GetAllZakupci();
+            listBoxZakupci.Items.Clear();
+
+            foreach (Zakupac z in zakupac)
+            {
+                listBoxZakupci.Items.Add(z.ID + " - " + z.Ime + " - " + z.Password);
+            }
         }
     }
 }

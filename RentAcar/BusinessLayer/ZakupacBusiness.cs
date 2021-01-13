@@ -12,18 +12,28 @@ namespace BusinessLayer
     {
         private readonly ZakupacRepository zakupacRepository;
 
+        public ZakupacBusiness()
+        {
+            this.zakupacRepository = new ZakupacRepository();
+        }
 
         public List<Zakupac> GetAllZakupci()
         {
             return this.zakupacRepository.GetAllZakupci();
         }
-        public ZakupacBusiness()
-        {
-            this.zakupacRepository = new ZakupacRepository();
-        }
+        
         public bool InsertZakupac(Zakupac r)
         {
             if (this.zakupacRepository.InsertZakupac(r) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool UpdateZakupac(Zakupac z)
+        {
+            if(this.zakupacRepository.UpdateZakupac(z) > 0)
             {
                 return true;
             }

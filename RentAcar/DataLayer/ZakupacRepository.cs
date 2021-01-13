@@ -37,8 +37,7 @@ namespace DataLayer
                     z.ID = sqlDataReader.GetInt32(0);
                     z.Ime = sqlDataReader.GetString(1);
                     z.Password = sqlDataReader.GetString(2);
-                
-
+              
                     results.Add(z);
                 }
 

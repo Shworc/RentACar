@@ -18,13 +18,13 @@ namespace PresentationLayer
     {
         private readonly ZakupacBusiness zakupacBusiness; //kacenje na zakupac biznis
 
-        /*private void FormRegistration_Load(object sender, EventArgs e)
+        private void FormRegistration_Load(object sender, EventArgs e)
         {
             GetAllZakupci();
-        }*/
+        }
         public FormRegistration()
         {
-            GetAllZakupci();
+            
             this.zakupacBusiness = new ZakupacBusiness();
             InitializeComponent();
         }
@@ -76,6 +76,23 @@ namespace PresentationLayer
             {
                 listBoxZakupci.Items.Add(z.ID + " - " + z.Ime + " - " + z.Password);
             }
+        }
+
+        private void FormRegistration_Load_1(object sender, EventArgs e)
+        {
+
+              GetAllZakupci();
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            Zakupac z = new Zakupac();
+            z.Ime = textBoxName.Text;
+            z.Password = textBoxPassword.Text;
+
+            z.ID = int.Parse(listBoxZakupci.SelectedItem.ToString().Split('-')[0]);
+
+            bool result = this.zakupacBusiness.UpdateZakupac(z);
         }
     }
 }

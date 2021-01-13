@@ -37,6 +37,8 @@ namespace PresentationLayer
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.listBoxZakupci = new System.Windows.Forms.ListBox();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonErase = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -106,14 +108,35 @@ namespace PresentationLayer
             this.listBoxZakupci.FormattingEnabled = true;
             this.listBoxZakupci.Location = new System.Drawing.Point(433, 38);
             this.listBoxZakupci.Name = "listBoxZakupci";
-            this.listBoxZakupci.Size = new System.Drawing.Size(279, 277);
+            this.listBoxZakupci.Size = new System.Drawing.Size(279, 186);
             this.listBoxZakupci.TabIndex = 7;
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(433, 240);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.TabIndex = 8;
+            this.buttonEdit.Text = "Izmeni";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            // 
+            // buttonErase
+            // 
+            this.buttonErase.Location = new System.Drawing.Point(637, 240);
+            this.buttonErase.Name = "buttonErase";
+            this.buttonErase.Size = new System.Drawing.Size(75, 23);
+            this.buttonErase.TabIndex = 9;
+            this.buttonErase.Text = "Obrisi";
+            this.buttonErase.UseVisualStyleBackColor = true;
             // 
             // FormRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonErase);
+            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.listBoxZakupci);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonBack);
@@ -124,6 +147,7 @@ namespace PresentationLayer
             this.Controls.Add(this.textBoxName);
             this.Name = "FormRegistration";
             this.Text = "FormRegistration";
+            this.Load += new System.EventHandler(this.FormRegistration_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +163,7 @@ namespace PresentationLayer
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.ListBox listBoxZakupci;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonErase;
     }
 }

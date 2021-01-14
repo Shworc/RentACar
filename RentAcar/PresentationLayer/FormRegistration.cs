@@ -94,5 +94,11 @@ namespace PresentationLayer
 
             bool result = this.zakupacBusiness.UpdateZakupac(z);
         }
+
+        private void listBoxZakupci_Click(object sender, EventArgs e)
+        {
+
+            textBoxName.Text = listBoxZakupci.SelectedItem.ToString().Trim().Split('.')[1];
+        }
     }
 }

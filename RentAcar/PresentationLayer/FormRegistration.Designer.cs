@@ -29,6 +29,7 @@ namespace PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
@@ -39,6 +40,12 @@ namespace PresentationLayer
             this.listBoxZakupci = new System.Windows.Forms.ListBox();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonErase = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rentacarDBDataSet = new PresentationLayer.RentacarDBDataSet();
+            this.rentacarDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentacarDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentacarDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -110,6 +117,7 @@ namespace PresentationLayer
             this.listBoxZakupci.Name = "listBoxZakupci";
             this.listBoxZakupci.Size = new System.Drawing.Size(279, 186);
             this.listBoxZakupci.TabIndex = 7;
+            this.listBoxZakupci.Click += new System.EventHandler(this.listBoxZakupci_Click);
             // 
             // buttonEdit
             // 
@@ -130,11 +138,32 @@ namespace PresentationLayer
             this.buttonErase.Text = "Obrisi";
             this.buttonErase.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.rentacarDBDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 234);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(341, 109);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // rentacarDBDataSet
+            // 
+            this.rentacarDBDataSet.DataSetName = "RentacarDBDataSet";
+            this.rentacarDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rentacarDBDataSetBindingSource
+            // 
+            this.rentacarDBDataSetBindingSource.DataSource = this.rentacarDBDataSet;
+            this.rentacarDBDataSetBindingSource.Position = 0;
+            // 
             // FormRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonErase);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.listBoxZakupci);
@@ -148,6 +177,9 @@ namespace PresentationLayer
             this.Name = "FormRegistration";
             this.Text = "FormRegistration";
             this.Load += new System.EventHandler(this.FormRegistration_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentacarDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentacarDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +197,8 @@ namespace PresentationLayer
         private System.Windows.Forms.ListBox listBoxZakupci;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonErase;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource rentacarDBDataSetBindingSource;
+        private RentacarDBDataSet rentacarDBDataSet;
     }
 }

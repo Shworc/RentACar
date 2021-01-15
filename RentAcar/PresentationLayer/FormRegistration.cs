@@ -76,13 +76,33 @@ namespace PresentationLayer
             {
                 listBoxZakupci.Items.Add(z.ID + "." + z.Ime + " - " + z.Password);
             }
+ 
         }
 
         private void FormRegistration_Load_1(object sender, EventArgs e)
         {
 
               GetAllZakupci();
+             //GetAllZakupciList(); //GriBox
         }
+
+        //GridBoxView
+        /*private DataTable GetAllZakupciList()
+        {
+            List<Zakupac> zakupac = this.zakupacBusiness.GetAllZakupci();
+            DataTable Zakupac = new DataTable();
+         
+            foreach (Zakupac z in zakupac)
+            {
+                int n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value.ToString();
+            }
+        
+
+
+            return Zakupac;
+        }*/
+
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
@@ -97,8 +117,10 @@ namespace PresentationLayer
 
         private void listBoxZakupci_Click(object sender, EventArgs e)
         {
-
-            textBoxName.Text = listBoxZakupci.SelectedItem.ToString().Trim().Split('.')[1];
+            /*foreach (object liItem in listBoxZakupci.Items)
+                textBoxName.Text += liItem.ToString() + " ";*/ // sve objekte iz listboksa stavlja u jedan textBox
+            textBoxName.Text = listBoxZakupci.SelectedItem.ToString().Trim().Split('.', '-' )[1];
+            textBoxPassword.Text = listBoxZakupci.SelectedItem.ToString().Split('-')[1].Trim();
         }
     }
 }

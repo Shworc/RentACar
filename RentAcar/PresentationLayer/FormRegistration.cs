@@ -35,7 +35,16 @@ namespace PresentationLayer
             z.Ime = textBoxName.Text;
             z.Password = textBoxPassword.Text;
 
-            zakupacBusiness.InsertZakupac(z); //boool mozemo da testiramo
+            if (this.zakupacBusiness.InsertZakupac(z))
+            {
+                GetAllZakupci();
+                textBoxName.Text = "";
+                textBoxPassword.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Greska!");
+            }
             
 
             /*int InsertZakupac(Zakupac z)
@@ -113,14 +122,53 @@ namespace PresentationLayer
             z.ID = int.Parse(listBoxZakupci.SelectedItem.ToString().Split('.')[0]);
 
             bool result = this.zakupacBusiness.UpdateZakupac(z);
+
+            if(this.zakupacBusiness.UpdateZakupac(z))
+            {
+                GetAllZakupci();
+                textBoxName.Text = "";
+                textBoxPassword.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Greska!");
+            }
         }
 
         private void listBoxZakupci_Click(object sender, EventArgs e)
         {
             /*foreach (object liItem in listBoxZakupci.Items)
                 textBoxName.Text += liItem.ToString() + " ";*/ // sve objekte iz listboksa stavlja u jedan textBox
-            textBoxName.Text = listBoxZakupci.SelectedItem.ToString().Trim().Split('.', '-' )[1];
+            textBoxName.Text = listBoxZakupci.SelectedItem.ToString().Split('.', '-' )[1];
             textBoxPassword.Text = listBoxZakupci.SelectedItem.ToString().Split('-')[1].Trim();
+        }
+
+        private void buttonErase_Click(object sender, EventArgs e)
+        {
+            Zakupac z = new Zakupac();
+            z.Ime = textBoxName.Text;
+            z.Password = textBoxPassword.Text;
+            z.ID = int.Parse(listBoxZakupci.SelectedItem.ToString().Split('.')[0]);
+
+            
+
+            if(this.zakupacBusiness.DeleteZakupac(z))
+            {
+                GetAllZakupci();
+                textBoxName.Text = "";
+                textBoxPassword.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Greska!");
+            }
+
+            bool result = this.zakupacBusiness.DeleteZakupac(z);
+        }
+
+        private void listBoxZakupci_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

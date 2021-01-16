@@ -66,5 +66,14 @@ namespace DataLayer
             return result;
         }
 
+        public int DeleteZakupac(Zakupac z)
+        {
+            var result = DBConnection.EditData(string.Format("DELETE FROM Zakupac WHERE ID={0}",
+                    z.ID));
+            DBConnection.CloseConnection();
+
+            return result;
+        }
+
     }
 }

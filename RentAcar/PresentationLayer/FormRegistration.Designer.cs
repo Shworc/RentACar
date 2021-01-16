@@ -116,6 +116,7 @@ namespace PresentationLayer
             this.listBoxZakupci.Size = new System.Drawing.Size(279, 186);
             this.listBoxZakupci.TabIndex = 7;
             this.listBoxZakupci.Click += new System.EventHandler(this.listBoxZakupci_Click);
+            this.listBoxZakupci.SelectedIndexChanged += new System.EventHandler(this.listBoxZakupci_SelectedIndexChanged);
             // 
             // buttonEdit
             // 
@@ -135,6 +136,7 @@ namespace PresentationLayer
             this.buttonErase.TabIndex = 9;
             this.buttonErase.Text = "Obrisi";
             this.buttonErase.UseVisualStyleBackColor = true;
+            this.buttonErase.Click += new System.EventHandler(this.buttonErase_Click);
             // 
             // rentacarDBDataSetBindingSource
             // 

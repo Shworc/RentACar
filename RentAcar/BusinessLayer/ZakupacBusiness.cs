@@ -39,5 +39,14 @@ namespace BusinessLayer
             }
             return false;
         }
+
+        public bool DeleteZakupac(Zakupac z)
+        {
+            if (this.zakupacRepository.DeleteZakupac(z) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

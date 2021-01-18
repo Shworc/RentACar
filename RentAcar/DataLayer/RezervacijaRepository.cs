@@ -40,7 +40,7 @@ namespace DataLayer
             List<Rezervacija> results = new List<Rezervacija>();
             List<Zakupac> results1 = new List<Zakupac>();
 
-            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija JOIN Zakupac ON Rezervacija.ZakupacID = Zakupac.Id ON Rezervacija.AutomobilID = Automobil.Id WHERE Zakupac.Ime = " + textBoxUsername);
+            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija JOIN Zakupac ON Rezervacija.ZakupacID = Zakupac.Id ON Rezervacija.AutomobilID = Automobil.Id WHERE Zakupac.Ime = " + textBoxUsername.ToString());
 
             while (sqlDataReader.Read())
             {
@@ -104,5 +104,23 @@ namespace DataLayer
 
                 return result;
             }
+
+        public int UpdateRezervacija(Rezervacija r)
+        {
+            var result = DBConnection.EditData(string.Format("UPDATE Rezervacija SET DatumOd ='{0}', DatumDo ='{1}', ZakupacID = '{2}', AutomobilID = '{3}'" + "WHERE ID={4}",
+                    r.DatumOd, r.DatumDo, r.ZakupacID, r.AutomobilID, r.Id));
+            DBConnection.CloseConnection();
+
+            return result;
         }
+
+        public int DeleteRezervacija(Rezervacija r)
+        {
+            var result = DBConnection.EditData(string.Format("DELETE FROM Rezervacija WHERE ID={0}",
+                    r.Id));
+            DBConnection.CloseConnection();
+
+            return result;
+        }
+    }
     }

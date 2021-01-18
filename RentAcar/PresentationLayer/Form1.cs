@@ -17,7 +17,7 @@ namespace PresentationLayer
     {
         private readonly RezervacijaBusiness rezervacijaBusiness;
         public FormLogin formLogin;
-
+        public FormRezervacija formRezervacija;
 
         public Form1()
         {
@@ -69,7 +69,9 @@ namespace PresentationLayer
 
         private void buttonReserve_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormRezervacija f3 = new FormRezervacija(); //redirect na formu rezervacija
+            f3.ShowDialog();
         }
     }
 }

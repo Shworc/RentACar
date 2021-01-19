@@ -16,6 +16,7 @@ namespace PresentationLayer
     public partial class Form1 : Form
     {
         private readonly RezervacijaBusiness rezervacijaBusiness;
+        private readonly object textBoxUsername;
         public FormLogin formLogin;
         public FormRezervacija formRezervacija;
 
@@ -25,7 +26,12 @@ namespace PresentationLayer
             
             InitializeComponent();
         }
-       
+        public Form1(TextBox _textBoxUsername)
+        {
+            textBoxUsername = _textBoxUsername;
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             

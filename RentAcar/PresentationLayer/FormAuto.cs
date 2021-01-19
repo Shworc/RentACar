@@ -114,7 +114,7 @@ namespace PresentationLayer
 
         private void listBoxAuto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBoxAutoMarka.Text = listBoxAuto.SelectedItem.ToString().Split('.', '-')[1];
+            textBoxAutoMarka.Text = listBoxAuto.SelectedItem.ToString().Split('.', '-')[1].Trim();
             textBoxAutoNaziv.Text = listBoxAuto.SelectedItem.ToString().Split('-')[1].Trim();
         }
     }

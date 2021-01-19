@@ -13,7 +13,7 @@ namespace DataLayer
         public List<Automobile> GetAllAutos()
         {
             List<Automobile> results = new List<Automobile>();
-            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT * FROM Atomobil");
+            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT * FROM Automobil");
 
             while(sqlDataReader.Read())
             {
@@ -49,7 +49,7 @@ namespace DataLayer
 
         public int DeleteAutomobile(Automobile a)
         {
-            var result = DBConnection.EditData(string.Format("DELETE FROM Autmobil WHERE ID={0}",
+            var result = DBConnection.EditData(string.Format("DELETE FROM Automobil WHERE ID={0}",
                     a.ID));
             DBConnection.CloseConnection();
 

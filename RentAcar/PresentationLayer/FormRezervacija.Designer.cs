@@ -39,6 +39,8 @@ namespace PresentationLayer
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.labelDatumOd = new System.Windows.Forms.Label();
             this.labelDatumDo = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonRevBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxRezervacija
@@ -51,7 +53,7 @@ namespace PresentationLayer
             // 
             // buttonSaveReserve
             // 
-            this.buttonSaveReserve.Location = new System.Drawing.Point(31, 364);
+            this.buttonSaveReserve.Location = new System.Drawing.Point(31, 280);
             this.buttonSaveReserve.Name = "buttonSaveReserve";
             this.buttonSaveReserve.Size = new System.Drawing.Size(75, 23);
             this.buttonSaveReserve.TabIndex = 1;
@@ -124,11 +126,33 @@ namespace PresentationLayer
             this.labelDatumDo.TabIndex = 9;
             this.labelDatumDo.Text = "Zavrsni datum";
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(696, 364);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 10;
+            this.buttonExit.Text = "Izlaz";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // buttonRevBack
+            // 
+            this.buttonRevBack.Location = new System.Drawing.Point(28, 364);
+            this.buttonRevBack.Name = "buttonRevBack";
+            this.buttonRevBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonRevBack.TabIndex = 11;
+            this.buttonRevBack.Text = "Nazad";
+            this.buttonRevBack.UseVisualStyleBackColor = true;
+            this.buttonRevBack.Click += new System.EventHandler(this.buttonRevBack_Click);
+            // 
             // FormRezervacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonRevBack);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelDatumDo);
             this.Controls.Add(this.labelDatumOd);
             this.Controls.Add(this.dateTimePicker2);
@@ -159,5 +183,7 @@ namespace PresentationLayer
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label labelDatumOd;
         private System.Windows.Forms.Label labelDatumDo;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonRevBack;
     }
 }

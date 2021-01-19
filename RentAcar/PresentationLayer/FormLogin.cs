@@ -19,7 +19,6 @@ namespace PresentationLayer
         {
             InitializeComponent();
         }
-
         public List<Zakupac> GetZakupacById()
 
         {
@@ -73,9 +72,12 @@ namespace PresentationLayer
                         if (count == 1)
                         {
                             this.Hide();
-                            Form1 f1 = new Form1(); //this is the change, code for redirect  
-                            f1.formLogin = this;
-                            f1.ShowDialog();
+                            //Form1 f1 = new Form1(textBoxUsername); //this is the change, code for redirect  
+                            Form1 f2 = new Form1();
+                            //f1.formLogin = this;
+                            //f1.ShowDialog();
+                            f2.formLogin = this;
+                            f2.ShowDialog();
                         }
                         else if (count > 1)
                         {

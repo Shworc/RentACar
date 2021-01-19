@@ -26,6 +26,18 @@ namespace PresentationLayer
 
         }
 
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonRevBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f8 = new Form1();
+            f8.ShowDialog();
+        }
+
         /*private void GetRezervacijaById(String s)
         {
             List<Rezervacija> reserve = this.rezervacijaBusiness.GetRezervacijaById(s);

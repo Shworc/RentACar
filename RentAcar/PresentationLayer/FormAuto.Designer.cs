@@ -62,7 +62,7 @@ namespace PresentationLayer
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 145);
+            this.label2.Location = new System.Drawing.Point(66, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 2;
@@ -70,14 +70,14 @@ namespace PresentationLayer
             // 
             // textBoxAutoMarka
             // 
-            this.textBoxAutoMarka.Location = new System.Drawing.Point(69, 102);
+            this.textBoxAutoMarka.Location = new System.Drawing.Point(66, 95);
             this.textBoxAutoMarka.Name = "textBoxAutoMarka";
             this.textBoxAutoMarka.Size = new System.Drawing.Size(100, 20);
             this.textBoxAutoMarka.TabIndex = 3;
             // 
             // textBoxAutoNaziv
             // 
-            this.textBoxAutoNaziv.Location = new System.Drawing.Point(66, 162);
+            this.textBoxAutoNaziv.Location = new System.Drawing.Point(66, 160);
             this.textBoxAutoNaziv.Name = "textBoxAutoNaziv";
             this.textBoxAutoNaziv.Size = new System.Drawing.Size(100, 20);
             this.textBoxAutoNaziv.TabIndex = 4;

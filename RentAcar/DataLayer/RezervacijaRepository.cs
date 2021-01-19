@@ -98,7 +98,7 @@ namespace DataLayer
            
             public int InsertRezervacija(Rezervacija r)
             {
-                var result = DBConnection.EditData(string.Format("INSERT INTO Rezervacija VALUES ('{0}', '{1}', {2}, {3})",
+                var result = DBConnection.EditData(string.Format("INSERT INTO Rezervacija VALUES ({0}, {1}, {2}, {3})",
                         r.DatumOd, r.DatumDo, r.ZakupacID, r.AutomobilID));
                 DBConnection.CloseConnection();
 
@@ -107,7 +107,7 @@ namespace DataLayer
 
         public int UpdateRezervacija(Rezervacija r)
         {
-            var result = DBConnection.EditData(string.Format("UPDATE Rezervacija SET DatumOd ='{0}', DatumDo ='{1}', ZakupacID = '{2}', AutomobilID = '{3}'" + "WHERE ID={4}",
+            var result = DBConnection.EditData(string.Format("UPDATE Rezervacija SET DatumOd ={0}, DatumDo ={1}, ZakupacID = {2}, AutomobilID = {3}" + "WHERE ID={4}",
                     r.DatumOd, r.DatumDo, r.ZakupacID, r.AutomobilID, r.Id));
             DBConnection.CloseConnection();
 

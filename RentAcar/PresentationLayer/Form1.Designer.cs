@@ -46,8 +46,8 @@ namespace PresentationLayer
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxZakupacID = new System.Windows.Forms.ComboBox();
+            this.comboBoxAutoID = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonReserve
@@ -156,6 +156,7 @@ namespace PresentationLayer
             this.buttonSaveRez.TabIndex = 12;
             this.buttonSaveRez.Text = "Snimi";
             this.buttonSaveRez.UseVisualStyleBackColor = false;
+            this.buttonSaveRez.Click += new System.EventHandler(this.buttonSaveRez_Click);
             // 
             // label1
             // 
@@ -177,6 +178,8 @@ namespace PresentationLayer
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(47, 187);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
@@ -184,6 +187,8 @@ namespace PresentationLayer
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(47, 226);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
@@ -207,29 +212,30 @@ namespace PresentationLayer
             this.label4.TabIndex = 20;
             this.label4.Text = "Datum od";
             // 
-            // comboBox1
+            // comboBoxZakupacID
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(47, 103);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 21;
+            this.comboBoxZakupacID.FormattingEnabled = true;
+            this.comboBoxZakupacID.Location = new System.Drawing.Point(47, 103);
+            this.comboBoxZakupacID.Name = "comboBoxZakupacID";
+            this.comboBoxZakupacID.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxZakupacID.TabIndex = 21;
+            this.comboBoxZakupacID.SelectedIndexChanged += new System.EventHandler(this.comboBoxZakupacID_SelectedIndexChanged);
             // 
-            // comboBox2
+            // comboBoxAutoID
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(47, 143);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 22;
+            this.comboBoxAutoID.FormattingEnabled = true;
+            this.comboBoxAutoID.Location = new System.Drawing.Point(47, 143);
+            this.comboBoxAutoID.Name = "comboBoxAutoID";
+            this.comboBoxAutoID.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxAutoID.TabIndex = 22;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxAutoID);
+            this.Controls.Add(this.comboBoxZakupacID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker2);
@@ -274,8 +280,8 @@ namespace PresentationLayer
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxZakupacID;
+        private System.Windows.Forms.ComboBox comboBoxAutoID;
     }
 }
 

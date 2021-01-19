@@ -15,6 +15,7 @@ namespace BusinessLayer
 
         public RezervacijaBusiness()
         {
+            this.zakupacRepository = new ZakupacRepository();
             this.rezervacijaRepository = new RezervacijaRepository();
         }
 
@@ -61,6 +62,40 @@ namespace BusinessLayer
             }
             return false;
         }
+
+
         //kreirati fja da prikazuje listu rezervacija za trenutnog korisnika
+
+        public List<Zakupac> GetAllZakupci()
+        {
+            return this.zakupacRepository.GetAllZakupci();
+        }
+
+        public bool InsertZakupac(Zakupac r)
+        {
+            if (this.zakupacRepository.InsertZakupac(r) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool UpdateZakupac(Zakupac r)
+        {
+            if (this.zakupacRepository.UpdateZakupac(r) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool DeleteZakupac(Zakupac r)
+        {
+            if (this.zakupacRepository.UpdateZakupac(r) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

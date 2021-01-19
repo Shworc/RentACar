@@ -106,7 +106,7 @@ namespace PresentationLayer
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            buttonA.Visible = true;
         }
 
         private void buttonRegistration_Click(object sender, EventArgs e)
@@ -121,5 +121,11 @@ namespace PresentationLayer
             Application.Exit();
         }
 
+        private void buttonA_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAuto f6 = new FormAuto();//redirect na registraciju auta
+            f6.ShowDialog();
+        }
     }
 }

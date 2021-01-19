@@ -29,7 +29,6 @@ namespace PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
@@ -40,10 +39,7 @@ namespace PresentationLayer
             this.listBoxZakupci = new System.Windows.Forms.ListBox();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonErase = new System.Windows.Forms.Button();
-            this.rentacarDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rentacarDBDataSet = new PresentationLayer.RentacarDBDataSet();
-            ((System.ComponentModel.ISupportInitialize)(this.rentacarDBDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rentacarDBDataSet)).BeginInit();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -138,16 +134,6 @@ namespace PresentationLayer
             this.buttonErase.UseVisualStyleBackColor = true;
             this.buttonErase.Click += new System.EventHandler(this.buttonErase_Click);
             // 
-            // rentacarDBDataSetBindingSource
-            // 
-            this.rentacarDBDataSetBindingSource.DataSource = this.rentacarDBDataSet;
-            this.rentacarDBDataSetBindingSource.Position = 0;
-            // 
-            // rentacarDBDataSet
-            // 
-            this.rentacarDBDataSet.DataSetName = "RentacarDBDataSet";
-            this.rentacarDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // FormRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,8 +152,6 @@ namespace PresentationLayer
             this.Name = "FormRegistration";
             this.Text = "FormRegistration";
             this.Load += new System.EventHandler(this.FormRegistration_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.rentacarDBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rentacarDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,7 +169,8 @@ namespace PresentationLayer
         private System.Windows.Forms.ListBox listBoxZakupci;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonErase;
-        private System.Windows.Forms.BindingSource rentacarDBDataSetBindingSource;
-        private RentacarDBDataSet rentacarDBDataSet;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        //private System.Windows.Forms.BindingSource rentacarDBDataSetBindingSource;
+        //private RentacarDBDataSet rentacarDBDataSet;
     }
 }

@@ -38,5 +38,23 @@ namespace DataLayer
             return result;
         }
 
+        public int UpdateAutomobile(Automobile a)
+        {
+            var result = DBConnection.EditData(string.Format("UPDATE Automobil SET Marka ='{0}', Naziv ='{1}'" + "WHERE ID={2}",
+                    a.Marka, a.Naziv, a.ID));
+            DBConnection.CloseConnection();
+
+            return result;
+        }
+
+        public int DeleteAutomobile(Automobile a)
+        {
+            var result = DBConnection.EditData(string.Format("DELETE FROM Autmobil WHERE ID={0}",
+                    a.ID));
+            DBConnection.CloseConnection();
+
+            return result;
+        }
+
     }
 }

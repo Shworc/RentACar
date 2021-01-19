@@ -26,7 +26,7 @@ namespace PresentationLayer
 
         }
 
-        private void GetRezervacijaById(String s)
+        /*private void GetRezervacijaById(String s)
         {
             List<Rezervacija> reserve = this.rezervacijaBusiness.GetRezervacijaById(s);
             listBoxRezervacija.Items.Clear();
@@ -35,7 +35,7 @@ namespace PresentationLayer
             {
                 listBoxRezervacija.Items.Add(r.DatumOd + " - " + r.DatumDo + " " + r.ZakupacID + " " + r.AutomobilID);
             }
-        }
+        }*/
     }
-    }
+    
 }

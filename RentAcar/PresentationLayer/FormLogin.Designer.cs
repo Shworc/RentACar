@@ -38,6 +38,8 @@ namespace PresentationLayer
             this.buttonRegistration = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.labelAuto = new System.Windows.Forms.Label();
+            this.buttonA = new System.Windows.Forms.Button();
             this.groupBoxLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,11 +127,32 @@ namespace PresentationLayer
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // labelAuto
+            // 
+            this.labelAuto.AutoSize = true;
+            this.labelAuto.Location = new System.Drawing.Point(85, 17);
+            this.labelAuto.Name = "labelAuto";
+            this.labelAuto.Size = new System.Drawing.Size(119, 13);
+            this.labelAuto.TabIndex = 7;
+            this.labelAuto.Text = "Unos novog automobila";
+            // 
+            // buttonA
+            // 
+            this.buttonA.Location = new System.Drawing.Point(109, 33);
+            this.buttonA.Name = "buttonA";
+            this.buttonA.Size = new System.Drawing.Size(75, 23);
+            this.buttonA.TabIndex = 8;
+            this.buttonA.Text = "Unesi_Auto";
+            this.buttonA.UseVisualStyleBackColor = true;
+            this.buttonA.Click += new System.EventHandler(this.buttonA_Click_1);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonA);
+            this.Controls.Add(this.labelAuto);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRegistration);
@@ -156,5 +179,7 @@ namespace PresentationLayer
         private System.Windows.Forms.Button buttonRegistration;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label labelAuto;
+        private System.Windows.Forms.Button buttonA;
     }
 }

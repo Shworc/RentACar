@@ -90,28 +90,11 @@ namespace PresentationLayer
 
         private void FormRegistration_Load_1(object sender, EventArgs e)
         {
-
-              GetAllZakupci();
+                GetAllZakupci();
              //GetAllZakupciList(); //GriBox
         }
 
         //GridBoxView
-        /*private DataTable GetAllZakupciList()
-        {
-            List<Zakupac> zakupac = this.zakupacBusiness.GetAllZakupci();
-            DataTable Zakupac = new DataTable();
-         
-            foreach (Zakupac z in zakupac)
-            {
-                int n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[0].Value.ToString();
-            }
-        
-
-
-            return Zakupac;
-        }*/
-
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {

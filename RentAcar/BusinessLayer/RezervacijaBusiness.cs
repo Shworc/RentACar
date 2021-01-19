@@ -29,11 +29,11 @@ namespace BusinessLayer
             return List < Zakupac > this.GetAllRezervations().Where(r1 => r1.ZakupacID == r1.Id);
         }*/
 
-            public List<Rezervacija> GetRezervacijaById(String textBoxUsername)
+        /*    public List<Rezervacija> GetRezervacijaById(String textBoxUsername)
         {
             
             //return this.GetRezervacijaById(textBoxUsername).Where(r => r.ZakupacID == zakupacRepository.r.ID));
-        }
+        }*/
        
         public bool InsertRezervacija(Rezervacija r)
         {

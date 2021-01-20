@@ -85,9 +85,11 @@ namespace PresentationLayer
 
             foreach (Rezervacija r in reserve)
             {
-                listBoxRezervacija.Items.Add(r.Id + "." + r.ZakupacID + " - " + r.AutomobilID + " " + r.DatumOd + " " + r.DatumDo);
+                //listBoxRezervacija.Items.Add(r.Id + "." + r.ZakupacID + " - " + r.AutomobilID + " " + r.DatumOd + " " + r.DatumDo);
                 comboBoxZakupacID.Items.AddRange(reserve.ToArray());
-                comboBoxAutoID.Items.AddRange(reserve.ToArray());
+                comboBoxZakupacID.Items.Add(r.ZakupacID);
+                
+                //comboBoxAutoID.Items.AddRange(reserve.ToArray());
             }
         }
 

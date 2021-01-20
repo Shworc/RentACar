@@ -214,6 +214,7 @@ namespace PresentationLayer
             // 
             // comboBoxZakupacID
             // 
+            this.comboBoxZakupacID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxZakupacID.FormattingEnabled = true;
             this.comboBoxZakupacID.Location = new System.Drawing.Point(47, 103);
             this.comboBoxZakupacID.Name = "comboBoxZakupacID";
@@ -228,6 +229,7 @@ namespace PresentationLayer
             this.comboBoxAutoID.Name = "comboBoxAutoID";
             this.comboBoxAutoID.Size = new System.Drawing.Size(121, 21);
             this.comboBoxAutoID.TabIndex = 22;
+            this.comboBoxAutoID.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoID_SelectedIndexChanged);
             // 
             // Form1
             // 

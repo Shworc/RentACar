@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace PresentationLayer
 {
@@ -17,6 +19,7 @@ namespace PresentationLayer
     {
         private readonly RezervacijaBusiness rezervacijaBusiness;
         private readonly ZakupacBusiness zakupacBusiness;
+        private readonly AutoBusiness autoBusiness;
         private readonly object textBoxUsername;
         public FormLogin formLogin;
         public FormRezervacija formRezervacija;
@@ -25,6 +28,7 @@ namespace PresentationLayer
         {
             this.rezervacijaBusiness = new RezervacijaBusiness();
             this.zakupacBusiness = new ZakupacBusiness();
+            this.autoBusiness = new AutoBusiness();
             InitializeComponent();
         }
         public Form1(TextBox _textBoxUsername)
@@ -35,7 +39,6 @@ namespace PresentationLayer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             GetAllRezervacije();
         }
 
@@ -50,7 +53,20 @@ namespace PresentationLayer
                     listBoxReserve.Items.Add(r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
                 }
         }
-        
+
+        private void GetAllZakupci()
+        {
+
+            List<Zakupac> reserve = this.zakupacBusiness.GetAllZakupci();
+            //listBoxReserve.Items.Clear();
+
+            foreach (Zakupac r in reserve)
+            {
+                comboBoxZakupacID.Items.Add(r.Ime);
+                comboBoxZakupacID.Items.AddRange(reserve.ToArray());
+            }
+        }
+
         /* 
          * SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija
             JOIN Zakupac 
@@ -62,7 +78,7 @@ namespace PresentationLayer
 
 
 
-private void ButtonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -107,21 +123,41 @@ private void ButtonExit_Click(object sender, EventArgs e)
         private void comboBoxZakupacID_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<Zakupac> reserve = this.zakupacBusiness.GetAllZakupci();
-            List<Rezervacija> reserve1 = this.rezervacijaBusiness.GetAllRezervations();
             listBoxReserve.Items.Clear();
 
+            
+
+                DataTable table = new DataTable();
             foreach (Zakupac r in reserve)
             {
-                comboBoxZakupacID.Items.Add(r.Ime);
-                comboBoxZakupacID.Items.AddRange(reserve.ToArray());
-                comboBoxAutoID.Items.AddRange(reserve.ToArray());
+                table.Columns.Add("Ime");
+                table.Rows.Add();
+                comboBoxZakupacID.DataSource = table;
+                comboBoxZakupacID.DisplayMember = "Ime";
             }
 
-            foreach(Rezervacija r in reserve1)
+            
+        }
+        public void comboBoxZakupacID_SelectedIndexChanged_Load(object sender, EventArgs e)
+        {
+            List<Zakupac> reserve = this.zakupacBusiness.GetAllZakupci();
+            listBoxReserve.Items.Clear();
+
+            DataTable table = new DataTable();
+            foreach (Zakupac r in reserve)
             {
-                comboBoxAutoID.Items.Add(r.AutomobilID);
-                comboBoxAutoID.Items.AddRange(reserve1.ToArray());
+                table.Columns.Add("Ime");
+                table.Rows.Add();
+                comboBoxZakupacID.DataSource = table;
+                comboBoxZakupacID.DisplayMember = "Ime";
             }
+
+
+        }
+
+        private void comboBoxAutoID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

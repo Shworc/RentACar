@@ -159,5 +159,12 @@ namespace PresentationLayer
         {
           
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAuto f6 = new FormAuto();//redirect na registraciju auta
+            f6.ShowDialog();
+        }
     }
 }

@@ -10,14 +10,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace PresentationLayer
 {
+ 
     public partial class FormLogin : Form
     {
+       
         public FormLogin()
         {
             InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; 
+        }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
         }
         public List<Zakupac> GetZakupacById()
 
@@ -46,8 +63,41 @@ namespace PresentationLayer
             return this.GetZakupacById().Where(r1 => r1.Ime == textBoxUsername).ToList();
         }
 
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
+ 
+        private void buttonRegistration_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRegistration f3 = new FormRegistration(); //redirect na registraciju korisnika
+            f3.ShowDialog();
+        }
 
-        private void buttonSubmit_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonA_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAuto f6 = new FormAuto();//redirect na registraciju auta
+            f6.ShowDialog();
+        }
+
+        private void groupBoxLogin_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uloguj_se_Click(object sender, EventArgs e)
         {
             try
             {
@@ -103,31 +153,14 @@ namespace PresentationLayer
             {
                 MessageBox.Show(es.Message);
             }
-        
+
+
+
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            buttonA.Visible = true;
-        }
 
-        private void buttonRegistration_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormRegistration f3 = new FormRegistration(); //redirect na registraciju korisnika
-            f3.ShowDialog();
-        }
-
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void buttonA_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormAuto f6 = new FormAuto();//redirect na registraciju auta
-            f6.ShowDialog();
         }
     }
 }

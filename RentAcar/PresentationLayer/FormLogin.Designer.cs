@@ -31,134 +31,137 @@ namespace PresentationLayer
         {
             this.groupBoxLogin = new System.Windows.Forms.GroupBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.buttonSubmit = new System.Windows.Forms.Button();
-            this.buttonRegistration = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.labelAuto = new System.Windows.Forms.Label();
-            this.buttonA = new System.Windows.Forms.Button();
+            this.uloguj_se = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxLogin
             // 
+            this.groupBoxLogin.AutoSize = true;
+            this.groupBoxLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBoxLogin.Controls.Add(this.textBoxPassword);
-            this.groupBoxLogin.Controls.Add(this.textBoxUsername);
             this.groupBoxLogin.Controls.Add(this.labelPassword);
             this.groupBoxLogin.Controls.Add(this.labelUsername);
-            this.groupBoxLogin.Location = new System.Drawing.Point(275, 99);
+            this.groupBoxLogin.Controls.Add(this.textBoxUsername);
+            this.groupBoxLogin.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBoxLogin.Location = new System.Drawing.Point(140, 106);
+            this.groupBoxLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBoxLogin.Name = "groupBoxLogin";
-            this.groupBoxLogin.Size = new System.Drawing.Size(200, 100);
+            this.groupBoxLogin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxLogin.Size = new System.Drawing.Size(267, 228);
             this.groupBoxLogin.TabIndex = 0;
             this.groupBoxLogin.TabStop = false;
-            this.groupBoxLogin.Text = "Login";
+            this.groupBoxLogin.Enter += new System.EventHandler(this.groupBoxLogin_Enter);
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(66, 52);
+            this.textBoxPassword.Location = new System.Drawing.Point(100, 129);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(132, 23);
             this.textBoxPassword.TabIndex = 3;
-            // 
-            // textBoxUsername
-            // 
-            this.textBoxUsername.Location = new System.Drawing.Point(66, 19);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(100, 20);
-            this.textBoxUsername.TabIndex = 2;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(10, 52);
+            this.labelPassword.Location = new System.Drawing.Point(31, 129);
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(52, 13);
+            this.labelPassword.Size = new System.Drawing.Size(35, 17);
             this.labelPassword.TabIndex = 1;
-            this.labelPassword.Text = "password";
+            this.labelPassword.Text = "sifra";
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(7, 20);
+            this.labelUsername.Location = new System.Drawing.Point(23, 65);
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(53, 13);
+            this.labelUsername.Size = new System.Drawing.Size(56, 17);
             this.labelUsername.TabIndex = 0;
-            this.labelUsername.Text = "username";
+            this.labelUsername.Text = "korisnik";
+            this.labelUsername.Click += new System.EventHandler(this.labelUsername_Click);
             // 
-            // buttonSubmit
+            // textBoxUsername
             // 
-            this.buttonSubmit.Location = new System.Drawing.Point(352, 229);
-            this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(75, 23);
-            this.buttonSubmit.TabIndex = 1;
-            this.buttonSubmit.Text = "submit";
-            this.buttonSubmit.UseVisualStyleBackColor = true;
-            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
+            this.textBoxUsername.Location = new System.Drawing.Point(100, 62);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(132, 23);
+            this.textBoxUsername.TabIndex = 2;
             // 
-            // buttonRegistration
+            // buttonExit
             // 
-            this.buttonRegistration.Location = new System.Drawing.Point(616, 33);
-            this.buttonRegistration.Name = "buttonRegistration";
-            this.buttonRegistration.Size = new System.Drawing.Size(75, 23);
-            this.buttonRegistration.TabIndex = 2;
-            this.buttonRegistration.Text = "Registracija";
-            this.buttonRegistration.UseVisualStyleBackColor = true;
-            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
+            this.buttonExit.BackColor = System.Drawing.Color.Lime;
+            this.buttonExit.Location = new System.Drawing.Point(456, -1);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(100, 28);
+            this.buttonExit.TabIndex = 5;
+            this.buttonExit.Text = "X";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // uloguj_se
+            // 
+            this.uloguj_se.Location = new System.Drawing.Point(220, 368);
+            this.uloguj_se.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uloguj_se.Name = "uloguj_se";
+            this.uloguj_se.Size = new System.Drawing.Size(100, 28);
+            this.uloguj_se.TabIndex = 6;
+            this.uloguj_se.Text = "Uloguj se";
+            this.uloguj_se.UseVisualStyleBackColor = true;
+            this.uloguj_se.Click += new System.EventHandler(this.uloguj_se_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(587, 17);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(136, 466);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Registracija novog korisnika";
+            this.label1.Size = new System.Drawing.Size(292, 22);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Softver za iznajmljivanje automobila";
+            this.label1.Visible = false;
             // 
-            // buttonExit
+            // label2
             // 
-            this.buttonExit.Location = new System.Drawing.Point(615, 381);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 23);
-            this.buttonExit.TabIndex = 5;
-            this.buttonExit.Text = "Izlaz";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // labelAuto
-            // 
-            this.labelAuto.AutoSize = true;
-            this.labelAuto.Location = new System.Drawing.Point(85, 17);
-            this.labelAuto.Name = "labelAuto";
-            this.labelAuto.Size = new System.Drawing.Size(119, 13);
-            this.labelAuto.TabIndex = 7;
-            this.labelAuto.Text = "Unos novog automobila";
-            // 
-            // buttonA
-            // 
-            this.buttonA.Location = new System.Drawing.Point(109, 33);
-            this.buttonA.Name = "buttonA";
-            this.buttonA.Size = new System.Drawing.Size(75, 23);
-            this.buttonA.TabIndex = 8;
-            this.buttonA.Text = "Unesi_Auto";
-            this.buttonA.UseVisualStyleBackColor = true;
-            this.buttonA.Click += new System.EventHandler(this.buttonA_Click_1);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(214, 51);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 31);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "RentACar";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonA);
-            this.Controls.Add(this.labelAuto);
-            this.Controls.Add(this.buttonExit);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(556, 497);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonRegistration);
-            this.Controls.Add(this.buttonSubmit);
+            this.Controls.Add(this.uloguj_se);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.groupBoxLogin);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.groupBoxLogin.ResumeLayout(false);
@@ -175,11 +178,9 @@ namespace PresentationLayer
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.Button buttonSubmit;
-        private System.Windows.Forms.Button buttonRegistration;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Label labelAuto;
-        private System.Windows.Forms.Button buttonA;
+        private System.Windows.Forms.Button uloguj_se;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

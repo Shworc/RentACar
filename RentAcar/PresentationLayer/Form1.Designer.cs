@@ -48,6 +48,9 @@ namespace PresentationLayer
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxZakupacID = new System.Windows.Forms.ComboBox();
             this.comboBoxAutoID = new System.Windows.Forms.ComboBox();
+            this.unesiAuto = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonReserve
@@ -231,11 +234,44 @@ namespace PresentationLayer
             this.comboBoxAutoID.TabIndex = 22;
             this.comboBoxAutoID.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoID_SelectedIndexChanged);
             // 
+            // unesiAuto
+            // 
+            this.unesiAuto.Location = new System.Drawing.Point(629, 30);
+            this.unesiAuto.Name = "unesiAuto";
+            this.unesiAuto.Size = new System.Drawing.Size(112, 42);
+            this.unesiAuto.TabIndex = 23;
+            this.unesiAuto.Text = "Unesi Auto";
+            this.unesiAuto.UseVisualStyleBackColor = true;
+            this.unesiAuto.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Location = new System.Drawing.Point(727, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(527, 31);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.unesiAuto);
             this.Controls.Add(this.comboBoxAutoID);
             this.Controls.Add(this.comboBoxZakupacID);
             this.Controls.Add(this.label4);
@@ -284,6 +320,9 @@ namespace PresentationLayer
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxZakupacID;
         private System.Windows.Forms.ComboBox comboBoxAutoID;
+        private System.Windows.Forms.Button unesiAuto;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

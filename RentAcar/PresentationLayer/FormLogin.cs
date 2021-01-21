@@ -131,21 +131,21 @@ namespace PresentationLayer
                         }
                         else if (count > 1)
                         {
-                            MessageBox.Show("Duplicate username and password", "login page");
+                            MessageBox.Show("Duplikat sifre i korisnickog imena", "login page");
                         }
                         else
                         {
-                            MessageBox.Show(" username and password incorrect", "login page");
+                            MessageBox.Show(" Lozinka ili korisnicko ime ne tacni", "login page");
                         }
                     }
                     else
                     {
-                        MessageBox.Show(" password empty", "login page");
+                        MessageBox.Show(" Prazno polje za lozinku", "login page");
                     }
                 }
                 else
                 {
-                    MessageBox.Show(" username empty", "login page");
+                    MessageBox.Show(" Prazno polje za korisnicko ime", "login page");
                 }
                 // con.Close();  
             }

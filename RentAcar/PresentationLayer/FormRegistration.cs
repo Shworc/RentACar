@@ -1,34 +1,39 @@
 ﻿using BusinessLayer;
-using DataLayer;
 using DataLayer.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace PresentationLayer
 {
+
     public partial class FormRegistration : Form
     {
         private readonly ZakupacBusiness zakupacBusiness; //kacenje na zakupac biznis
 
         private void FormRegistration_Load(object sender, EventArgs e)
         {
-            GetAllZakupci();
+            
         }
         public FormRegistration()
         {
-            
             this.zakupacBusiness = new ZakupacBusiness();
             InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            MessageBoxManager.Yes = "Da";
+            MessageBoxManager.No = "Ne";
         }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
 
+            base.WndProc(ref m);
+        }
         private void buttonSave_Click(object sender, EventArgs e)
         {
             Zakupac z = new Zakupac();
@@ -37,9 +42,7 @@ namespace PresentationLayer
 
             if (this.zakupacBusiness.InsertZakupac(z))
             {
-                GetAllZakupci();
-                textBoxName.Text = "";
-                textBoxPassword.Text = "";
+                MessageBox.Show("Uspesno dodato");
             }
             else
             {
@@ -63,11 +66,7 @@ namespace PresentationLayer
             }*/
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            //this.Close();
-        }
+       
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
@@ -76,81 +75,25 @@ namespace PresentationLayer
             f2.ShowDialog();
         }
 
-        private void GetAllZakupci()
-        {
-            List<Zakupac> zakupac = this.zakupacBusiness.GetAllZakupci();
-            listBoxZakupci.Items.Clear();
-
-            foreach (Zakupac z in zakupac)
-            {
-                listBoxZakupci.Items.Add(z.ID + "." + z.Ime + " - " + z.Password);
-            }
- 
-        }
 
         private void FormRegistration_Load_1(object sender, EventArgs e)
         {
-                GetAllZakupci();
-             //GetAllZakupciList(); //GriBox
+    
         }
 
-        //GridBoxView
-
-        private void buttonEdit_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Zakupac z = new Zakupac();
-            z.Ime = textBoxName.Text;
-            z.Password = textBoxPassword.Text;
-
-            z.ID = int.Parse(listBoxZakupci.SelectedItem.ToString().Split('.')[0]);
-
-            bool result = this.zakupacBusiness.UpdateZakupac(z);
-
-            if(this.zakupacBusiness.UpdateZakupac(z))
+            var confirmResult = MessageBox.Show("Jeste li sigurni?",
+                                     "Potvrda",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
             {
-                GetAllZakupci();
-                textBoxName.Text = "";
-                textBoxPassword.Text = "";
+                Application.Exit();
             }
             else
             {
-                MessageBox.Show("Greska!");
+              
             }
-        }
-
-        private void listBoxZakupci_Click(object sender, EventArgs e)
-        {
-            /*foreach (object liItem in listBoxZakupci.Items)
-                textBoxName.Text += liItem.ToString() + " ";*/ // sve objekte iz listboksa stavlja u jedan textBox
-            textBoxName.Text = listBoxZakupci.SelectedItem.ToString().Split('.', '-' )[1];
-            textBoxPassword.Text = listBoxZakupci.SelectedItem.ToString().Split('-')[1].Trim();
-        }
-
-        private void buttonErase_Click(object sender, EventArgs e)
-        {
-            Zakupac z = new Zakupac();
-            z.Ime = textBoxName.Text;
-            z.Password = textBoxPassword.Text;
-            z.ID = int.Parse(listBoxZakupci.SelectedItem.ToString().Split('.')[0]);
-
-            
-
-            if(this.zakupacBusiness.DeleteZakupac(z))
-            {
-                GetAllZakupci();
-                textBoxName.Text = "";
-                textBoxPassword.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Greska!");
-            }
-
-            bool result = this.zakupacBusiness.DeleteZakupac(z);
-        }
-
-        private void listBoxZakupci_SelectedIndexChanged(object sender, EventArgs e)
-        {
             
         }
     }

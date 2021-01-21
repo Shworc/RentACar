@@ -32,13 +32,11 @@ namespace PresentationLayer
             this.buttonReserve = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
-            this.RE = new System.Windows.Forms.RichTextBox();
             this.labelReserve = new System.Windows.Forms.Label();
             this.labelEdit = new System.Windows.Forms.Label();
             this.labelDelete = new System.Windows.Forms.Label();
             this.listBoxReserve = new System.Windows.Forms.ListBox();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.buttonSaveRez = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,16 +48,16 @@ namespace PresentationLayer
             this.comboBoxAutoID = new System.Windows.Forms.ComboBox();
             this.unesiAuto = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonReserve
             // 
-            this.buttonReserve.BackColor = System.Drawing.Color.OliveDrab;
-            this.buttonReserve.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonReserve.Location = new System.Drawing.Point(21, 12);
+            this.buttonReserve.BackColor = System.Drawing.Color.Transparent;
+            this.buttonReserve.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonReserve.Location = new System.Drawing.Point(268, 393);
             this.buttonReserve.Name = "buttonReserve";
-            this.buttonReserve.Size = new System.Drawing.Size(238, 60);
+            this.buttonReserve.Size = new System.Drawing.Size(112, 23);
             this.buttonReserve.TabIndex = 0;
             this.buttonReserve.Text = "Rezervacija";
             this.buttonReserve.UseVisualStyleBackColor = false;
@@ -68,6 +66,8 @@ namespace PresentationLayer
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.Crimson;
+            this.buttonDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonDelete.Location = new System.Drawing.Point(233, 269);
             this.buttonDelete.Name = "buttonDelete";
@@ -75,10 +75,13 @@ namespace PresentationLayer
             this.buttonDelete.TabIndex = 2;
             this.buttonDelete.Text = "Brisanje";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonEdit
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.Blue;
+            this.buttonEdit.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonEdit.Location = new System.Drawing.Point(140, 269);
             this.buttonEdit.Name = "buttonEdit";
@@ -86,14 +89,7 @@ namespace PresentationLayer
             this.buttonEdit.TabIndex = 3;
             this.buttonEdit.Text = "Editovanje";
             this.buttonEdit.UseVisualStyleBackColor = false;
-            // 
-            // RE
-            // 
-            this.RE.Location = new System.Drawing.Point(283, 30);
-            this.RE.Name = "RE";
-            this.RE.Size = new System.Drawing.Size(238, 35);
-            this.RE.TabIndex = 4;
-            this.RE.Text = "                        RENT A CAR\nIZNAJMITE AUTOMOBIL PO VASOJ ZELJI";
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // labelReserve
             // 
@@ -125,14 +121,15 @@ namespace PresentationLayer
             // listBoxReserve
             // 
             this.listBoxReserve.FormattingEnabled = true;
-            this.listBoxReserve.Location = new System.Drawing.Point(394, 88);
+            this.listBoxReserve.Location = new System.Drawing.Point(425, 91);
             this.listBoxReserve.Name = "listBoxReserve";
             this.listBoxReserve.Size = new System.Drawing.Size(363, 277);
             this.listBoxReserve.TabIndex = 9;
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(47, 382);
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonBack.Location = new System.Drawing.Point(40, 393);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 10;
@@ -140,19 +137,13 @@ namespace PresentationLayer
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
-            // buttonExit
-            // 
-            this.buttonExit.Location = new System.Drawing.Point(681, 381);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 23);
-            this.buttonExit.TabIndex = 11;
-            this.buttonExit.Text = "Izlaz";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
-            // 
             // buttonSaveRez
             // 
-            this.buttonSaveRez.BackColor = System.Drawing.Color.CadetBlue;
+            this.buttonSaveRez.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonSaveRez.FlatAppearance.BorderColor = System.Drawing.Color.Turquoise;
+            this.buttonSaveRez.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonSaveRez.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonSaveRez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveRez.Location = new System.Drawing.Point(47, 269);
             this.buttonSaveRez.Name = "buttonSaveRez";
             this.buttonSaveRez.Size = new System.Drawing.Size(75, 24);
@@ -236,9 +227,10 @@ namespace PresentationLayer
             // 
             // unesiAuto
             // 
-            this.unesiAuto.Location = new System.Drawing.Point(629, 30);
+            this.unesiAuto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.unesiAuto.Location = new System.Drawing.Point(425, 393);
             this.unesiAuto.Name = "unesiAuto";
-            this.unesiAuto.Size = new System.Drawing.Size(112, 42);
+            this.unesiAuto.Size = new System.Drawing.Size(112, 23);
             this.unesiAuto.TabIndex = 23;
             this.unesiAuto.Text = "Unesi Auto";
             this.unesiAuto.UseVisualStyleBackColor = true;
@@ -247,29 +239,37 @@ namespace PresentationLayer
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(727, 0);
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(706, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(96, 29);
             this.button1.TabIndex = 24;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button2
+            // label5
             // 
-            this.button2.Location = new System.Drawing.Point(527, 31);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label5.Location = new System.Drawing.Point(34, 21);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 31);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "RentACar";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.unesiAuto);
             this.Controls.Add(this.comboBoxAutoID);
@@ -281,16 +281,15 @@ namespace PresentationLayer
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSaveRez);
-            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.listBoxReserve);
             this.Controls.Add(this.labelDelete);
             this.Controls.Add(this.labelEdit);
             this.Controls.Add(this.labelReserve);
-            this.Controls.Add(this.RE);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonReserve);
+            this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Name = "Form1";
             this.Text = "RentAcar";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -304,13 +303,11 @@ namespace PresentationLayer
         private System.Windows.Forms.Button buttonReserve;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonEdit;
-        private System.Windows.Forms.RichTextBox RE;
         private System.Windows.Forms.Label labelReserve;
         private System.Windows.Forms.Label labelEdit;
         private System.Windows.Forms.Label labelDelete;
         private System.Windows.Forms.ListBox listBoxReserve;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonSaveRez;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -322,7 +319,7 @@ namespace PresentationLayer
         private System.Windows.Forms.ComboBox comboBoxAutoID;
         private System.Windows.Forms.Button unesiAuto;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
     }
 }
 

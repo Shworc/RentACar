@@ -166,5 +166,25 @@ namespace PresentationLayer
             FormAuto f6 = new FormAuto();//redirect na registraciju auta
             f6.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

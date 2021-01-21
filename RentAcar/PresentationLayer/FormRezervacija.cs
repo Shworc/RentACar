@@ -38,16 +38,16 @@ namespace PresentationLayer
             f8.ShowDialog();
         }
 
-       private void GetAllRezervacije()
+        private void GetAllRezervacije()
         {
             List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
             listBoxRezervacija.Items.Clear();
 
             foreach (Rezervacija r in reserve)
             {
-                listBoxRezervacija.Items.Add(r.Id + "." + r.ZakupacID+ " - " + r.AutomobilID + " " + r.DatumOd + " " + r.DatumDo);
-                comboBoxZakupacID.Items.AddRange(reserve.ToArray());
-                comboBoxAutoID.Items.AddRange(reserve.ToArray());
+                listBoxRezervacija.Items.Add(r.Id + "." + r.ZakupacID + " - " + r.AutomobilID + " " + r.DatumOd + " " + r.DatumDo);
+                //comboBoxZakupacID.Items.AddRange(reserve.ToArray()); //vrati ovo
+                //comboBoxAutoID.Items.AddRange(reserve.ToArray()); //vratiovo
             }
 
         }
@@ -55,54 +55,54 @@ namespace PresentationLayer
          * editovanje i 
          * brisanje rezervacije
         */
-        private void buttonSaveReserve_Click(object sender, EventArgs e)
+        private void buttonSaveReserve_Click(object sender, EventArgs e) //vrati ove funkcije kad napravis unos preko JMBGa
         {
-            Rezervacija r = new Rezervacija();
-            r.ZakupacID = int.Parse(comboBoxZakupacID.Text);
-            r.AutomobilID = int.Parse(comboBoxAutoID.Text);
-            r.DatumOd = DateTime.Parse(dateTimePicker1.Text);
-            r.DatumDo = DateTime.Parse(dateTimePicker2.Text);
+            /*   Rezervacija r = new Rezervacija();
+               r.ZakupacID = int.Parse(comboBoxZakupacID.Text);
+               r.AutomobilID = int.Parse(comboBoxAutoID.Text);
+               r.DatumOd = DateTime.Parse(dateTimePicker1.Text);
+               r.DatumDo = DateTime.Parse(dateTimePicker2.Text);
 
-            bool result = this.rezervacijaBusiness.InsertRezervacija(r);
+               bool result = this.rezervacijaBusiness.InsertRezervacija(r);
 
-            if (this.rezervacijaBusiness.InsertRezervacija(r))
+               if (this.rezervacijaBusiness.InsertRezervacija(r))
+               {
+                   GetAllRezervacije();
+                   comboBoxZakupacID.Text = "";
+                   comboBoxAutoID.Text = "";
+
+               }
+               else
+               {
+                   MessageBox.Show("Greska!");
+               }
+           }
+
+           private void comboBoxZakupacID_SelectedIndexChanged(object sender, EventArgs e)
+           {
+               List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
+               listBoxRezervacija.Items.Clear();
+
+               foreach (Rezervacija r in reserve)
+               {
+                   //listBoxRezervacija.Items.Add(r.Id + "." + r.ZakupacID + " - " + r.AutomobilID + " " + r.DatumOd + " " + r.DatumDo);
+                   comboBoxZakupacID.Items.AddRange(reserve.ToArray());
+                   comboBoxZakupacID.Items.Add(r.ZakupacID);
+
+                   //comboBoxAutoID.Items.AddRange(reserve.ToArray());
+               }
+           }
+            */
+            /*private void GetRezervacijaById(String s)
             {
-                GetAllRezervacije();
-                comboBoxZakupacID.Text = "";
-                comboBoxAutoID.Text = "";
-                
-            }
-            else
-            {
-                MessageBox.Show("Greska!");
-            }
+                List<Rezervacija> reserve = this.rezervacijaBusiness.GetRezervacijaById(s);
+                listBoxRezervacija.Items.Clear();
+
+                foreach (Rezervacija r in reserve)
+                {
+                    listBoxRezervacija.Items.Add(r.DatumOd + " - " + r.DatumDo + " " + r.ZakupacID + " " + r.AutomobilID);
+                }
+            }*/
         }
-
-        private void comboBoxZakupacID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
-            listBoxRezervacija.Items.Clear();
-
-            foreach (Rezervacija r in reserve)
-            {
-                //listBoxRezervacija.Items.Add(r.Id + "." + r.ZakupacID + " - " + r.AutomobilID + " " + r.DatumOd + " " + r.DatumDo);
-                comboBoxZakupacID.Items.AddRange(reserve.ToArray());
-                comboBoxZakupacID.Items.Add(r.ZakupacID);
-                
-                //comboBoxAutoID.Items.AddRange(reserve.ToArray());
-            }
-        }
-
-        /*private void GetRezervacijaById(String s)
-        {
-            List<Rezervacija> reserve = this.rezervacijaBusiness.GetRezervacijaById(s);
-            listBoxRezervacija.Items.Clear();
-
-            foreach (Rezervacija r in reserve)
-            {
-                listBoxRezervacija.Items.Add(r.DatumOd + " - " + r.DatumDo + " " + r.ZakupacID + " " + r.AutomobilID);
-            }
-        }*/
     }
-    
-}
+    }

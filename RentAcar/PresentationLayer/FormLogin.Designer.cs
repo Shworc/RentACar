@@ -34,10 +34,11 @@ namespace PresentationLayer
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.uloguj_se = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@ namespace PresentationLayer
             this.groupBoxLogin.Controls.Add(this.labelUsername);
             this.groupBoxLogin.Controls.Add(this.textBoxUsername);
             this.groupBoxLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBoxLogin.Location = new System.Drawing.Point(140, 106);
+            this.groupBoxLogin.Location = new System.Drawing.Point(140, 121);
             this.groupBoxLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBoxLogin.Name = "groupBoxLogin";
             this.groupBoxLogin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -97,21 +98,9 @@ namespace PresentationLayer
             this.textBoxUsername.Size = new System.Drawing.Size(132, 23);
             this.textBoxUsername.TabIndex = 2;
             // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.Lime;
-            this.buttonExit.Location = new System.Drawing.Point(456, -1);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(100, 28);
-            this.buttonExit.TabIndex = 5;
-            this.buttonExit.Text = "X";
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
             // uloguj_se
             // 
-            this.uloguj_se.Location = new System.Drawing.Point(220, 368);
+            this.uloguj_se.Location = new System.Drawing.Point(220, 383);
             this.uloguj_se.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uloguj_se.Name = "uloguj_se";
             this.uloguj_se.Size = new System.Drawing.Size(100, 28);
@@ -138,13 +127,37 @@ namespace PresentationLayer
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(214, 51);
+            this.label2.Location = new System.Drawing.Point(214, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 31);
             this.label2.TabIndex = 7;
             this.label2.Text = "RentACar";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.Lime;
+            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Location = new System.Drawing.Point(456, -1);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(100, 28);
+            this.buttonExit.TabIndex = 5;
+            this.buttonExit.Text = "X";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(93, 436);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(375, 27);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Privremno dugme za kreiranje naloga";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormLogin
             // 
@@ -153,6 +166,7 @@ namespace PresentationLayer
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(556, 497);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uloguj_se);
@@ -178,9 +192,10 @@ namespace PresentationLayer
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button uloguj_se;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button button1;
     }
 }

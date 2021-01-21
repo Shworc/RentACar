@@ -179,7 +179,17 @@ namespace PresentationLayer
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-          
+            var confirmResult = MessageBox.Show("Jeste li sigurni?",
+                                     "Potvrda",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+
+            }
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)

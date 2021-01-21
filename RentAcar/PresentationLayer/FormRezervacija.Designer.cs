@@ -194,6 +194,7 @@ namespace PresentationLayer
             this.Controls.Add(this.buttonSaveReserve);
             this.Controls.Add(this.listBoxRezervacija);
             this.Name = "FormRezervacija";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRezervacija";
             this.Load += new System.EventHandler(this.FormRezervacija_Load);
             this.ResumeLayout(false);

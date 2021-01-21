@@ -127,6 +127,7 @@ namespace PresentationLayer
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxName);
             this.Name = "FormRegistration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegistration";
             this.Load += new System.EventHandler(this.FormRegistration_Load_1);
             this.ResumeLayout(false);

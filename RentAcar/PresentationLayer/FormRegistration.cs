@@ -18,8 +18,6 @@ namespace PresentationLayer
             this.zakupacBusiness = new ZakupacBusiness();
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            MessageBoxManager.Yes = "Da";
-            MessageBoxManager.No = "Ne";
         }
         protected override void WndProc(ref Message m)
         {

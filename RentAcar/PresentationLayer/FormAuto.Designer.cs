@@ -53,6 +53,7 @@ namespace PresentationLayer
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(66, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
@@ -62,6 +63,7 @@ namespace PresentationLayer
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(66, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
@@ -70,6 +72,7 @@ namespace PresentationLayer
             // 
             // textBoxAutoMarka
             // 
+            this.textBoxAutoMarka.ForeColor = System.Drawing.SystemColors.Control;
             this.textBoxAutoMarka.Location = new System.Drawing.Point(66, 95);
             this.textBoxAutoMarka.Name = "textBoxAutoMarka";
             this.textBoxAutoMarka.Size = new System.Drawing.Size(100, 20);
@@ -136,6 +139,7 @@ namespace PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonBackAuto);
             this.Controls.Add(this.buttonExit);
@@ -148,6 +152,7 @@ namespace PresentationLayer
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxAuto);
             this.Name = "FormAuto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAuto";
             this.Load += new System.EventHandler(this.FormAuto_Load);
             this.ResumeLayout(false);

@@ -81,23 +81,34 @@ namespace PresentationLayer
 
         private void buttonAutoDelete_Click(object sender, EventArgs e)
         {
-            Automobile a = new Automobile();
-            a.Marka = textBoxAutoMarka.Text;
-            a.Naziv = textBoxAutoNaziv.Text;
-            a.ID = int.Parse(listBoxAuto.SelectedItem.ToString().Split('.')[0]);
-
-            if (this.autoBusiness.DeleteAutos(a))
+            var confirmResult = MessageBox.Show("Jeste li sigurni?",
+                                        "Potvrda",
+                                        MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
             {
-                GetAllAutos();
-                textBoxAutoMarka.Text = "";
-                textBoxAutoNaziv.Text = "";
+                Automobile a = new Automobile();
+                a.Marka = textBoxAutoMarka.Text;
+                a.Naziv = textBoxAutoNaziv.Text;
+                a.ID = int.Parse(listBoxAuto.SelectedItem.ToString().Split('.')[0]);
+
+                if (this.autoBusiness.DeleteAutos(a))
+                {
+                    GetAllAutos();
+                    textBoxAutoMarka.Text = "";
+                    textBoxAutoNaziv.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Greska!");
+                }
+
+                bool result = this.autoBusiness.DeleteAutos(a);
             }
             else
             {
-                MessageBox.Show("Greska!");
-            }
 
-            bool result = this.autoBusiness.DeleteAutos(a);
+            }
+            
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

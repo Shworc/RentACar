@@ -31,6 +31,8 @@ namespace PresentationLayer
             this.autoBusiness = new AutoBusiness();
             InitializeComponent();
         }
+
+        SqlConnection con = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=RentacarDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         public Form1(TextBox _textBoxUsername)
         {
             textBoxUsername = _textBoxUsername;
@@ -40,6 +42,12 @@ namespace PresentationLayer
         private void Form1_Load(object sender, EventArgs e)
         {
             GetAllRezervacije();
+            
+            ZakupciComboBox();
+
+            AutaComboBox();
+
+
         }
 
         private void GetAllRezervacije() 
@@ -54,7 +62,7 @@ namespace PresentationLayer
                 }
         }
 
-        private void GetAllZakupci()
+        private void GetAllZakupciName()
         {
 
             List<Zakupac> reserve = this.zakupacBusiness.GetAllZakupci();
@@ -122,6 +130,9 @@ namespace PresentationLayer
 
         private void comboBoxZakupacID_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+        /*
             List<Zakupac> reserve = this.zakupacBusiness.GetAllZakupci();
             listBoxReserve.Items.Clear();
 
@@ -134,30 +145,58 @@ namespace PresentationLayer
                 table.Rows.Add();
                 comboBoxZakupacID.DataSource = table;
                 comboBoxZakupacID.DisplayMember = "Ime";
-            }
-
-            
-        }
+            }  
+        }*/
         public void comboBoxZakupacID_SelectedIndexChanged_Load(object sender, EventArgs e)
         {
-            List<Zakupac> reserve = this.zakupacBusiness.GetAllZakupci();
-            listBoxReserve.Items.Clear();
-
-            DataTable table = new DataTable();
-            foreach (Zakupac r in reserve)
-            {
-                table.Columns.Add("Ime");
-                table.Rows.Add();
-                comboBoxZakupacID.DataSource = table;
-                comboBoxZakupacID.DisplayMember = "Ime";
-            }
-
-
+            
         }
 
         private void comboBoxAutoID_SelectedIndexChanged(object sender, EventArgs e)
         {
           
+        }
+
+        private void ZakupciComboBox()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand sc = new SqlCommand("SELECT (Ime) from Zakupac", con);
+                SqlDataReader reader;
+                reader = sc.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Ime", typeof(string));
+                dt.Load(reader);
+                comboBoxZakupacID.ValueMember = "Ime";
+                comboBoxZakupacID.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void AutaComboBox()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand sc = new SqlCommand("SELECT (Naziv) from Automobil", con);
+                SqlDataReader reader;
+                reader = sc.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Naziv", typeof(string));
+                dt.Load(reader);
+                comboBoxAutoID.ValueMember = "Naziv";
+                comboBoxAutoID.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

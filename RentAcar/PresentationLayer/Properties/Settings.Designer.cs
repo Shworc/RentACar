@@ -12,10 +12,16 @@
 namespace PresentationLayer.Properties
 {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+<<<<<<< Updated upstream
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
     {
 
+=======
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+>>>>>>> Stashed changes
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
 
         public static Settings Default
@@ -25,5 +31,29 @@ namespace PresentationLayer.Properties
                 return defaultInstance;
             }
         }
+<<<<<<< Updated upstream
+=======
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Bane\\Documents\\GitHub\\Rent" +
+            "ACar\\Rentacar.accdb")]
+        public string RentacarDBConnectionString {
+            get {
+                return ((string)(this["RentacarDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Rentacar.accdb")]
+        public string RentacarConnectionString {
+            get {
+                return ((string)(this["RentacarConnectionString"]));
+            }
+        }
+>>>>>>> Stashed changes
     }
 }

@@ -2,6 +2,9 @@
 using DataLayer.Models;
 using System;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using DataLayer;
+
 namespace PresentationLayer
 {
 
@@ -35,8 +38,8 @@ namespace PresentationLayer
         private void buttonSave_Click(object sender, EventArgs e)
         {
             Zakupac z = new Zakupac();
-            z.Ime = textBoxName.Text;
-            z.Password = textBoxPassword.Text;
+            z.Korisnik = textBoxName.Text;
+            z.Sifra = textBoxPassword.Text;
 
             if (this.zakupacBusiness.InsertZakupac(z))
             {
@@ -63,8 +66,21 @@ namespace PresentationLayer
                 }
             }*/
         }
+        int InsertZakupac(Zakupac z)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = string.Format("INSERT INTO Zakupac VALUES ('{1}','{2}')",
+                    z.Korisnik, z.Sifra);
 
-       
+                sqlConnection.Open();
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
+
 
         private void buttonBack_Click(object sender, EventArgs e)
         {

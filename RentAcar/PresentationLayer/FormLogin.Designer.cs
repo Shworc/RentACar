@@ -39,6 +39,7 @@ namespace PresentationLayer
             this.label2 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBoxLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,9 +53,9 @@ namespace PresentationLayer
             this.groupBoxLogin.Controls.Add(this.textBoxUsername);
             this.groupBoxLogin.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBoxLogin.Location = new System.Drawing.Point(140, 121);
-            this.groupBoxLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxLogin.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxLogin.Name = "groupBoxLogin";
-            this.groupBoxLogin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxLogin.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxLogin.Size = new System.Drawing.Size(267, 228);
             this.groupBoxLogin.TabIndex = 0;
             this.groupBoxLogin.TabStop = false;
@@ -63,7 +64,7 @@ namespace PresentationLayer
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(100, 129);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(132, 23);
             this.textBoxPassword.TabIndex = 3;
@@ -93,7 +94,7 @@ namespace PresentationLayer
             // textBoxUsername
             // 
             this.textBoxUsername.Location = new System.Drawing.Point(100, 62);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(132, 23);
             this.textBoxUsername.TabIndex = 2;
@@ -101,7 +102,7 @@ namespace PresentationLayer
             // uloguj_se
             // 
             this.uloguj_se.Location = new System.Drawing.Point(220, 383);
-            this.uloguj_se.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uloguj_se.Margin = new System.Windows.Forms.Padding(4);
             this.uloguj_se.Name = "uloguj_se";
             this.uloguj_se.Size = new System.Drawing.Size(100, 28);
             this.uloguj_se.TabIndex = 6;
@@ -159,6 +160,16 @@ namespace PresentationLayer
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(465, 300);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,6 +177,7 @@ namespace PresentationLayer
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(556, 497);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -173,7 +185,7 @@ namespace PresentationLayer
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.groupBoxLogin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
@@ -197,5 +209,6 @@ namespace PresentationLayer
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

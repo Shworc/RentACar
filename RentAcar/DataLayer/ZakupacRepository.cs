@@ -17,7 +17,7 @@ namespace DataLayer
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText = string.Format("INSERT INTO Zakupac VALUES ('{0}','{1}')",
-                    z.Ime, z.Password);
+                    z.Korisnik, z.Sifra);
 
                 sqlConnection.Open();
 
@@ -35,8 +35,8 @@ namespace DataLayer
                 {
                     Zakupac z = new Zakupac();
                     z.ID = sqlDataReader.GetInt32(0);
-                    z.Ime = sqlDataReader.GetString(1);
-                    z.Password = sqlDataReader.GetString(2);
+                    z.Korisnik = sqlDataReader.GetString(1);
+                    z.Sifra = sqlDataReader.GetString(2);
               
                     results.Add(z);
                 }
@@ -51,7 +51,7 @@ namespace DataLayer
             public int InsertZakupac(Zakupac z)
             {
                 var result = DBConnection.EditData(string.Format("INSERT INTO Zakupac VALUES ('{0}', '{1}')",
-                        z.Ime, z.Password));
+                        z.Korisnik, z.Sifra));
                 DBConnection.CloseConnection();
 
                 return result;
@@ -59,8 +59,8 @@ namespace DataLayer
 
         public int UpdateZakupac(Zakupac z)
         {
-            var result = DBConnection.EditData(string.Format("UPDATE Zakupac SET Ime ='{0}', Password ='{1}'" + "WHERE ID={2}", 
-                    z.Ime, z.Password, z.ID));
+            var result = DBConnection.EditData(string.Format("UPDATE Zakupac SET Korisnik ='{0}', Sifra ='{1}'" + "WHERE ID={2}", 
+                    z.Korisnik, z.Sifra, z.ID));
             DBConnection.CloseConnection();
 
             return result;

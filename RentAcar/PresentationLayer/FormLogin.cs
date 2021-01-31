@@ -2,26 +2,21 @@
 using DataLayer.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Input;
 
 namespace PresentationLayer
 {
- 
+
     public partial class FormLogin : Form
     {
-       
+
         public FormLogin()
         {
             InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; 
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
         protected override void WndProc(ref Message m)
         {
@@ -47,9 +42,8 @@ namespace PresentationLayer
             {
                 Zakupac r1 = new Zakupac();
                 r1.ID = sqlDataReader.GetInt32(0);
-                //r1.Ime = sqlDataReader.GetString(1);
-                //r1.Password = sqlDataReader.GetString(2);
-
+                r1.Korisnik = sqlDataReader.GetString(1);
+                r1.Sifra = sqlDataReader.GetString(2);
                 results1.Add(r1);
             }
 
@@ -60,14 +54,14 @@ namespace PresentationLayer
 
         public List<Zakupac> GetZakupacId(String textBoxUsername)
         {
-            return this.GetZakupacById().Where(r1 => r1.Ime == textBoxUsername).ToList();
+            return this.GetZakupacById().Where(r1 => r1.Korisnik == textBoxUsername).ToList();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            
+
         }
- 
+
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -106,8 +100,8 @@ namespace PresentationLayer
                     if (!(textBoxPassword.Text == string.Empty))
                     {
                         //String str = "server=(localdb)\\ProjectsV13;database=RentacarDB;UID=True;Password=True";
-                        String str = "Data Source=(localdb)\\ProjectsV13;Initial Catalog=RentacarDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-                        String query = "select * from Zakupac where Ime = '" + this.textBoxUsername.Text + "'and Password = '" + this.textBoxPassword.Text + "'";
+                        String str = "Data Source=DESKTOP-NDCIMUS;Initial Catalog=RentAcar;Integrated Security=True";
+                        String query = "select * from Zakupac where Korisnik = '" + this.textBoxUsername.Text + "'and Sifra = '" + this.textBoxPassword.Text + "'";
                         SqlConnection con = new SqlConnection(str);
                         SqlCommand cmd = new SqlCommand(query, con);
                         SqlDataReader dbr;
@@ -168,6 +162,15 @@ namespace PresentationLayer
             this.Hide();
             FormRegistration f3 = new FormRegistration(); //redirect na registraciju korisnika
             f3.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 f2 = new Form1();
+            //f1.formLogin = this;
+            //f1.ShowDialog();
+            f2.formLogin = this;
+            f2.ShowDialog();
         }
     }
 }

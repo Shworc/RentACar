@@ -52,8 +52,8 @@ namespace DataLayer
                 r.ZakupacID = sqlDataReader.GetInt32(3);
                 r.AutomobilID = sqlDataReader.GetInt32(4);
                 r1.ID = sqlDataReader.GetInt32(5);
-                r1.Ime = sqlDataReader.GetString(6);
-                r1.Password = sqlDataReader.GetString(7);
+                r1.Korisnik = sqlDataReader.GetString(6);
+                r1.Sifra = sqlDataReader.GetString(7);
 
                 results.Add(r);
                 results1.Add(r1);
@@ -93,8 +93,8 @@ namespace DataLayer
 
                 return results;
             }
-        }*/
-
+        }
+        */
            
             public int InsertRezervacija(Rezervacija r)
             {

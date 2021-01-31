@@ -23,7 +23,7 @@ namespace BusinessLayer
         {
             return this.rezervacijaRepository.GetAllRezervations();
         }
-
+       
        /*public List<Rezervacija> GetRezervacijaById()
         {
 

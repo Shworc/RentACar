@@ -9,7 +9,7 @@ namespace DataLayer.Models
     public class Zakupac
     {
         public int ID { get; set; }
-        public string Ime { get; set; }
-        public string Password { get; set; }
+        public string Korisnik { get; set; }
+        public string Sifra { get; set; }
     }
 }

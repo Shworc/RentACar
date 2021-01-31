@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
-using System.Data.SqlClient;
 
 namespace PresentationLayer
 {
@@ -76,7 +75,7 @@ namespace PresentationLayer
 
             foreach (Zakupac r in reserve)
             {
-                comboBoxZakupacID.Items.Add(r.Ime);
+                comboBoxZakupacID.Items.Add(r.Korisnik);
                 comboBoxZakupacID.Items.AddRange(reserve.ToArray());
             }
         }

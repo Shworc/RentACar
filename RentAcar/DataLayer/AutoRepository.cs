@@ -20,7 +20,7 @@ namespace DataLayer
                 Automobile a = new Automobile();
                 a.ID = sqlDataReader.GetInt32(0);
                 a.Marka = sqlDataReader.GetString(1);
-                a.Naziv = sqlDataReader.GetString(2);
+                a.Model = sqlDataReader.GetString(2);
 
                 results.Add(a);
             }
@@ -32,7 +32,7 @@ namespace DataLayer
         public int InsertAutomobile(Automobile a)
         {
             var result = DBConnection.EditData(string.Format("INSERT INTO Automobil VALUES ('{0}', '{1}')",
-                    a.Marka, a.Naziv));
+                    a.Marka, a.Model));
             DBConnection.CloseConnection();
 
             return result;
@@ -41,7 +41,7 @@ namespace DataLayer
         public int UpdateAutomobile(Automobile a)
         {
             var result = DBConnection.EditData(string.Format("UPDATE Automobil SET Marka ='{0}', Naziv ='{1}'" + "WHERE ID={2}",
-                    a.Marka, a.Naziv, a.ID));
+                    a.Marka, a.Model, a.ID));
             DBConnection.CloseConnection();
 
             return result;

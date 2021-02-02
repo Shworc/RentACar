@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Data.SqlClient;
 
 namespace PresentationLayer
 {
@@ -22,7 +23,11 @@ namespace PresentationLayer
         private readonly object textBoxUsername;
         public FormLogin formLogin;
         public FormRezervacija formRezervacija;
-
+        DataRow dr2;
+        DataRowBuilder ParmUnos;
+        DataSet ds2 = new DataSet();
+        DataTable dt2 = new DataTable();
+        SqlDataReader dbr2;
         public Form1()
         {
             this.rezervacijaBusiness = new RezervacijaBusiness();
@@ -38,8 +43,26 @@ namespace PresentationLayer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GetAllRezervacije(); 
+            // TODO: This line of code loads data into the 'rentACar200311DataSet1.Automobili' table. You can move, or remove it, as needed.
+        
+            // TODO: This line of code loads data into the 'rentACar200311DataSet1.Rezervacije' table. You can move, or remove it, as needed.
+           
+           
+           
+            
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            String str = "Data Source=DESKTOP-NDCIMUS;Initial Catalog=RentACar2003111SQL;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            String query2 = "select * From Rezervacije";
+            SqlConnection con2 = new SqlConnection(str);
+            con2.Open();
+            SqlCommand cmd2 = new SqlCommand();
+            cmd2.Connection = con2;
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = query2;
+            cmd2.ExecuteNonQuery();
+            dbr2 = cmd2.ExecuteReader();
+            dt2.Load(dbr2);
+            dataGridView2.DataSource = dt2;
         }
         protected override void WndProc(ref Message m)
         {
@@ -55,7 +78,7 @@ namespace PresentationLayer
             base.WndProc(ref m);
         }
 
-        private void GetAllRezervacije() 
+        /*private void GetAllRezervacije() 
         {
 
             List<Rezervacija> reserve = this.rezervacijaBusiness.GetAllRezervations();
@@ -65,9 +88,9 @@ namespace PresentationLayer
                 {
                     listBoxReserve.Items.Add(r.DatumOd + " - " + r.DatumDo + " -> " + r.ZakupacID + " " + r.AutomobilID);
                 }
-        }
+        }*/
 
-        private void GetAllZakupci()
+        /*private void GetAllZakupci()
         {
 
             List<Zakupac> reserve = this.zakupacBusiness.GetAllZakupci();
@@ -79,7 +102,7 @@ namespace PresentationLayer
                 comboBoxZakupacID.Items.AddRange(reserve.ToArray());
             }
         }
-
+        */
         /* 
          * SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija
             JOIN Zakupac 
@@ -110,30 +133,14 @@ namespace PresentationLayer
             f3.ShowDialog();
         }
 
-        private void buttonSaveRez_Click(object sender, EventArgs e)
+        private void buttonSaveRez_Click(object sender, EventArgs e) //Rezervacija dugme klik metoda
         {
-            Rezervacija r = new Rezervacija();
-            r.ZakupacID = int.Parse(comboBoxZakupacID.Text);
-            r.AutomobilID = int.Parse(comboBoxAutoID.Text);
-            r.DatumOd = DateTime.Parse(dateTimePicker1.Text);
-            r.DatumDo = DateTime.Parse(dateTimePicker2.Text);
-
-            bool result = this.rezervacijaBusiness.InsertRezervacija(r);
-
-            if (this.rezervacijaBusiness.InsertRezervacija(r))
-            {
-                GetAllRezervacije();
-                comboBoxZakupacID.Text = "";
-                comboBoxAutoID.Text = "";
-
-            }
-            else
-            {
-                MessageBox.Show("Greska!");
-            }
+            this.Hide();
+            FormRezervacija f3 = new FormRezervacija(); //redirect na formu rezervacija
+            f3.ShowDialog();
         }
-
-        private void comboBoxZakupacID_SelectedIndexChanged(object sender, EventArgs e)
+            
+       /* private void comboBoxZakupacID_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<Zakupac> reserve = this.zakupacBusiness.GetAllZakupci();
             listBoxReserve.Items.Clear();
@@ -145,12 +152,12 @@ namespace PresentationLayer
             {
                 table.Columns.Add("Ime");
                 table.Rows.Add();
-                comboBoxZakupacID.DataSource = table;
-                comboBoxZakupacID.DisplayMember = "Ime";
+               // comboBoxZakupacID.DataSource = table;
+               // comboBoxZakupacID.DisplayMember = "Ime";
             }
 
             
-        }
+        }*/
         public void comboBoxZakupacID_SelectedIndexChanged_Load(object sender, EventArgs e)
         {
             List<Zakupac> reserve = this.zakupacBusiness.GetAllZakupci();
@@ -161,8 +168,8 @@ namespace PresentationLayer
             {
                 table.Columns.Add("Ime");
                 table.Rows.Add();
-                comboBoxZakupacID.DataSource = table;
-                comboBoxZakupacID.DisplayMember = "Ime";
+               // comboBoxZakupacID.DataSource = table;
+                //comboBoxZakupacID.DisplayMember = "Ime";
             }
 
 
@@ -197,7 +204,7 @@ namespace PresentationLayer
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
-                Application.Exit();
+              
             }
             else
             {
@@ -207,6 +214,18 @@ namespace PresentationLayer
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+          
 
         }
     }

@@ -100,7 +100,7 @@ namespace PresentationLayer
                     if (!(textBoxPassword.Text == string.Empty))
                     {
                         //String str = "server=(localdb)\\ProjectsV13;database=RentacarDB;UID=True;Password=True";
-                        String str = "Data Source=DESKTOP-NDCIMUS;Initial Catalog=RentAcar;Integrated Security=True";
+                        String str = "Data Source=DESKTOP-NDCIMUS;Initial Catalog=RentACar2003111SQL;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                         String query = "select * from Zakupac where Korisnik = '" + this.textBoxUsername.Text + "'and Sifra = '" + this.textBoxPassword.Text + "'";
                         SqlConnection con = new SqlConnection(str);
                         SqlCommand cmd = new SqlCommand(query, con);

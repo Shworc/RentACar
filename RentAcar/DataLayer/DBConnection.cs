@@ -12,7 +12,8 @@ namespace DataLayer
             private static SqlConnection sqlConnection = null;
             private static SqlCommand sqlCommand = null;
 
-            private static string connectionString = Constants.connectionString;
+            private static string connectionString = "Data Source=DESKTOP-NDCIMUS; Initial Catalog=RentACar2003111SQL; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        
 
             private DBConnection()
             {

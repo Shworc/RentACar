@@ -30,8 +30,9 @@ namespace PresentationLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRezervacija));
-            this.listBoxRezervacija = new System.Windows.Forms.ListBox();
             this.buttonSaveReserve = new System.Windows.Forms.Button();
             this.JMBGTEXT = new System.Windows.Forms.Label();
             this.ImeText = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@ namespace PresentationLayer
             this.ZavrsniDatumUnos = new System.Windows.Forms.Label();
             this.buttonRevBack = new System.Windows.Forms.Button();
             this.JMBGUNOS = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.AdresaText = new System.Windows.Forms.Label();
             this.GradText = new System.Windows.Forms.Label();
@@ -68,22 +68,21 @@ namespace PresentationLayer
             this.rentACar200311DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LogOut = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listBoxRezervacija
-            // 
-            this.listBoxRezervacija.FormattingEnabled = true;
-            this.listBoxRezervacija.Location = new System.Drawing.Point(226, 110);
-            this.listBoxRezervacija.Name = "listBoxRezervacija";
-            this.listBoxRezervacija.Size = new System.Drawing.Size(382, 329);
-            this.listBoxRezervacija.TabIndex = 0;
             // 
             // buttonSaveReserve
             // 
             this.buttonSaveReserve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonSaveReserve.FlatAppearance.BorderSize = 0;
+            this.buttonSaveReserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveReserve.ForeColor = System.Drawing.Color.Black;
             this.buttonSaveReserve.Location = new System.Drawing.Point(889, 490);
             this.buttonSaveReserve.Name = "buttonSaveReserve";
             this.buttonSaveReserve.Size = new System.Drawing.Size(195, 52);
@@ -96,7 +95,7 @@ namespace PresentationLayer
             // 
             this.JMBGTEXT.AutoSize = true;
             this.JMBGTEXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JMBGTEXT.ForeColor = System.Drawing.Color.Cyan;
+            this.JMBGTEXT.ForeColor = System.Drawing.Color.White;
             this.JMBGTEXT.Location = new System.Drawing.Point(886, 313);
             this.JMBGTEXT.Name = "JMBGTEXT";
             this.JMBGTEXT.Size = new System.Drawing.Size(110, 17);
@@ -107,7 +106,7 @@ namespace PresentationLayer
             // 
             this.ImeText.AutoSize = true;
             this.ImeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ImeText.ForeColor = System.Drawing.Color.Cyan;
+            this.ImeText.ForeColor = System.Drawing.Color.White;
             this.ImeText.Location = new System.Drawing.Point(886, 98);
             this.ImeText.Name = "ImeText";
             this.ImeText.Size = new System.Drawing.Size(34, 17);
@@ -137,7 +136,7 @@ namespace PresentationLayer
             // 
             this.labelDatumOd.AutoSize = true;
             this.labelDatumOd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDatumOd.ForeColor = System.Drawing.Color.Cyan;
+            this.labelDatumOd.ForeColor = System.Drawing.Color.White;
             this.labelDatumOd.Location = new System.Drawing.Point(887, 356);
             this.labelDatumOd.Name = "labelDatumOd";
             this.labelDatumOd.Size = new System.Drawing.Size(98, 17);
@@ -148,7 +147,7 @@ namespace PresentationLayer
             // 
             this.ZavrsniDatumUnos.AutoSize = true;
             this.ZavrsniDatumUnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZavrsniDatumUnos.ForeColor = System.Drawing.Color.Cyan;
+            this.ZavrsniDatumUnos.ForeColor = System.Drawing.Color.White;
             this.ZavrsniDatumUnos.Location = new System.Drawing.Point(887, 399);
             this.ZavrsniDatumUnos.Name = "ZavrsniDatumUnos";
             this.ZavrsniDatumUnos.Size = new System.Drawing.Size(98, 17);
@@ -158,12 +157,14 @@ namespace PresentationLayer
             // buttonRevBack
             // 
             this.buttonRevBack.BackColor = System.Drawing.Color.LightPink;
+            this.buttonRevBack.FlatAppearance.BorderSize = 0;
             this.buttonRevBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRevBack.ForeColor = System.Drawing.Color.Black;
             this.buttonRevBack.Location = new System.Drawing.Point(26, 490);
             this.buttonRevBack.Name = "buttonRevBack";
             this.buttonRevBack.Size = new System.Drawing.Size(166, 52);
             this.buttonRevBack.TabIndex = 11;
-            this.buttonRevBack.Text = "<----";
+            this.buttonRevBack.Text = "Nazad";
             this.buttonRevBack.UseVisualStyleBackColor = false;
             this.buttonRevBack.Click += new System.EventHandler(this.buttonRevBack_Click);
             // 
@@ -174,25 +175,11 @@ namespace PresentationLayer
             this.JMBGUNOS.Size = new System.Drawing.Size(194, 20);
             this.JMBGUNOS.TabIndex = 12;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(1051, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Cyan;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(886, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 17);
@@ -203,7 +190,7 @@ namespace PresentationLayer
             // 
             this.AdresaText.AutoSize = true;
             this.AdresaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdresaText.ForeColor = System.Drawing.Color.Cyan;
+            this.AdresaText.ForeColor = System.Drawing.Color.White;
             this.AdresaText.Location = new System.Drawing.Point(886, 184);
             this.AdresaText.Name = "AdresaText";
             this.AdresaText.Size = new System.Drawing.Size(57, 17);
@@ -214,7 +201,7 @@ namespace PresentationLayer
             // 
             this.GradText.AutoSize = true;
             this.GradText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GradText.ForeColor = System.Drawing.Color.Cyan;
+            this.GradText.ForeColor = System.Drawing.Color.White;
             this.GradText.Location = new System.Drawing.Point(886, 227);
             this.GradText.Name = "GradText";
             this.GradText.Size = new System.Drawing.Size(44, 17);
@@ -225,7 +212,7 @@ namespace PresentationLayer
             // 
             this.MobilniText.AutoSize = true;
             this.MobilniText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MobilniText.ForeColor = System.Drawing.Color.Cyan;
+            this.MobilniText.ForeColor = System.Drawing.Color.White;
             this.MobilniText.Location = new System.Drawing.Point(886, 270);
             this.MobilniText.Name = "MobilniText";
             this.MobilniText.Size = new System.Drawing.Size(84, 17);
@@ -271,19 +258,19 @@ namespace PresentationLayer
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Cyan;
-            this.label2.Location = new System.Drawing.Point(347, 59);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(67, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 17);
+            this.label2.Size = new System.Drawing.Size(136, 17);
             this.label2.TabIndex = 36;
-            this.label2.Text = "Dostupni automobili";
+            this.label2.Text = "Dostupni automobili:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Cyan;
-            this.label3.Location = new System.Drawing.Point(483, 442);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(19, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 17);
             this.label3.TabIndex = 37;
@@ -309,7 +296,7 @@ namespace PresentationLayer
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Cyan;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(21, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 17);
@@ -320,7 +307,7 @@ namespace PresentationLayer
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Cyan;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(21, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 17);
@@ -331,7 +318,7 @@ namespace PresentationLayer
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Cyan;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(902, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(164, 17);
@@ -342,8 +329,8 @@ namespace PresentationLayer
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Cyan;
-            this.label7.Location = new System.Drawing.Point(42, 60);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(39, 71);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 17);
             this.label7.TabIndex = 43;
@@ -351,6 +338,7 @@ namespace PresentationLayer
             // 
             // button2
             // 
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(24, 250);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 37);
@@ -362,7 +350,7 @@ namespace PresentationLayer
             // 
             this.OdabranAutoText.AutoSize = true;
             this.OdabranAutoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OdabranAutoText.ForeColor = System.Drawing.Color.Cyan;
+            this.OdabranAutoText.ForeColor = System.Drawing.Color.White;
             this.OdabranAutoText.Location = new System.Drawing.Point(21, 353);
             this.OdabranAutoText.Name = "OdabranAutoText";
             this.OdabranAutoText.Size = new System.Drawing.Size(100, 17);
@@ -380,7 +368,7 @@ namespace PresentationLayer
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Cyan;
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(21, 399);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 17);
@@ -409,27 +397,95 @@ namespace PresentationLayer
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Cyan;
-            this.label8.Location = new System.Drawing.Point(692, 59);
+            this.label8.Location = new System.Drawing.Point(1089, 117);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 17);
             this.label8.TabIndex = 49;
             this.label8.Text = "Slika automobila";
+            this.label8.Visible = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(636, 110);
+            this.pictureBox1.Location = new System.Drawing.Point(1089, 153);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(229, 177);
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // LogOut
+            // 
+            this.LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.LogOut.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.LogOut.FlatAppearance.BorderSize = 0;
+            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOut.ForeColor = System.Drawing.Color.White;
+            this.LogOut.Location = new System.Drawing.Point(900, -2);
+            this.LogOut.Margin = new System.Windows.Forms.Padding(0);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(72, 30);
+            this.LogOut.TabIndex = 52;
+            this.LogOut.Text = "Izloguj se";
+            this.LogOut.UseVisualStyleBackColor = false;
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(993, -2);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(101, 30);
+            this.buttonExit.TabIndex = 51;
+            this.buttonExit.Text = "X";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.Location = new System.Drawing.Point(205, 1);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(672, 574);
+            this.dataGridView1.TabIndex = 53;
             // 
             // FormRezervacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1126, 571);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.LogOut);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox1);
@@ -454,7 +510,6 @@ namespace PresentationLayer
             this.Controls.Add(this.GradText);
             this.Controls.Add(this.AdresaText);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.JMBGUNOS);
             this.Controls.Add(this.buttonRevBack);
             this.Controls.Add(this.ZavrsniDatumUnos);
@@ -464,7 +519,7 @@ namespace PresentationLayer
             this.Controls.Add(this.ImeText);
             this.Controls.Add(this.JMBGTEXT);
             this.Controls.Add(this.buttonSaveReserve);
-            this.Controls.Add(this.listBoxRezervacija);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRezervacija";
@@ -474,14 +529,13 @@ namespace PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBoxRezervacija;
         private System.Windows.Forms.Button buttonSaveReserve;
         private System.Windows.Forms.Label JMBGTEXT;
         private System.Windows.Forms.Label ImeText;
@@ -491,7 +545,6 @@ namespace PresentationLayer
         private System.Windows.Forms.Label ZavrsniDatumUnos;
         private System.Windows.Forms.Button buttonRevBack;
         private System.Windows.Forms.TextBox JMBGUNOS;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label AdresaText;
         private System.Windows.Forms.Label GradText;
@@ -518,5 +571,8 @@ namespace PresentationLayer
         private System.Windows.Forms.BindingSource rentACar200311DataSetBindingSource;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button LogOut;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

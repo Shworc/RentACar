@@ -13,200 +13,108 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using DataLayer;
 using System.Runtime.InteropServices;
-
 namespace PresentationLayer
 {
     
-    public partial class FormAuto : Form
+    public partial class FormAuto : Funkcije
     {
-        DataRow dr;
-        DataRowBuilder ParmUnos;
-        DataSet ds = new DataSet();
+        
         DataTable dt = new DataTable();
-        SqlDataReader dbr;
-        private readonly AutoBusiness autoBusiness;
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // width of ellipse
-            int nHeightEllipse // height of ellipse
-        );
         public FormAuto()
         {
-           /// this.autoBusiness = new AutoBusiness();
+            //this.autoBusiness = new AutoBusiness();
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20)); //Zaobljen prozor
+          
         }
-
-        private void FormAuto_Load(object sender, EventArgs e)
+       private void FormAuto_Load(object sender, EventArgs e) //Cita formu
         {
-            // TODO: This line of code loads data into the 'rentACar200311DataSet.Automobili' table. You can move, or remove it, as needed.
-            //this.automobiliTableAdapter.Fill(this.rentACar200311DataSet.Automobili);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            String str = "Data Source=DESKTOP-NDCIMUS;Initial Catalog=RentACar2003111SQL;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            String query = "select * From Automobili";
-            SqlConnection con = new SqlConnection(str);
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;   
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = query;
-            cmd.ExecuteNonQuery();
-            dbr = cmd.ExecuteReader();
-            dt.Load(dbr);
-            dataGridView1.DataSource = dt;
-
-
-
-
+            Konekcija();
+            Query("select * From Automobili");
+            RefreshTabele(dt, dataGridView1);      
         }
-        protected override void WndProc(ref Message m)
+        private void LogOut_Click(object sender, EventArgs e) //Logout
         {
-            switch (m.Msg)
-            {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
-            }
-
-            base.WndProc(ref m);
+            PorukaPotvrde(() => Application.Restart()); 
         }
 
-        private void GetAllAutos()
+        private void buttonExit_Click_1(object sender, EventArgs e) //Izlaz iz aplikacije
         {
-          /*  List<Automobile> auto = this.autoBusiness.GetAllAutos();
-            listBoxAuto.Items.Clear();
-
-            foreach (Automobile a in auto)
-            {
-                listBoxAuto.Items.Add(a.ID + "." + a.Marka + " - " + a.Model);
-            }*/
+            PorukaPotvrde(() => Application.Exit()); 
         }
-
-        private void buttonAutoSave_Click(object sender, EventArgs e)
-        {
-            Automobile a = new Automobile();
-            a.Marka = txtMarka.Text;
-            a.Model = txtModel.Text;
-
-            if (this.autoBusiness.InsertAutos(a))
-            {
-                GetAllAutos();
-                txtMarka.Text = "";
-                txtModel.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Greska!");
-            }
-        }
-
-        private void buttonAutoUpdate_Click(object sender, EventArgs e)
-        {
-            Automobile a = new Automobile();
-            a.Marka = txtMarka.Text;
-            a.Model = txtModel.Text;
-
-            a.ID = int.Parse(listBoxAuto.SelectedItem.ToString().Split('.')[0]);
-
-            bool result = this.autoBusiness.UpdateAutos(a);
-
-            if (this.autoBusiness.UpdateAutos(a))
-            {
-                GetAllAutos();
-                txtMarka.Text = "";
-                txtModel.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Greska!");
-            }
-        }
-
-        private void buttonAutoDelete_Click(object sender, EventArgs e)
-        {
-            var confirmResult = MessageBox.Show("Jeste li sigurni?",
-                                        "Potvrda",
-                                        MessageBoxButtons.YesNo);
-            if (confirmResult == DialogResult.Yes)
-            {
-                Automobile a = new Automobile();
-                a.Marka = txtMarka.Text;
-                a.Model = txtModel.Text;
-                a.ID = int.Parse(listBoxAuto.SelectedItem.ToString().Split('.')[0]);
-                
-
-
-                if (this.autoBusiness.DeleteAutos(a))
-                {
-                    GetAllAutos();
-                    txtMarka.Text = "";
-                    txtModel.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("Greska!");
-                }
-
-                bool result = this.autoBusiness.DeleteAutos(a);
-            }
-            else
-            {
-
-            }
-            
-        }
-
         
-
-      
-        private void listBoxAuto_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonRevBack_Click(object sender, EventArgs e) //Nazad na formu rezervacije
         {
-            txtMarka.Text = listBoxAuto.SelectedItem.ToString().Split('.', '-')[1].Trim();
-            txtModel.Text = listBoxAuto.SelectedItem.ToString().Split('-')[1].Trim();
-        }
-
-        private void LogOut_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
-
-        private void buttonExit_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void buttonRevBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+           this.Hide();
            Form1 f1 = new Form1();
            f1.ShowDialog();
         }
 
-        private void Isprazni_Click(object sender, EventArgs e)
+        private void Isprazni_Click(object sender, EventArgs e) //Prazni polja
         {
-            txtGodiste.Text = "" ;
-            txtMarka.Text = "";
-            txtModel.Text = "";
-            txtReg.Text = "";
-            txtSasija.Text = "";
-            txtBoja.Text = "";
+            var t = this.Controls.OfType<TextBox>().AsEnumerable<TextBox>(); //Uzeto sa neta zbog manjeg koda
+            foreach (TextBox item in t)
+            {
+                item.Text = "";
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //Obrisi  red u bazi (klik na dugme Obrisi)
         {
-
+            PorukaPotvrde(() => brisanjeAuta());
+        }
+        private void brisanjeAuta() // Brise selektovan auto
+        {
+            Query("Delete FROM Automobili Where id=" + drS(0));
+            Refresh();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //Unesi podatak u bazu (klik na dugme Unesi)
         {
+            Query("INSERT INTO Automobili (Marka, Model,[Registarski broj], [Broj sasije],Godiste,Tip,Boja) VALUES('"+txtMarka.Text+"','"+txtModel.Text+"','"+txtReg.Text + "','" + txtSasija.Text + "','" + txtGodiste.Text + "','"+ txtTip.Text+ "','" + txtBoja.Text+"')");
+            Refresh();
+        }
+        private void Refresh()  //Cudan refresh forme jer ne radi Refresh ni Update za grid ni formu, ni DataSource=null
+        {
+            FormAuto a = new FormAuto();
+            a.Show();
+            this.Hide();
+        }
+        private void button3_Click(object sender, DataGridViewCellEventArgs e) //Unos selektovane kolone u polja
+        {
+            txtSelektovanID.Text = drS(0);
+            txtMarka.Text= drS(1);
+            txtModel.Text = drS(2);
+            txtBoja.Text = drS(3);
+            txtTip.Text = drS(4);
+            txtGodiste.Text = drS(5);
+            txtReg.Text = drS(6);
+            txtSasija.Text = drS(7);
+            txtNapomena.Text = drS(8);
+        }
+        private void button3_Click(object sender, DataGridViewCellMouseEventArgs e) //Header Klik Refresh ID
+        {
+            txtSelektovanID.Text = drS(0);
+        }
+        private void button2_Click(object sender, EventArgs e) //Izmena napomene
+        {
+            Query("UPDATE Automobili SET Napomena='"+txtNapomena.Text+"' WHERE id="+drS(0));
+            Refresh();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        { 
+            if (txtMarka.Text.Length==0) {
+                Query("SELECT * FROM Automobili");
+                RefreshTabele(dt, dataGridView1);
+            }
+  
+            else
+            {
+                Query("SELECT * FROM Automobili WHERE Marka='" + txtMarka.Text + "'");
+                RefreshTabele(dt, dataGridView1);
+            }
         }
     }
 }

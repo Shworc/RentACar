@@ -50,73 +50,78 @@ namespace PresentationLayer
             this.groupBoxLogin.Controls.Add(this.labelUsername);
             this.groupBoxLogin.Controls.Add(this.textBoxUsername);
             this.groupBoxLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBoxLogin.Location = new System.Drawing.Point(140, 121);
+            this.groupBoxLogin.Location = new System.Drawing.Point(69, 132);
             this.groupBoxLogin.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxLogin.Name = "groupBoxLogin";
             this.groupBoxLogin.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxLogin.Size = new System.Drawing.Size(267, 228);
+            this.groupBoxLogin.Size = new System.Drawing.Size(420, 157);
             this.groupBoxLogin.TabIndex = 0;
             this.groupBoxLogin.TabStop = false;
             this.groupBoxLogin.Enter += new System.EventHandler(this.groupBoxLogin_Enter);
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(100, 129);
+            this.textBoxPassword.Location = new System.Drawing.Point(34, 110);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(132, 23);
+            this.textBoxPassword.Size = new System.Drawing.Size(356, 23);
             this.textBoxPassword.TabIndex = 3;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(31, 129);
+            this.labelPassword.Location = new System.Drawing.Point(187, 89);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(35, 17);
+            this.labelPassword.Size = new System.Drawing.Size(47, 17);
             this.labelPassword.TabIndex = 1;
-            this.labelPassword.Text = "sifra";
+            this.labelPassword.Text = "SIFRA";
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(23, 65);
+            this.labelUsername.Location = new System.Drawing.Point(177, 22);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(56, 17);
+            this.labelUsername.Size = new System.Drawing.Size(72, 17);
             this.labelUsername.TabIndex = 0;
-            this.labelUsername.Text = "korisnik";
+            this.labelUsername.Text = "KORISNIK";
             this.labelUsername.Click += new System.EventHandler(this.labelUsername_Click);
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(100, 62);
+            this.textBoxUsername.Location = new System.Drawing.Point(34, 43);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(132, 23);
+            this.textBoxUsername.Size = new System.Drawing.Size(356, 23);
             this.textBoxUsername.TabIndex = 2;
             // 
             // uloguj_se
             // 
-            this.uloguj_se.Location = new System.Drawing.Point(220, 383);
+            this.uloguj_se.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.uloguj_se.FlatAppearance.BorderSize = 0;
+            this.uloguj_se.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uloguj_se.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uloguj_se.ForeColor = System.Drawing.Color.White;
+            this.uloguj_se.Location = new System.Drawing.Point(214, 324);
             this.uloguj_se.Margin = new System.Windows.Forms.Padding(4);
             this.uloguj_se.Name = "uloguj_se";
-            this.uloguj_se.Size = new System.Drawing.Size(100, 28);
+            this.uloguj_se.Size = new System.Drawing.Size(128, 32);
             this.uloguj_se.TabIndex = 6;
             this.uloguj_se.Text = "Uloguj se";
-            this.uloguj_se.UseVisualStyleBackColor = true;
+            this.uloguj_se.UseVisualStyleBackColor = false;
             this.uloguj_se.Click += new System.EventHandler(this.uloguj_se_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(136, 466);
+            this.label1.Location = new System.Drawing.Point(142, 407);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 22);
+            this.label1.Size = new System.Drawing.Size(258, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Softver za iznajmljivanje automobila";
             this.label1.Visible = false;
@@ -124,21 +129,23 @@ namespace PresentationLayer
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(214, 66);
+            this.label2.Location = new System.Drawing.Point(198, 55);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 31);
+            this.label2.Size = new System.Drawing.Size(169, 39);
             this.label2.TabIndex = 7;
             this.label2.Text = "RentACar";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonExit
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.Lime;
-            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
             this.buttonExit.Location = new System.Drawing.Point(456, -1);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
             this.buttonExit.Name = "buttonExit";
@@ -152,9 +159,9 @@ namespace PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(556, 497);
+            this.ClientSize = new System.Drawing.Size(556, 436);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uloguj_se);

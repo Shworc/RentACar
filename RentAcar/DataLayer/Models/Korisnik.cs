@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Models
 {
-    public class Zakupac
+    public class Korisnik
     {
         public int ID { get; set; }
-        public string Korisnik { get; set; }
+        public string Korisnicko { get; set; }
         public string Sifra { get; set; }
     }
 }

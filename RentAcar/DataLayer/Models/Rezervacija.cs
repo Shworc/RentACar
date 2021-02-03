@@ -11,7 +11,7 @@ namespace DataLayer.Models
         public int Id { get; set; }
         public DateTime DatumOd { get; set; }
         public DateTime DatumDo { get; set; }
-        public int ZakupacID { get; set; }
+        public int KorisnikID { get; set; }
         public int AutomobilID { get; set; }
     }
 }

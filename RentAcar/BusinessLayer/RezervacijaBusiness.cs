@@ -11,11 +11,11 @@ namespace BusinessLayer
     public class RezervacijaBusiness
     {
         private readonly RezervacijaRepository rezervacijaRepository;
-        private readonly ZakupacRepository zakupacRepository;
+        private readonly KorisnikRepository korisnikRepository;
 
         public RezervacijaBusiness()
         {
-            this.zakupacRepository = new ZakupacRepository();
+            this.korisnikRepository = new KorisnikRepository();
             this.rezervacijaRepository = new RezervacijaRepository();
         }
 
@@ -27,13 +27,13 @@ namespace BusinessLayer
        /*public List<Rezervacija> GetRezervacijaById()
         {
 
-            return List < Zakupac > this.GetAllRezervations().Where(r1 => r1.ZakupacID == r1.Id);
+            return List < Korisnik > this.GetAllRezervations().Where(r1 => r1.KorisnikID == r1.Id);
         }*/
 
         /*    public List<Rezervacija> GetRezervacijaById(String textBoxUsername)
         {
             
-            //return this.GetRezervacijaById(textBoxUsername).Where(r => r.ZakupacID == zakupacRepository.r.ID));
+            //return this.GetRezervacijaById(textBoxUsername).Where(r => r.KorisnikID == KorisnikRepository.r.ID));
         }*/
        
         public bool InsertRezervacija(Rezervacija r)
@@ -66,36 +66,36 @@ namespace BusinessLayer
 
         //kreirati fja da prikazuje listu rezervacija za trenutnog korisnika
 
-        public List<Zakupac> GetAllZakupci()
-        {
-            return this.zakupacRepository.GetAllZakupci();
-        }
+        //public List<Korisnik> GetAllZakupci()
+        //{
+        //    return this.KorisnikRepository.GetAllZakupci();
+        //}
 
-        public bool InsertZakupac(Zakupac r)
-        {
-            if (this.zakupacRepository.InsertZakupac(r) > 0)
-            {
-                return true;
-            }
-            return false;
-        }
+        //public bool InsertKorisnik(Korisnik r)
+        //{
+        //    if (this.KorisnikRepository.InsertKorisnik(r) > 0)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
-        public bool UpdateZakupac(Zakupac r)
-        {
-            if (this.zakupacRepository.UpdateZakupac(r) > 0)
-            {
-                return true;
-            }
-            return false;
-        }
+        //public bool UpdateKorisnik(Korisnik r)
+        //{
+        //    if (this.KorisnikRepository.UpdateKorisnik(r) > 0)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
-        public bool DeleteZakupac(Zakupac r)
-        {
-            if (this.zakupacRepository.UpdateZakupac(r) > 0)
-            {
-                return true;
-            }
-            return false;
-        }
+        //public bool DeleteKorisnik(Korisnik r)
+        //{
+        //    if (this.KorisnikRepository.UpdateKorisnik(r) > 0)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
     }
 }

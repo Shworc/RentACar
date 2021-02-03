@@ -34,7 +34,6 @@ namespace PresentationLayer
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAuto));
-            this.listBoxAuto = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMarka = new System.Windows.Forms.TextBox();
@@ -68,30 +67,25 @@ namespace PresentationLayer
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.LogOut = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.Isprazni = new System.Windows.Forms.Button();
+            this.txtSelektovanID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNapomena = new System.Windows.Forms.TextBox();
+            this.lblNapomena = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtTip = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listBoxAuto
-            // 
-            this.listBoxAuto.FormattingEnabled = true;
-            this.listBoxAuto.Location = new System.Drawing.Point(149, 227);
-            this.listBoxAuto.Name = "listBoxAuto";
-            this.listBoxAuto.Size = new System.Drawing.Size(622, 290);
-            this.listBoxAuto.TabIndex = 0;
-            this.listBoxAuto.SelectedIndexChanged += new System.EventHandler(this.listBoxAuto_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(25, 23);
+            this.label1.Location = new System.Drawing.Point(25, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 1;
@@ -101,7 +95,7 @@ namespace PresentationLayer
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(26, 62);
+            this.label2.Location = new System.Drawing.Point(26, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 2;
@@ -109,22 +103,22 @@ namespace PresentationLayer
             // 
             // txtMarka
             // 
-            this.txtMarka.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtMarka.Location = new System.Drawing.Point(28, 39);
+            this.txtMarka.ForeColor = System.Drawing.Color.Black;
+            this.txtMarka.Location = new System.Drawing.Point(28, 33);
             this.txtMarka.Name = "txtMarka";
             this.txtMarka.Size = new System.Drawing.Size(115, 20);
             this.txtMarka.TabIndex = 3;
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(27, 78);
+            this.txtModel.Location = new System.Drawing.Point(27, 72);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(115, 20);
             this.txtModel.TabIndex = 4;
             // 
             // txtReg
             // 
-            this.txtReg.Location = new System.Drawing.Point(166, 39);
+            this.txtReg.Location = new System.Drawing.Point(166, 33);
             this.txtReg.Name = "txtReg";
             this.txtReg.Size = new System.Drawing.Size(115, 20);
             this.txtReg.TabIndex = 11;
@@ -133,7 +127,7 @@ namespace PresentationLayer
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(162, 23);
+            this.label3.Location = new System.Drawing.Point(162, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 10;
@@ -143,7 +137,7 @@ namespace PresentationLayer
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(477, 554);
+            this.button1.Location = new System.Drawing.Point(477, 537);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 37);
             this.button1.TabIndex = 12;
@@ -155,7 +149,7 @@ namespace PresentationLayer
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(163, 62);
+            this.label4.Location = new System.Drawing.Point(163, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 13;
@@ -163,14 +157,14 @@ namespace PresentationLayer
             // 
             // txtSasija
             // 
-            this.txtSasija.Location = new System.Drawing.Point(166, 78);
+            this.txtSasija.Location = new System.Drawing.Point(166, 72);
             this.txtSasija.Name = "txtSasija";
             this.txtSasija.Size = new System.Drawing.Size(115, 20);
             this.txtSasija.TabIndex = 14;
             // 
             // txtGodiste
             // 
-            this.txtGodiste.Location = new System.Drawing.Point(302, 39);
+            this.txtGodiste.Location = new System.Drawing.Point(302, 33);
             this.txtGodiste.Name = "txtGodiste";
             this.txtGodiste.Size = new System.Drawing.Size(115, 20);
             this.txtGodiste.TabIndex = 16;
@@ -179,7 +173,7 @@ namespace PresentationLayer
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(301, 23);
+            this.label5.Location = new System.Drawing.Point(301, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 15;
@@ -187,7 +181,7 @@ namespace PresentationLayer
             // 
             // txtBoja
             // 
-            this.txtBoja.Location = new System.Drawing.Point(302, 78);
+            this.txtBoja.Location = new System.Drawing.Point(302, 72);
             this.txtBoja.Name = "txtBoja";
             this.txtBoja.Size = new System.Drawing.Size(115, 20);
             this.txtBoja.TabIndex = 18;
@@ -196,7 +190,7 @@ namespace PresentationLayer
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(299, 62);
+            this.label6.Location = new System.Drawing.Point(299, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 17;
@@ -204,11 +198,12 @@ namespace PresentationLayer
             // 
             // buttonExit
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.Lime;
-            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonExit.Location = new System.Drawing.Point(1050, -2);
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(1027, -2);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(0);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(101, 30);
@@ -221,7 +216,7 @@ namespace PresentationLayer
             // 
             this.buttonRevBack.BackColor = System.Drawing.Color.LightPink;
             this.buttonRevBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRevBack.Location = new System.Drawing.Point(25, 554);
+            this.buttonRevBack.Location = new System.Drawing.Point(25, 537);
             this.buttonRevBack.Name = "buttonRevBack";
             this.buttonRevBack.Size = new System.Drawing.Size(101, 37);
             this.buttonRevBack.TabIndex = 27;
@@ -264,14 +259,16 @@ namespace PresentationLayer
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 123);
+            this.dataGridView1.Location = new System.Drawing.Point(-1, 108);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1091, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(1159, 413);
             this.dataGridView1.TabIndex = 34;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.button3_Click);
+            this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.button3_Click);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -342,7 +339,7 @@ namespace PresentationLayer
             this.napomenaDataGridViewTextBoxColumn.HeaderText = "Napomena";
             this.napomenaDataGridViewTextBoxColumn.Name = "napomenaDataGridViewTextBoxColumn";
             this.napomenaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.napomenaDataGridViewTextBoxColumn.Width = 260;
+            this.napomenaDataGridViewTextBoxColumn.Width = 320;
             // 
             // stanjeDataGridViewCheckBoxColumn
             // 
@@ -375,7 +372,7 @@ namespace PresentationLayer
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1017, 554);
+            this.button3.Location = new System.Drawing.Point(1017, 537);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 37);
             this.button3.TabIndex = 35;
@@ -387,20 +384,22 @@ namespace PresentationLayer
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(450, 77);
+            this.button4.Location = new System.Drawing.Point(441, 69);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 21);
+            this.button4.Size = new System.Drawing.Size(101, 23);
             this.button4.TabIndex = 36;
             this.button4.Text = "Pretrazi";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // LogOut
             // 
-            this.LogOut.BackColor = System.Drawing.Color.Lime;
-            this.LogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.LogOut.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.LogOut.FlatAppearance.BorderSize = 0;
             this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOut.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LogOut.Location = new System.Drawing.Point(966, -2);
+            this.LogOut.ForeColor = System.Drawing.Color.White;
+            this.LogOut.Location = new System.Drawing.Point(934, -2);
             this.LogOut.Margin = new System.Windows.Forms.Padding(0);
             this.LogOut.Name = "LogOut";
             this.LogOut.Size = new System.Drawing.Size(72, 30);
@@ -409,50 +408,96 @@ namespace PresentationLayer
             this.LogOut.UseVisualStyleBackColor = false;
             this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(931, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 156);
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(1008, 104);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 19);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "SoftDogo";
-            // 
             // Isprazni
             // 
             this.Isprazni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Isprazni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Isprazni.Location = new System.Drawing.Point(450, 39);
+            this.Isprazni.Location = new System.Drawing.Point(441, 33);
             this.Isprazni.Name = "Isprazni";
-            this.Isprazni.Size = new System.Drawing.Size(101, 21);
+            this.Isprazni.Size = new System.Drawing.Size(101, 24);
             this.Isprazni.TabIndex = 41;
             this.Isprazni.Text = "Isprazni";
             this.Isprazni.UseVisualStyleBackColor = false;
             this.Isprazni.Click += new System.EventHandler(this.Isprazni_Click);
             // 
+            // txtSelektovanID
+            // 
+            this.txtSelektovanID.Location = new System.Drawing.Point(1078, 82);
+            this.txtSelektovanID.Name = "txtSelektovanID";
+            this.txtSelektovanID.Size = new System.Drawing.Size(62, 20);
+            this.txtSelektovanID.TabIndex = 42;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(996, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Selektovan ID:";
+            // 
+            // txtNapomena
+            // 
+            this.txtNapomena.Location = new System.Drawing.Point(567, 33);
+            this.txtNapomena.Name = "txtNapomena";
+            this.txtNapomena.Size = new System.Drawing.Size(307, 20);
+            this.txtNapomena.TabIndex = 44;
+            // 
+            // lblNapomena
+            // 
+            this.lblNapomena.AutoSize = true;
+            this.lblNapomena.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNapomena.Location = new System.Drawing.Point(564, 17);
+            this.lblNapomena.Name = "lblNapomena";
+            this.lblNapomena.Size = new System.Drawing.Size(62, 13);
+            this.lblNapomena.TabIndex = 45;
+            this.lblNapomena.Text = "Napomena:";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(567, 69);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(307, 23);
+            this.button2.TabIndex = 46;
+            this.button2.Text = "Izmeni napomenu";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtTip
+            // 
+            this.txtTip.Location = new System.Drawing.Point(1079, 55);
+            this.txtTip.Name = "txtTip";
+            this.txtTip.Size = new System.Drawing.Size(61, 20);
+            this.txtTip.TabIndex = 47;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(1048, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 13);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Tip:";
+            // 
             // FormAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1151, 610);
-            this.Controls.Add(this.Isprazni);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.ClientSize = new System.Drawing.Size(1151, 592);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtTip);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lblNapomena);
+            this.Controls.Add(this.txtNapomena);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtSelektovanID);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Isprazni);
             this.Controls.Add(this.LogOut);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -471,7 +516,6 @@ namespace PresentationLayer
             this.Controls.Add(this.txtMarka);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBoxAuto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAuto";
@@ -482,15 +526,12 @@ namespace PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBoxAuto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMarka;
@@ -514,8 +555,6 @@ namespace PresentationLayer
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button LogOut;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Isprazni;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn markaDataGridViewTextBoxColumn;
@@ -527,5 +566,12 @@ namespace PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn brojSasijeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn stanjeDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.TextBox txtSelektovanID;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNapomena;
+        private System.Windows.Forms.Label lblNapomena;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtTip;
+        private System.Windows.Forms.Label label8;
     }
 }

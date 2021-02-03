@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace PresentationLayer
 {
 
-    public partial class FormLogin : Form
+    public partial class FormLogin : Funkcije
     {
 
         public FormLogin()
@@ -18,31 +18,19 @@ namespace PresentationLayer
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
-            }
-
-            base.WndProc(ref m);
-        }
-        public List<Zakupac> GetZakupacById()
+    
+        public List<Korisnik> GetKorisnikById()
 
         {
 
-            List<Zakupac> results1 = new List<Zakupac>();
-            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT * FROM Zakupac");
+            List<Korisnik> results1 = new List<Korisnik>();
+            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT * FROM Korisnici");
 
             while (sqlDataReader.Read())
             {
-                Zakupac r1 = new Zakupac();
+                Korisnik r1 = new Korisnik();
                 r1.ID = sqlDataReader.GetInt32(0);
-                r1.Korisnik = sqlDataReader.GetString(1);
+                r1.Korisnicko = sqlDataReader.GetString(1);
                 r1.Sifra = sqlDataReader.GetString(2);
                 results1.Add(r1);
             }
@@ -52,9 +40,9 @@ namespace PresentationLayer
             return results1;
         }
 
-        public List<Zakupac> GetZakupacId(String textBoxUsername)
+        public List<Korisnik> GetKorisnikId(String textBoxUsername)
         {
-            return this.GetZakupacById().Where(r1 => r1.Korisnik == textBoxUsername).ToList();
+            return this.GetKorisnikById().Where(r1 => r1.Korisnicko == textBoxUsername).ToList();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -64,9 +52,9 @@ namespace PresentationLayer
 
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormRegistration f3 = new FormRegistration(); //redirect na registraciju korisnika
-            f3.ShowDialog();
+            //this.Hide();
+            //FormRegistration f3 = new FormRegistration(); //redirect na registraciju korisnika
+            //f3.ShowDialog();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -91,7 +79,7 @@ namespace PresentationLayer
 
         }
 
-        private void uloguj_se_Click(object sender, EventArgs e)
+        public void uloguj_se_Click(object sender, EventArgs e)
         {
             try
             {
@@ -99,47 +87,39 @@ namespace PresentationLayer
                 {
                     if (!(textBoxPassword.Text == string.Empty))
                     {
-                        //String str = "server=(localdb)\\ProjectsV13;database=RentacarDB;UID=True;Password=True";
-                        String str = "Data Source=DESKTOP-NDCIMUS;Initial Catalog=RentACar2003111SQL;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-                        String query = "select * from Zakupac where Korisnik = '" + this.textBoxUsername.Text + "'and Sifra = '" + this.textBoxPassword.Text + "'";
-                        SqlConnection con = new SqlConnection(str);
-                        SqlCommand cmd = new SqlCommand(query, con);
-                        SqlDataReader dbr;
-                        con.Open();
-                        dbr = cmd.ExecuteReader();
+                        Konekcija();
+                        Query("select * from Korisnici where Korisnicko = '" + this.textBoxUsername.Text + "'and Sifra = '" + this.textBoxPassword.Text + "'");
                         int count = 0;
-
                         while (dbr.Read())
                         {
                             count = count + 1;
                         }
                         if (count == 1)
                         {
+                            MessageBox.Show("Uspesan login", "Login");
                             this.Hide();
-                            //Form1 f1 = new Form1(textBoxUsername); //this is the change, code for redirect  
-                            Form1 f2 = new Form1();
-                            //f1.formLogin = this;
-                            //f1.ShowDialog();
-                            f2.formLogin = this;
-                            f2.ShowDialog();
+                            Form1 f = new Form1();
+                            f.formLogin = this;
+                            f.ShowDialog();
+                            
                         }
                         else if (count > 1)
                         {
-                            MessageBox.Show("Duplikat sifre i korisnickog imena", "login page");
+                            MessageBox.Show("Duplikat sifre i korisnickog imena", "Login");
                         }
                         else
                         {
-                            MessageBox.Show(" Lozinka ili korisnicko ime ne tacni", "login page");
+                            MessageBox.Show(" Lozinka ili korisnicko ime ne tacni", "Login");
                         }
                     }
                     else
                     {
-                        MessageBox.Show(" Prazno polje za lozinku", "login page");
+                        MessageBox.Show(" Prazno polje za lozinku", "Login");
                     }
                 }
                 else
                 {
-                    MessageBox.Show(" Prazno polje za korisnicko ime", "login page");
+                    MessageBox.Show(" Prazno polje za korisnicko ime", "Login");
                 }
                 // con.Close();  
             }
@@ -159,9 +139,9 @@ namespace PresentationLayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormRegistration f3 = new FormRegistration(); //redirect na registraciju korisnika
-            f3.ShowDialog();
+            //this.Hide();
+            //FormRegistration f3 = new FormRegistration(); //redirect na registraciju korisnika
+            //f3.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

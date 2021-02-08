@@ -30,10 +30,10 @@ namespace PresentationLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.labelReserve = new System.Windows.Forms.Label();
@@ -53,31 +53,39 @@ namespace PresentationLayer
             this.button2 = new System.Windows.Forms.Button();
             this.ModelOdabir = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.napomenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marka = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listBoxReserve = new System.Windows.Forms.ListBox();
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.klijentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.automobilIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Napomena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumOdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.napomenaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zavrsenaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.rezervacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rentACar200311DataSet = new PresentationLayer.RentACar200311DataSet();
             this.rezervacijeTableAdapter1 = new PresentationLayer.RentACar200311DataSetTableAdapters.RezervacijeTableAdapter();
             this.buttonExit = new System.Windows.Forms.Button();
             this.LogOut = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtKorisnik = new System.Windows.Forms.TextBox();
+            this.txtCena = new System.Windows.Forms.TextBox();
+            this.lblcena = new System.Windows.Forms.Label();
+            this.btnPodesiCenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSet)).BeginInit();
@@ -94,7 +102,7 @@ namespace PresentationLayer
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(272, 24);
             this.buttonDelete.TabIndex = 2;
-            this.buttonDelete.Text = "Brisanje";
+            this.buttonDelete.Text = "Otkazi rezervaciju";
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
@@ -109,7 +117,7 @@ namespace PresentationLayer
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(272, 24);
             this.buttonEdit.TabIndex = 3;
-            this.buttonEdit.Text = "Editovanje";
+            this.buttonEdit.Text = "Zavrsi rezervaciju";
             this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
@@ -166,9 +174,9 @@ namespace PresentationLayer
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(1094, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Marka:";
+            this.label2.Text = "Ime:";
             // 
             // DatumOd
             // 
@@ -215,7 +223,7 @@ namespace PresentationLayer
             this.MarkaOdabir.Name = "MarkaOdabir";
             this.MarkaOdabir.Size = new System.Drawing.Size(265, 21);
             this.MarkaOdabir.TabIndex = 22;
-            this.MarkaOdabir.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoID_SelectedIndexChanged);
+            this.MarkaOdabir.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoid_SelectedIndexChanged);
             // 
             // unesiAuto
             // 
@@ -294,15 +302,15 @@ namespace PresentationLayer
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(1094, 141);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 13);
+            this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 31;
-            this.label7.Text = "Model:";
+            this.label7.Text = "Prezime:";
             // 
-            // iDDataGridViewTextBoxColumn
+            // idDataGridViewTextBoxColumn
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
             // napomenaDataGridViewTextBoxColumn
             // 
@@ -330,11 +338,11 @@ namespace PresentationLayer
             this.listBoxReserve.Size = new System.Drawing.Size(800, 420);
             this.listBoxReserve.TabIndex = 9;
             // 
-            // iDDataGridViewTextBoxColumn1
+            // idDataGridViewTextBoxColumn1
             // 
-            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -350,7 +358,7 @@ namespace PresentationLayer
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "ID";
+            this.Column1.DataPropertyName = "id";
             this.Column1.HeaderText = "Column1";
             this.Column1.Name = "Column1";
             // 
@@ -370,70 +378,105 @@ namespace PresentationLayer
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.AutoGenerateColumns = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn2,
-            this.klijentIDDataGridViewTextBoxColumn,
-            this.automobilIDDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Napomena,
+            this.dataGridViewTextBoxColumn5,
+            this.Column2,
             this.datumOdDataGridViewTextBoxColumn,
             this.datumDoDataGridViewTextBoxColumn,
             this.napomenaDataGridViewTextBoxColumn1,
-            this.korisnikIDDataGridViewTextBoxColumn,
             this.zavrsenaDataGridViewCheckBoxColumn});
             this.dataGridView2.DataSource = this.rezervacijeBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView2.Location = new System.Drawing.Point(187, 0);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView2.RowHeadersVisible = false;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(864, 616);
             this.dataGridView2.TabIndex = 35;
             // 
-            // iDDataGridViewTextBoxColumn2
+            // idDataGridViewTextBoxColumn2
             // 
-            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
-            this.iDDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn2.Width = 50;
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "Redni br.";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn2.Width = 50;
             // 
-            // klijentIDDataGridViewTextBoxColumn
+            // Column3
             // 
-            this.klijentIDDataGridViewTextBoxColumn.DataPropertyName = "Klijent ID";
-            this.klijentIDDataGridViewTextBoxColumn.HeaderText = "Klijent ID";
-            this.klijentIDDataGridViewTextBoxColumn.Name = "klijentIDDataGridViewTextBoxColumn";
-            this.klijentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Column3.DataPropertyName = "Ime";
+            this.Column3.HeaderText = "Ime";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
-            // automobilIDDataGridViewTextBoxColumn
+            // Column4
             // 
-            this.automobilIDDataGridViewTextBoxColumn.DataPropertyName = "Automobil ID";
-            this.automobilIDDataGridViewTextBoxColumn.HeaderText = "Automobil ID";
-            this.automobilIDDataGridViewTextBoxColumn.Name = "automobilIDDataGridViewTextBoxColumn";
-            this.automobilIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Column4.DataPropertyName = "Prezime";
+            this.Column4.HeaderText = "Prezime";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "JMBG";
+            this.Column5.HeaderText = "JMBG";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Napomena
+            // 
+            this.Napomena.DataPropertyName = "Marka";
+            this.Napomena.HeaderText = "Marka";
+            this.Napomena.Name = "Napomena";
+            this.Napomena.ReadOnly = true;
+            this.Napomena.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Model";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Model";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 80;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Registarski broj";
+            this.Column2.HeaderText = "Registarski broj";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // datumOdDataGridViewTextBoxColumn
             // 
@@ -456,13 +499,6 @@ namespace PresentationLayer
             this.napomenaDataGridViewTextBoxColumn1.Name = "napomenaDataGridViewTextBoxColumn1";
             this.napomenaDataGridViewTextBoxColumn1.ReadOnly = true;
             this.napomenaDataGridViewTextBoxColumn1.Width = 170;
-            // 
-            // korisnikIDDataGridViewTextBoxColumn
-            // 
-            this.korisnikIDDataGridViewTextBoxColumn.DataPropertyName = "Korisnik ID";
-            this.korisnikIDDataGridViewTextBoxColumn.HeaderText = "Korisnik ID";
-            this.korisnikIDDataGridViewTextBoxColumn.Name = "korisnikIDDataGridViewTextBoxColumn";
-            this.korisnikIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // zavrsenaDataGridViewCheckBoxColumn
             // 
@@ -517,12 +553,67 @@ namespace PresentationLayer
             this.LogOut.UseVisualStyleBackColor = false;
             this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
+            // label8
+            // 
+            this.label8.AccessibleName = "lblkorisnik";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 572);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 13);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Ulogovan korisnik:";
+            // 
+            // txtKorisnik
+            // 
+            this.txtKorisnik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.txtKorisnik.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKorisnik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKorisnik.ForeColor = System.Drawing.Color.White;
+            this.txtKorisnik.Location = new System.Drawing.Point(12, 588);
+            this.txtKorisnik.Multiline = true;
+            this.txtKorisnik.Name = "txtKorisnik";
+            this.txtKorisnik.ReadOnly = true;
+            this.txtKorisnik.Size = new System.Drawing.Size(145, 19);
+            this.txtKorisnik.TabIndex = 42;
+            // 
+            // txtCena
+            // 
+            this.txtCena.Location = new System.Drawing.Point(1090, 576);
+            this.txtCena.Name = "txtCena";
+            this.txtCena.Size = new System.Drawing.Size(114, 20);
+            this.txtCena.TabIndex = 43;
+            // 
+            // lblcena
+            // 
+            this.lblcena.AutoSize = true;
+            this.lblcena.Location = new System.Drawing.Point(1087, 559);
+            this.lblcena.Name = "lblcena";
+            this.lblcena.Size = new System.Drawing.Size(117, 13);
+            this.lblcena.TabIndex = 44;
+            this.lblcena.Text = "Cena po danu u evrima";
+            // 
+            // btnPodesiCenu
+            // 
+            this.btnPodesiCenu.ForeColor = System.Drawing.Color.Black;
+            this.btnPodesiCenu.Location = new System.Drawing.Point(1214, 560);
+            this.btnPodesiCenu.Name = "btnPodesiCenu";
+            this.btnPodesiCenu.Size = new System.Drawing.Size(148, 36);
+            this.btnPodesiCenu.TabIndex = 45;
+            this.btnPodesiCenu.Text = "Podesi cenu";
+            this.btnPodesiCenu.UseVisualStyleBackColor = true;
+            this.btnPodesiCenu.Click += new System.EventHandler(this.btnPodesiCenu_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1395, 613);
+            this.Controls.Add(this.btnPodesiCenu);
+            this.Controls.Add(this.lblcena);
+            this.Controls.Add(this.txtCena);
+            this.Controls.Add(this.txtKorisnik);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.LogOut);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.dataGridView2);
@@ -579,12 +670,12 @@ namespace PresentationLayer
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox ModelOdabir;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marka;
         private System.Windows.Forms.DataGridViewTextBoxColumn Model;
         private System.Windows.Forms.ListBox listBoxReserve;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -595,15 +686,25 @@ namespace PresentationLayer
         private RentACar200311DataSetTableAdapters.RezervacijeTableAdapter rezervacijeTableAdapter1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn klijentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn automobilIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button LogOut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn klijentidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn automobilidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtKorisnik;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Napomena;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumOdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumDoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn korisnikIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn zavrsenaDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Button LogOut;
+        private System.Windows.Forms.TextBox txtCena;
+        private System.Windows.Forms.Label lblcena;
+        private System.Windows.Forms.Button btnPodesiCenu;
     }
 }
 

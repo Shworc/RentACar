@@ -24,16 +24,16 @@ namespace BusinessLayer
             return this.rezervacijaRepository.GetAllRezervations();
         }
        
-       /*public List<Rezervacija> GetRezervacijaById()
+       /*public List<Rezervacija> GetRezervacijaByid()
         {
 
-            return List < Korisnik > this.GetAllRezervations().Where(r1 => r1.KorisnikID == r1.Id);
+            return List < Korisnik > this.GetAllRezervations().Where(r1 => r1.Korisnikid == r1.id);
         }*/
 
-        /*    public List<Rezervacija> GetRezervacijaById(String textBoxUsername)
+        /*    public List<Rezervacija> GetRezervacijaByid(String textBoxUsername)
         {
             
-            //return this.GetRezervacijaById(textBoxUsername).Where(r => r.KorisnikID == KorisnikRepository.r.ID));
+            //return this.GetRezervacijaByid(textBoxUsername).Where(r => r.Korisnikid == KorisnikRepository.r.id));
         }*/
        
         public bool InsertRezervacija(Rezervacija r)

@@ -50,7 +50,24 @@ namespace PresentationLayer
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonRevBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.automobiliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.rentACar200311DataSet = new PresentationLayer.RentACar200311DataSet();
+            this.automobiliTableAdapter = new PresentationLayer.RentACar200311DataSetTableAdapters.AutomobiliTableAdapter();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.LogOut = new System.Windows.Forms.Button();
+            this.Isprazni = new System.Windows.Forms.Button();
+            this.txtSelektovanid = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNapomena = new System.Windows.Forms.TextBox();
+            this.lblNapomena = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtTip = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbMarka = new System.Windows.Forms.ComboBox();
+            this.cmbModel = new System.Windows.Forms.ComboBox();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.markaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bojaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,21 +77,6 @@ namespace PresentationLayer
             this.brojSasijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.napomenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stanjeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.automobiliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.rentACar200311DataSet = new PresentationLayer.RentACar200311DataSet();
-            this.automobiliTableAdapter = new PresentationLayer.RentACar200311DataSetTableAdapters.AutomobiliTableAdapter();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.LogOut = new System.Windows.Forms.Button();
-            this.Isprazni = new System.Windows.Forms.Button();
-            this.txtSelektovanID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNapomena = new System.Windows.Forms.TextBox();
-            this.lblNapomena = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtTip = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -108,6 +110,7 @@ namespace PresentationLayer
             this.txtMarka.Name = "txtMarka";
             this.txtMarka.Size = new System.Drawing.Size(115, 20);
             this.txtMarka.TabIndex = 3;
+            this.txtMarka.Visible = false;
             // 
             // txtModel
             // 
@@ -239,7 +242,7 @@ namespace PresentationLayer
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn,
             this.markaDataGridViewTextBoxColumn,
             this.modelDataGridViewTextBoxColumn,
             this.bojaDataGridViewTextBoxColumn,
@@ -269,85 +272,6 @@ namespace PresentationLayer
             this.dataGridView1.TabIndex = 34;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.button3_Click);
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.button3_Click);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.iDDataGridViewTextBoxColumn.Width = 43;
-            // 
-            // markaDataGridViewTextBoxColumn
-            // 
-            this.markaDataGridViewTextBoxColumn.DataPropertyName = "Marka";
-            this.markaDataGridViewTextBoxColumn.HeaderText = "Marka";
-            this.markaDataGridViewTextBoxColumn.Name = "markaDataGridViewTextBoxColumn";
-            this.markaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bojaDataGridViewTextBoxColumn
-            // 
-            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "Boja";
-            this.bojaDataGridViewTextBoxColumn.HeaderText = "Boja";
-            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
-            this.bojaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipDataGridViewTextBoxColumn
-            // 
-            this.tipDataGridViewTextBoxColumn.DataPropertyName = "Tip";
-            this.tipDataGridViewTextBoxColumn.HeaderText = "Tip";
-            this.tipDataGridViewTextBoxColumn.Name = "tipDataGridViewTextBoxColumn";
-            this.tipDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // godisteDataGridViewTextBoxColumn
-            // 
-            this.godisteDataGridViewTextBoxColumn.DataPropertyName = "Godiste";
-            this.godisteDataGridViewTextBoxColumn.HeaderText = "Godiste";
-            this.godisteDataGridViewTextBoxColumn.Name = "godisteDataGridViewTextBoxColumn";
-            this.godisteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.godisteDataGridViewTextBoxColumn.Width = 45;
-            // 
-            // registarskiBrojDataGridViewTextBoxColumn
-            // 
-            this.registarskiBrojDataGridViewTextBoxColumn.DataPropertyName = "Registarski broj";
-            this.registarskiBrojDataGridViewTextBoxColumn.HeaderText = "Registarski broj";
-            this.registarskiBrojDataGridViewTextBoxColumn.Name = "registarskiBrojDataGridViewTextBoxColumn";
-            this.registarskiBrojDataGridViewTextBoxColumn.ReadOnly = true;
-            this.registarskiBrojDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // brojSasijeDataGridViewTextBoxColumn
-            // 
-            this.brojSasijeDataGridViewTextBoxColumn.DataPropertyName = "Broj sasije";
-            this.brojSasijeDataGridViewTextBoxColumn.HeaderText = "Broj sasije";
-            this.brojSasijeDataGridViewTextBoxColumn.Name = "brojSasijeDataGridViewTextBoxColumn";
-            this.brojSasijeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // napomenaDataGridViewTextBoxColumn
-            // 
-            this.napomenaDataGridViewTextBoxColumn.DataPropertyName = "Napomena";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.napomenaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.napomenaDataGridViewTextBoxColumn.HeaderText = "Napomena";
-            this.napomenaDataGridViewTextBoxColumn.Name = "napomenaDataGridViewTextBoxColumn";
-            this.napomenaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.napomenaDataGridViewTextBoxColumn.Width = 320;
-            // 
-            // stanjeDataGridViewCheckBoxColumn
-            // 
-            this.stanjeDataGridViewCheckBoxColumn.DataPropertyName = "Stanje";
-            this.stanjeDataGridViewCheckBoxColumn.HeaderText = "Stanje";
-            this.stanjeDataGridViewCheckBoxColumn.Name = "stanjeDataGridViewCheckBoxColumn";
-            this.stanjeDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.stanjeDataGridViewCheckBoxColumn.Width = 80;
             // 
             // automobiliBindingSource
             // 
@@ -420,12 +344,12 @@ namespace PresentationLayer
             this.Isprazni.UseVisualStyleBackColor = false;
             this.Isprazni.Click += new System.EventHandler(this.Isprazni_Click);
             // 
-            // txtSelektovanID
+            // txtSelektovanid
             // 
-            this.txtSelektovanID.Location = new System.Drawing.Point(1078, 82);
-            this.txtSelektovanID.Name = "txtSelektovanID";
-            this.txtSelektovanID.Size = new System.Drawing.Size(62, 20);
-            this.txtSelektovanID.TabIndex = 42;
+            this.txtSelektovanid.Location = new System.Drawing.Point(1078, 82);
+            this.txtSelektovanid.Name = "txtSelektovanid";
+            this.txtSelektovanid.Size = new System.Drawing.Size(62, 20);
+            this.txtSelektovanid.TabIndex = 42;
             // 
             // label7
             // 
@@ -433,9 +357,9 @@ namespace PresentationLayer
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(996, 85);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.Size = new System.Drawing.Size(75, 13);
             this.label7.TabIndex = 43;
-            this.label7.Text = "Selektovan ID:";
+            this.label7.Text = "Selektovan id:";
             // 
             // txtNapomena
             // 
@@ -483,19 +407,119 @@ namespace PresentationLayer
             this.label8.TabIndex = 48;
             this.label8.Text = "Tip:";
             // 
+            // cmbMarka
+            // 
+            this.cmbMarka.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbMarka.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbMarka.FormattingEnabled = true;
+            this.cmbMarka.Location = new System.Drawing.Point(27, 32);
+            this.cmbMarka.Name = "cmbMarka";
+            this.cmbMarka.Size = new System.Drawing.Size(115, 21);
+            this.cmbMarka.TabIndex = 49;
+            // 
+            // cmbModel
+            // 
+            this.cmbModel.FormattingEnabled = true;
+            this.cmbModel.Location = new System.Drawing.Point(891, 69);
+            this.cmbModel.Name = "cmbModel";
+            this.cmbModel.Size = new System.Drawing.Size(99, 21);
+            this.cmbModel.TabIndex = 50;
+            this.cmbModel.Visible = false;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.idDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // markaDataGridViewTextBoxColumn
+            // 
+            this.markaDataGridViewTextBoxColumn.DataPropertyName = "Marka";
+            this.markaDataGridViewTextBoxColumn.HeaderText = "Marka";
+            this.markaDataGridViewTextBoxColumn.Name = "markaDataGridViewTextBoxColumn";
+            this.markaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bojaDataGridViewTextBoxColumn
+            // 
+            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "Boja";
+            this.bojaDataGridViewTextBoxColumn.HeaderText = "Boja";
+            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
+            this.bojaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipDataGridViewTextBoxColumn
+            // 
+            this.tipDataGridViewTextBoxColumn.DataPropertyName = "Tip";
+            this.tipDataGridViewTextBoxColumn.HeaderText = "Tip";
+            this.tipDataGridViewTextBoxColumn.Name = "tipDataGridViewTextBoxColumn";
+            this.tipDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // godisteDataGridViewTextBoxColumn
+            // 
+            this.godisteDataGridViewTextBoxColumn.DataPropertyName = "Godiste";
+            this.godisteDataGridViewTextBoxColumn.HeaderText = "Godiste";
+            this.godisteDataGridViewTextBoxColumn.Name = "godisteDataGridViewTextBoxColumn";
+            this.godisteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.godisteDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // registarskiBrojDataGridViewTextBoxColumn
+            // 
+            this.registarskiBrojDataGridViewTextBoxColumn.DataPropertyName = "Registarski broj";
+            this.registarskiBrojDataGridViewTextBoxColumn.HeaderText = "Registarski broj";
+            this.registarskiBrojDataGridViewTextBoxColumn.Name = "registarskiBrojDataGridViewTextBoxColumn";
+            this.registarskiBrojDataGridViewTextBoxColumn.ReadOnly = true;
+            this.registarskiBrojDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // brojSasijeDataGridViewTextBoxColumn
+            // 
+            this.brojSasijeDataGridViewTextBoxColumn.DataPropertyName = "Broj sasije";
+            this.brojSasijeDataGridViewTextBoxColumn.HeaderText = "Broj sasije";
+            this.brojSasijeDataGridViewTextBoxColumn.Name = "brojSasijeDataGridViewTextBoxColumn";
+            this.brojSasijeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // napomenaDataGridViewTextBoxColumn
+            // 
+            this.napomenaDataGridViewTextBoxColumn.DataPropertyName = "Napomena";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.napomenaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.napomenaDataGridViewTextBoxColumn.HeaderText = "Napomena";
+            this.napomenaDataGridViewTextBoxColumn.Name = "napomenaDataGridViewTextBoxColumn";
+            this.napomenaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.napomenaDataGridViewTextBoxColumn.Width = 320;
+            // 
+            // stanjeDataGridViewCheckBoxColumn
+            // 
+            this.stanjeDataGridViewCheckBoxColumn.DataPropertyName = "U upotrebi";
+            this.stanjeDataGridViewCheckBoxColumn.HeaderText = "U upotrebi";
+            this.stanjeDataGridViewCheckBoxColumn.Name = "stanjeDataGridViewCheckBoxColumn";
+            this.stanjeDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.stanjeDataGridViewCheckBoxColumn.Width = 80;
+            // 
             // FormAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1151, 592);
+            this.Controls.Add(this.cmbModel);
+            this.Controls.Add(this.cmbMarka);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtTip);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblNapomena);
             this.Controls.Add(this.txtNapomena);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtSelektovanID);
+            this.Controls.Add(this.txtSelektovanid);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Isprazni);
             this.Controls.Add(this.LogOut);
@@ -556,7 +580,16 @@ namespace PresentationLayer
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button LogOut;
         private System.Windows.Forms.Button Isprazni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtSelektovanid;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNapomena;
+        private System.Windows.Forms.Label lblNapomena;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtTip;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbMarka;
+        private System.Windows.Forms.ComboBox cmbModel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn markaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bojaDataGridViewTextBoxColumn;
@@ -566,12 +599,5 @@ namespace PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn brojSasijeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn stanjeDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.TextBox txtSelektovanID;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtNapomena;
-        private System.Windows.Forms.Label lblNapomena;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtTip;
-        private System.Windows.Forms.Label label8;
     }
 }

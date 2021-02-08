@@ -123,6 +123,15 @@
   <metadata name="rentACar200311DataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>199, 17</value>
   </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="automobiliBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>460, 17</value>
+  </metadata>
+  <metadata name="automobiliTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>649, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -273,7 +282,7 @@
         Af8BAQH/ICIE/+b1G//u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/e7Br/BQYB/wEB
         Af8BAQH/s74V/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/t/Bv/PEAH/wEB
         Af8BAQH/PkII/+38G/Pu/Rsb////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
-        /wHt/RtT3Ooa/xESAv8BAQH/AQEB/4CID//u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
+        /wHt/RtT3Ooa/xESAv8BAQH/AQEB/4Cid//u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP+9yRb/AQEB/wEBAf8BAQH/jZYR/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP+jrRP/AQEB/wEBAf8EBAH/w9AX/+79HHn///8B////Af///wH///8B////Af///wH///8B////Af//
         /wH///8B////Af///wH///8B7fwbv4mSEP8BAQH/AQEB/w4PAv/Z5xn/7v0c/+79HP/u/Rz/7v0c/+79
@@ -895,7 +904,7 @@
         HEXt/Rz97v0c/+z7G/9ARAj/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf9PVAn/7fwb/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
-        HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/4CID/8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
+        HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/4Cid/8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
         Af8ICAH/ydYX/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/6WwE/8BAQH/AQEB/wEB
@@ -1331,7 +1340,7 @@
         /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
         /wH///8B7fscBe79G83u/Rz/7v0c/6awE/8CAgH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/1BV
         Cv/t/Bv/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/h7xr/dn0O/zM2Bv8qLAX/KiwF/yos
-        Bf8qLAX/NjoH/4CID//l9Bv/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
+        Bf8qLAX/NjoH/4Cid//l9Bv/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP+zvhX/AgIB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf9DRwj/7Psb/+79HP/u/Rv77v0bPf//
         /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
         /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
@@ -2197,7 +2206,7 @@
         Af8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
         Af8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
         Af8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
-        Af8BAQH/AQEB/wEBAf8BAQH/ERID/7S/Ff/t/Bv/7v0c/+79HP/u/Rz/7fwc/+78HFvt/BsT7fwb2+79
+        Af8BAQH/AQEB/wEBAf8BAQH/ERid/7S/Ff/t/Bv/7v0c/+79HP/u/Rz/7fwc/+78HFvt/BsT7fwb2+79
         HP/u/Rz/7v0c/+79HP/T4Rn/HiAE/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
         Af8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
         Af8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
@@ -3367,7 +3376,7 @@
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/QkYI/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
-        Af8BAQH/AQEB/wEBAf8BAQH/AQEB/4GID//u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
+        Af8BAQH/AQEB/wEBAf8BAQH/AQEB/4Gid//u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
@@ -3687,7 +3696,7 @@
         /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
         /wH///8B////Af///wH///8B////Af///wH///8B////Af///wHu/RoR7vwc2e79HP/u/Rz/7v0c/+79
         HP/u/Rz/4/Ea/zI1Bv8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
-        Af8BAQH/AQEB/wEBAf8BAQH/AQEB/4CID//t/Bv/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
+        Af8BAQH/AQEB/wEBAf8BAQH/AQEB/4Cid//t/Bv/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/c6hn/ISME/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEB
@@ -4087,7 +4096,7 @@
         Af8BAQH/AQEB/wEBAf8BAQH/AQEB/292Df/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+79HP/u/Rz/7v0c/+j2G/9CRgj/AQEB/wEBAf8BAQH/AQEB/wEB
-        Af8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wIDAf+Cig//7v0c/+79
+        Af8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/wEBAf8BAQH/AQEB/widAf+Cig//7v0c/+79
         HP/u/Rz/7v0c/+79HP/u/Rz/7f0bdf///wH///8B////Af///wH///8B////Af///wH///8B////Af//
         /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
         /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//

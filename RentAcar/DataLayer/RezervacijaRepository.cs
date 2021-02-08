@@ -20,11 +20,11 @@ namespace DataLayer
             while (sqlDataReader.Read())
             {
                 Rezervacija r = new Rezervacija();
-                r.Id = sqlDataReader.GetInt32(0);
+                r.id = sqlDataReader.GetInt32(0);
                 r.DatumOd = sqlDataReader.GetDateTime(1);
                 r.DatumDo = sqlDataReader.GetDateTime(2);
-                r.KorisnikID = sqlDataReader.GetInt32(3);
-                r.AutomobilID = sqlDataReader.GetInt32(4);
+                r.Korisnikid = sqlDataReader.GetInt32(3);
+                r.Automobilid = sqlDataReader.GetInt32(4);
 
                 results.Add(r);
             }
@@ -35,23 +35,23 @@ namespace DataLayer
         }
 
 
-        public List<Rezervacija> GetRezervacijaById(String textBoxUsername)
+        public List<Rezervacija> GetRezervacijaByid(String textBoxUsername)
         {
             List<Rezervacija> results = new List<Rezervacija>();
             List<Korisnik> results1 = new List<Korisnik>();
 
-            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija JOIN Korisnik ON Rezervacija.KorisnikID = Korisnik.Id ON Rezervacija.AutomobilID = Automobil.Id WHERE Korisnik.Ime = " + textBoxUsername.ToString());
+            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT Ime, Marka, Naziv, DatumOd, DatumDo FROM Rezervacija JOIN Korisnik ON Rezervacija.Korisnikid = Korisnik.id ON Rezervacija.Automobilid = Automobil.id WHERE Korisnik.Ime = " + textBoxUsername.ToString());
 
             while (sqlDataReader.Read())
             {
                 Rezervacija r = new Rezervacija();
                 Korisnik r1 = new Korisnik();
-                r.Id = sqlDataReader.GetInt32(0);
+                r.id = sqlDataReader.GetInt32(0);
                 r.DatumOd = sqlDataReader.GetDateTime(1);
                 r.DatumDo = sqlDataReader.GetDateTime(2);
-                r.KorisnikID = sqlDataReader.GetInt32(3);
-                r.AutomobilID = sqlDataReader.GetInt32(4);
-                r1.ID = sqlDataReader.GetInt32(5);
+                r.Korisnikid = sqlDataReader.GetInt32(3);
+                r.Automobilid = sqlDataReader.GetInt32(4);
+                r1.id = sqlDataReader.GetInt32(5);
                 r1.Korisnicko = sqlDataReader.GetString(6);
                 r1.Sifra = sqlDataReader.GetString(7);
 
@@ -80,11 +80,11 @@ namespace DataLayer
                 while (sqlDataReader.Read())
                 {
                     Rezervacija r = new Rezervacija();
-                    r.Id = sqlDataReader.GetInt32(0);
+                    r.id = sqlDataReader.GetInt32(0);
                     r.DatumOd = sqlDataReader.GetDateTime(1);
                     r.DatumDo = sqlDataReader.GetDateTime(2);
-                    r.KorisnikID = sqlDataReader.GetInt32(3);
-                    r.AutomobilID = sqlDataReader.GetInt32(4);
+                    r.Korisnikid = sqlDataReader.GetInt32(3);
+                    r.Automobilid = sqlDataReader.GetInt32(4);
 
                     results.Add(r);
                 }
@@ -99,7 +99,7 @@ namespace DataLayer
             public int InsertRezervacija(Rezervacija r)
             {
                 var result = DBConnection.EditData(string.Format("INSERT INTO Rezervacija VALUES ({0}, {1}, {2}, {3})",
-                        r.DatumOd, r.DatumDo, r.KorisnikID, r.AutomobilID));
+                        r.DatumOd, r.DatumDo, r.Korisnikid, r.Automobilid));
                 DBConnection.CloseConnection();
 
                 return result;
@@ -107,8 +107,8 @@ namespace DataLayer
 
         public int UpdateRezervacija(Rezervacija r)
         {
-            var result = DBConnection.EditData(string.Format("UPDATE Rezervacija SET DatumOd = '{0}', DatumDo = '{1}', KorisnikID = {2}, AutomobilID = {3}" + "WHERE ID={4}",
-                    r.DatumOd, r.DatumDo, r.KorisnikID, r.AutomobilID, r.Id));
+            var result = DBConnection.EditData(string.Format("UPDATE Rezervacija SET DatumOd = '{0}', DatumDo = '{1}', Korisnikid = {2}, Automobilid = {3}" + "WHERE id={4}",
+                    r.DatumOd, r.DatumDo, r.Korisnikid, r.Automobilid, r.id));
             DBConnection.CloseConnection();
 
             return result;
@@ -116,8 +116,8 @@ namespace DataLayer
 
         public int DeleteRezervacija(Rezervacija r)
         {
-            var result = DBConnection.EditData(string.Format("DELETE FROM Rezervacija WHERE ID={0}",
-                    r.Id));
+            var result = DBConnection.EditData(string.Format("DELETE FROM Rezervacija WHERE id={0}",
+                    r.id));
             DBConnection.CloseConnection();
 
             return result;

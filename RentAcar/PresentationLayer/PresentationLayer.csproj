@@ -131,8 +131,8 @@
     </None>
     <None Include="RentACar200311DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RentACar200311DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>RentACar200311DataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="RentACar200311DataSet.xss">
       <DependentUpon>RentACar200311DataSet.xsd</DependentUpon>

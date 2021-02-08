@@ -17,32 +17,32 @@ namespace BusinessLayer
             this.autoRepository = new AutoRepository();
         }
 
-        public List<Automobile> GetAllAutos()
+        public List<Automobil> GetAllAutos()
         {
             return this.autoRepository.GetAllAutos();
         }
 
-        public bool InsertAutos(Automobile a)
+        public bool InsertAutos(Automobil a)
         {
-            if (this.autoRepository.InsertAutomobile(a) > 0)
+            if (this.autoRepository.InsertAutomobil(a) > 0)
             {
                 return true;
             }
             return false;
         }
 
-        public bool UpdateAutos(Automobile a)
+        public bool UpdateAutos(Automobil a)
         {
-            if (this.autoRepository.UpdateAutomobile(a) > 0)
+            if (this.autoRepository.UpdateAutomobil(a) > 0)
             {
                 return true;
             }
             return false;
         }
 
-        public bool DeleteAutos(Automobile a)
+        public bool DeleteAutos(Automobil a)
         {
-            if (this.autoRepository.DeleteAutomobile(a) > 0)
+            if (this.autoRepository.DeleteAutomobil(a) > 0)
             {
                 return true;
             }

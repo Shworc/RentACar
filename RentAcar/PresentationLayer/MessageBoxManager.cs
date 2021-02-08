@@ -24,7 +24,7 @@ namespace System.Windows.Forms
         private const int WM_INITDIALOG = 0x0110;
         private const int WM_TIMER = 0x0113;
         private const int WM_USER = 0x400;
-        private const int DM_GETDEFID = WM_USER + 0;
+        private const int DM_GETDEFid = WM_USER + 0;
 
         private const int MBOK = 1;
         private const int MBCancel = 2;
@@ -39,7 +39,7 @@ namespace System.Windows.Forms
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
 
         [DllImport("user32.dll")]
-        private static extern IntPtr SetWindowsHookEx(int idHook, HookProc lpfn, IntPtr hInstance, int threadId);
+        private static extern IntPtr SetWindowsHookEx(int idHook, HookProc lpfn, IntPtr hInstance, int threadid);
 
         [DllImport("user32.dll")]
         private static extern int UnhookWindowsHookEx(IntPtr idHook);
@@ -63,10 +63,10 @@ namespace System.Windows.Forms
         private static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
 
         [DllImport("user32.dll")]
-        private static extern int GetDlgCtrlID(IntPtr hwndCtl);
+        private static extern int GetDlgCtrlid(IntPtr hwndCtl);
 
         [DllImport("user32.dll")]
-        private static extern IntPtr GetDlgItem(IntPtr hDlg, int nIDDlgItem);
+        private static extern IntPtr GetDlgItem(IntPtr hDlg, int nidDlgItem);
 
         [DllImport("user32.dll", EntryPoint = "SetWindowTextW", CharSet = CharSet.Unicode)]
         private static extern bool SetWindowText(IntPtr hWnd, string lpString);
@@ -189,8 +189,8 @@ namespace System.Windows.Forms
             GetClassName(hWnd, className, className.Capacity);
             if (className.ToString() == "Button")
             {
-                int ctlId = GetDlgCtrlID(hWnd);
-                switch (ctlId)
+                int ctlid = GetDlgCtrlid(hWnd);
+                switch (ctlid)
                 {
                     case MBOK:
                         SetWindowText(hWnd, OK);

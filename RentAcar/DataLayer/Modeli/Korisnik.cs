@@ -8,7 +8,7 @@ namespace DataLayer.Models
 {
     public class Korisnik
     {
-        public int ID { get; set; }
+        public int id { get; set; }
         public string Korisnicko { get; set; }
         public string Sifra { get; set; }
     }

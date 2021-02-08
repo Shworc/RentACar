@@ -17,7 +17,10 @@ namespace PresentationLayer
 {
     public class Funkcije : Form
     {
-        DataSet ds = new DataSet();
+        public SqlDataAdapter da;
+        public SqlDataAdapter da2;
+        public DataSet ds = new DataSet();
+        public DataSet ds2 = new DataSet();
         DataTable dt = new DataTable();
         DataTable dtc = new DataTable();
         DataGridView dataGridView1;
@@ -26,6 +29,8 @@ namespace PresentationLayer
         public SqlCommand cmd;
         public String str;
         public String query;
+        public String cmbquery;
+        public static int cena;
         public void Query(String query) //Upit
         {
             cmd.CommandText = query;
@@ -52,6 +57,24 @@ namespace PresentationLayer
         {
             return dataGridView1.SelectedRows[0].Cells[row].Value.ToString();
         }
+        public void ComboLoad(ComboBox combobox,String ID, String Name, String cmbquery)
+        {
+            da = new SqlDataAdapter(cmbquery, con);
+            da.Fill(ds);
+            combobox.ValueMember = ID;
+            combobox.DisplayMember = Name;
+            combobox.DataSource = ds.Tables[0];
+        }
+        public void ComboLoad2(ComboBox combobox, String ID, String Name, String cmbquery2) //Comboload sa clear funkcijom
+        {
+            ds2.Clear();
+            da2 = new SqlDataAdapter(cmbquery2, con);
+            da2.Fill(ds2);
+            combobox.Text = "";
+            combobox.ValueMember = ID;
+            combobox.DisplayMember = Name;
+            combobox.DataSource = ds2.Tables[0];
+        }
         protected override void WndProc(ref Message m) //Omogucava pomeranje prozora
         {
             switch (m.Msg)
@@ -73,6 +96,19 @@ namespace PresentationLayer
                 Metoda();
             }
             else { }
+        }
+        public void Isprazni() //Prazni sve TextBoxove
+        {
+            var t = this.Controls.OfType<TextBox>().AsEnumerable<TextBox>(); //Uzeto sa neta zbog manjeg koda
+            var c = this.Controls.OfType<ComboBox>().AsEnumerable<ComboBox>();
+            foreach (TextBox item in t)
+            {
+                item.Text = "";
+            }
+            foreach (ComboBox item in c)
+            {
+                item.Text = "";
+            }
         }
         /*...............Za zaobljene ivice prozora................*/
         /*[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]

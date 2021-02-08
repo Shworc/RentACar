@@ -9,17 +9,17 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-
+    
     public partial class FormLogin : Funkcije
     {
-
+        public static string ukorisnik;
         public FormLogin()
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
     
-        public List<Korisnik> GetKorisnikById()
+        public List<Korisnik> GetKorisnikByid()
 
         {
 
@@ -29,7 +29,7 @@ namespace PresentationLayer
             while (sqlDataReader.Read())
             {
                 Korisnik r1 = new Korisnik();
-                r1.ID = sqlDataReader.GetInt32(0);
+                r1.id = sqlDataReader.GetInt32(0);
                 r1.Korisnicko = sqlDataReader.GetString(1);
                 r1.Sifra = sqlDataReader.GetString(2);
                 results1.Add(r1);
@@ -40,9 +40,9 @@ namespace PresentationLayer
             return results1;
         }
 
-        public List<Korisnik> GetKorisnikId(String textBoxUsername)
+        public List<Korisnik> GetKorisnikid(String textBoxUsername)
         {
-            return this.GetKorisnikById().Where(r1 => r1.Korisnicko == textBoxUsername).ToList();
+            return this.GetKorisnikByid().Where(r1 => r1.Korisnicko == textBoxUsername).ToList();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -98,6 +98,7 @@ namespace PresentationLayer
                         {
                             MessageBox.Show("Uspesan login", "Login");
                             this.Hide();
+                            ukorisnik = this.textBoxUsername.Text;
                             Form1 f = new Form1();
                             f.formLogin = this;
                             f.ShowDialog();

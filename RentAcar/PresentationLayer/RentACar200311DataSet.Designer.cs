@@ -24,11 +24,11 @@ namespace PresentationLayer {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class RentACar200311DataSet : global::System.Data.DataSet {
         
-        private AutomobiliDataTable tableAutomobili;
+        private AutomobilidataTable tableAutomobili;
         
-        private KlijentiDataTable tableKlijenti;
+        private KlijentidataTable tableKlijenti;
         
-        private KorisniciDataTable tableKorisnici;
+        private KorisnicidataTable tableKorisnici;
         
         private RezervacijeDataTable tableRezervacije;
         
@@ -69,13 +69,13 @@ namespace PresentationLayer {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
                 if ((ds.Tables["Automobili"] != null)) {
-                    base.Tables.Add(new AutomobiliDataTable(ds.Tables["Automobili"]));
+                    base.Tables.Add(new AutomobilidataTable(ds.Tables["Automobili"]));
                 }
                 if ((ds.Tables["Klijenti"] != null)) {
-                    base.Tables.Add(new KlijentiDataTable(ds.Tables["Klijenti"]));
+                    base.Tables.Add(new KlijentidataTable(ds.Tables["Klijenti"]));
                 }
                 if ((ds.Tables["Korisnici"] != null)) {
-                    base.Tables.Add(new KorisniciDataTable(ds.Tables["Korisnici"]));
+                    base.Tables.Add(new KorisnicidataTable(ds.Tables["Korisnici"]));
                 }
                 if ((ds.Tables["Rezervacije"] != null)) {
                     base.Tables.Add(new RezervacijeDataTable(ds.Tables["Rezervacije"]));
@@ -102,7 +102,7 @@ namespace PresentationLayer {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AutomobiliDataTable Automobili {
+        public AutomobilidataTable Automobili {
             get {
                 return this.tableAutomobili;
             }
@@ -112,7 +112,7 @@ namespace PresentationLayer {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public KlijentiDataTable Klijenti {
+        public KlijentidataTable Klijenti {
             get {
                 return this.tableKlijenti;
             }
@@ -122,7 +122,7 @@ namespace PresentationLayer {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public KorisniciDataTable Korisnici {
+        public KorisnicidataTable Korisnici {
             get {
                 return this.tableKorisnici;
             }
@@ -206,13 +206,13 @@ namespace PresentationLayer {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
                 if ((ds.Tables["Automobili"] != null)) {
-                    base.Tables.Add(new AutomobiliDataTable(ds.Tables["Automobili"]));
+                    base.Tables.Add(new AutomobilidataTable(ds.Tables["Automobili"]));
                 }
                 if ((ds.Tables["Klijenti"] != null)) {
-                    base.Tables.Add(new KlijentiDataTable(ds.Tables["Klijenti"]));
+                    base.Tables.Add(new KlijentidataTable(ds.Tables["Klijenti"]));
                 }
                 if ((ds.Tables["Korisnici"] != null)) {
-                    base.Tables.Add(new KorisniciDataTable(ds.Tables["Korisnici"]));
+                    base.Tables.Add(new KorisnicidataTable(ds.Tables["Korisnici"]));
                 }
                 if ((ds.Tables["Rezervacije"] != null)) {
                     base.Tables.Add(new RezervacijeDataTable(ds.Tables["Rezervacije"]));
@@ -250,19 +250,19 @@ namespace PresentationLayer {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAutomobili = ((AutomobiliDataTable)(base.Tables["Automobili"]));
+            this.tableAutomobili = ((AutomobilidataTable)(base.Tables["Automobili"]));
             if ((initTable == true)) {
                 if ((this.tableAutomobili != null)) {
                     this.tableAutomobili.InitVars();
                 }
             }
-            this.tableKlijenti = ((KlijentiDataTable)(base.Tables["Klijenti"]));
+            this.tableKlijenti = ((KlijentidataTable)(base.Tables["Klijenti"]));
             if ((initTable == true)) {
                 if ((this.tableKlijenti != null)) {
                     this.tableKlijenti.InitVars();
                 }
             }
-            this.tableKorisnici = ((KorisniciDataTable)(base.Tables["Korisnici"]));
+            this.tableKorisnici = ((KorisnicidataTable)(base.Tables["Korisnici"]));
             if ((initTable == true)) {
                 if ((this.tableKorisnici != null)) {
                     this.tableKorisnici.InitVars();
@@ -288,29 +288,29 @@ namespace PresentationLayer {
             this.Namespace = "http://tempuri.org/RentACar200311DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableAutomobili = new AutomobiliDataTable();
+            this.tableAutomobili = new AutomobilidataTable();
             base.Tables.Add(this.tableAutomobili);
-            this.tableKlijenti = new KlijentiDataTable();
+            this.tableKlijenti = new KlijentidataTable();
             base.Tables.Add(this.tableKlijenti);
-            this.tableKorisnici = new KorisniciDataTable();
+            this.tableKorisnici = new KorisnicidataTable();
             base.Tables.Add(this.tableKorisnici);
             this.tableRezervacije = new RezervacijeDataTable();
             base.Tables.Add(this.tableRezervacije);
             this.relationAutomobiliRezervacije = new global::System.Data.DataRelation("AutomobiliRezervacije", new global::System.Data.DataColumn[] {
-                        this.tableAutomobili.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRezervacije.Automobil_IDColumn}, false);
+                        this.tableAutomobili.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRezervacije.Automobil_idColumn}, false);
             this.Relations.Add(this.relationAutomobiliRezervacije);
             this.relationKlijentiRezervacije = new global::System.Data.DataRelation("KlijentiRezervacije", new global::System.Data.DataColumn[] {
-                        this.tableKlijenti.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRezervacije.Klijent_IDColumn}, false);
+                        this.tableKlijenti.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRezervacije.Klijent_idColumn}, false);
             this.Relations.Add(this.relationKlijentiRezervacije);
             this.relationKlijentiRezervacije1 = new global::System.Data.DataRelation("KlijentiRezervacije1", new global::System.Data.DataColumn[] {
-                        this.tableKlijenti.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRezervacije.IDColumn}, false);
+                        this.tableKlijenti.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRezervacije.idColumn}, false);
             this.Relations.Add(this.relationKlijentiRezervacije1);
             this.relationKorisniciRezervacije = new global::System.Data.DataRelation("KorisniciRezervacije", new global::System.Data.DataColumn[] {
-                        this.tableKorisnici.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRezervacije.Korisnik_IDColumn}, false);
+                        this.tableKorisnici.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRezervacije.Korisnik_idColumn}, false);
             this.Relations.Add(this.relationKorisniciRezervacije);
         }
         
@@ -410,9 +410,9 @@ namespace PresentationLayer {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AutomobiliDataTable : global::System.Data.TypedTableBase<AutomobiliRow> {
+        public partial class AutomobilidataTable : global::System.Data.TypedTableBase<AutomobiliRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnMarka;
             
@@ -434,7 +434,7 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AutomobiliDataTable() {
+            public AutomobilidataTable() {
                 this.TableName = "Automobili";
                 this.BeginInit();
                 this.InitClass();
@@ -443,7 +443,7 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal AutomobiliDataTable(global::System.Data.DataTable table) {
+            internal AutomobilidataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -460,16 +460,16 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected AutomobiliDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AutomobilidataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnID;
+                    return this.columnid;
                 }
             }
             
@@ -602,15 +602,15 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AutomobiliRow FindByID(int ID) {
+            public AutomobiliRow FindByid(int id) {
                 return ((AutomobiliRow)(this.Rows.Find(new object[] {
-                            ID})));
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                AutomobiliDataTable cln = ((AutomobiliDataTable)(base.Clone()));
+                AutomobilidataTable cln = ((AutomobilidataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -618,13 +618,13 @@ namespace PresentationLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new AutomobiliDataTable();
+                return new AutomobilidataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
+                this.columnid = base.Columns["id"];
                 this.columnMarka = base.Columns["Marka"];
                 this.columnModel = base.Columns["Model"];
                 this.columnRegistarski_broj = base.Columns["Registarski broj"];
@@ -639,8 +639,8 @@ namespace PresentationLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnMarka = new global::System.Data.DataColumn("Marka", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMarka);
                 this.columnModel = new global::System.Data.DataColumn("Model", typeof(string), null, global::System.Data.MappingType.Element);
@@ -660,12 +660,12 @@ namespace PresentationLayer {
                 this.columnStanje = new global::System.Data.DataColumn("Stanje", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStanje);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
                 this.columnMarka.MaxLength = 255;
                 this.columnModel.MaxLength = 255;
                 this.columnRegistarski_broj.MaxLength = 255;
@@ -673,6 +673,8 @@ namespace PresentationLayer {
                 this.columnNapomena.MaxLength = 255;
                 this.columnTip.MaxLength = 255;
                 this.columnBoja.MaxLength = 255;
+                this.ExtendedProperties.Add("Generator_TableClassName", "AutomobilidataTable");
+                this.ExtendedProperties.Add("Generator_UserTableName", "Automobili");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -758,7 +760,7 @@ namespace PresentationLayer {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "AutomobiliDataTable";
+                attribute2.FixedValue = "AutomobilidataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -804,9 +806,9 @@ namespace PresentationLayer {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class KlijentiDataTable : global::System.Data.TypedTableBase<KlijentiRow> {
+        public partial class KlijentidataTable : global::System.Data.TypedTableBase<KlijentiRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnIme;
             
@@ -822,7 +824,7 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KlijentiDataTable() {
+            public KlijentidataTable() {
                 this.TableName = "Klijenti";
                 this.BeginInit();
                 this.InitClass();
@@ -831,7 +833,7 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal KlijentiDataTable(global::System.Data.DataTable table) {
+            internal KlijentidataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -848,16 +850,16 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected KlijentiDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected KlijentidataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnID;
+                    return this.columnid;
                 }
             }
             
@@ -963,15 +965,15 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KlijentiRow FindByID(int ID) {
+            public KlijentiRow FindByid(int id) {
                 return ((KlijentiRow)(this.Rows.Find(new object[] {
-                            ID})));
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                KlijentiDataTable cln = ((KlijentiDataTable)(base.Clone()));
+                KlijentidataTable cln = ((KlijentidataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -979,13 +981,13 @@ namespace PresentationLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new KlijentiDataTable();
+                return new KlijentidataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
+                this.columnid = base.Columns["id"];
                 this.columnIme = base.Columns["Ime"];
                 this.columnJMBG = base.Columns["JMBG"];
                 this.columnAdresa = base.Columns["Adresa"];
@@ -997,8 +999,8 @@ namespace PresentationLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnIme = new global::System.Data.DataColumn("Ime", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIme);
                 this.columnJMBG = new global::System.Data.DataColumn("JMBG", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1012,18 +1014,20 @@ namespace PresentationLayer {
                 this.columnGrad = new global::System.Data.DataColumn("Grad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGrad);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
                 this.columnIme.MaxLength = 255;
                 this.columnJMBG.MaxLength = 255;
                 this.columnAdresa.MaxLength = 255;
                 this.columnPrezime.MaxLength = 255;
                 this.columnMobilni_broj.MaxLength = 255;
                 this.columnGrad.MaxLength = 255;
+                this.ExtendedProperties.Add("Generator_TableClassName", "KlijentidataTable");
+                this.ExtendedProperties.Add("Generator_UserTableName", "Klijenti");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1109,7 +1113,7 @@ namespace PresentationLayer {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "KlijentiDataTable";
+                attribute2.FixedValue = "KlijentidataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1155,9 +1159,9 @@ namespace PresentationLayer {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class KorisniciDataTable : global::System.Data.TypedTableBase<KorisniciRow> {
+        public partial class KorisnicidataTable : global::System.Data.TypedTableBase<KorisniciRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnKorisnicko;
             
@@ -1165,7 +1169,7 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KorisniciDataTable() {
+            public KorisnicidataTable() {
                 this.TableName = "Korisnici";
                 this.BeginInit();
                 this.InitClass();
@@ -1174,7 +1178,7 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal KorisniciDataTable(global::System.Data.DataTable table) {
+            internal KorisnicidataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1191,16 +1195,16 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected KorisniciDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected KorisnicidataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnID;
+                    return this.columnid;
                 }
             }
             
@@ -1270,15 +1274,15 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KorisniciRow FindByID(int ID) {
+            public KorisniciRow FindByid(int id) {
                 return ((KorisniciRow)(this.Rows.Find(new object[] {
-                            ID})));
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                KorisniciDataTable cln = ((KorisniciDataTable)(base.Clone()));
+                KorisnicidataTable cln = ((KorisnicidataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1286,13 +1290,13 @@ namespace PresentationLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new KorisniciDataTable();
+                return new KorisnicidataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
+                this.columnid = base.Columns["id"];
                 this.columnKorisnicko = base.Columns["Korisnicko"];
                 this.columnSifra = base.Columns["Sifra"];
             }
@@ -1300,21 +1304,23 @@ namespace PresentationLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnKorisnicko = new global::System.Data.DataColumn("Korisnicko", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKorisnicko);
                 this.columnSifra = new global::System.Data.DataColumn("Sifra", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSifra);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
                 this.columnKorisnicko.MaxLength = 255;
                 this.columnSifra.MaxLength = 255;
+                this.ExtendedProperties.Add("Generator_TableClassName", "KorisnicidataTable");
+                this.ExtendedProperties.Add("Generator_UserTableName", "Korisnici");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1400,7 +1406,7 @@ namespace PresentationLayer {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "KorisniciDataTable";
+                attribute2.FixedValue = "KorisnicidataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1448,7 +1454,7 @@ namespace PresentationLayer {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class RezervacijeDataTable : global::System.Data.TypedTableBase<RezervacijeRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnDatum_od;
             
@@ -1456,11 +1462,11 @@ namespace PresentationLayer {
             
             private global::System.Data.DataColumn columnNapomena;
             
-            private global::System.Data.DataColumn columnAutomobil_ID;
+            private global::System.Data.DataColumn columnAutomobil_id;
             
-            private global::System.Data.DataColumn columnKorisnik_ID;
+            private global::System.Data.DataColumn columnKorisnik_id;
             
-            private global::System.Data.DataColumn columnKlijent_ID;
+            private global::System.Data.DataColumn columnKlijent_id;
             
             private global::System.Data.DataColumn columnZavrsena;
             
@@ -1499,9 +1505,9 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnID;
+                    return this.columnid;
                 }
             }
             
@@ -1531,25 +1537,25 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Automobil_IDColumn {
+            public global::System.Data.DataColumn Automobil_idColumn {
                 get {
-                    return this.columnAutomobil_ID;
+                    return this.columnAutomobil_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Korisnik_IDColumn {
+            public global::System.Data.DataColumn Korisnik_idColumn {
                 get {
-                    return this.columnKorisnik_ID;
+                    return this.columnKorisnik_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Klijent_IDColumn {
+            public global::System.Data.DataColumn Klijent_idColumn {
                 get {
-                    return this.columnKlijent_ID;
+                    return this.columnKlijent_id;
                 }
             }
             
@@ -1625,9 +1631,9 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RezervacijeRow FindByID(int ID) {
+            public RezervacijeRow FindByid(int id) {
                 return ((RezervacijeRow)(this.Rows.Find(new object[] {
-                            ID})));
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1647,42 +1653,42 @@ namespace PresentationLayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
+                this.columnid = base.Columns["id"];
                 this.columnDatum_od = base.Columns["Datum od"];
                 this.columnDatum_do = base.Columns["Datum do"];
                 this.columnNapomena = base.Columns["Napomena"];
-                this.columnAutomobil_ID = base.Columns["Automobil ID"];
-                this.columnKorisnik_ID = base.Columns["Korisnik ID"];
-                this.columnKlijent_ID = base.Columns["Klijent ID"];
+                this.columnAutomobil_id = base.Columns["Automobil id"];
+                this.columnKorisnik_id = base.Columns["Korisnik id"];
+                this.columnKlijent_id = base.Columns["Klijent id"];
                 this.columnZavrsena = base.Columns["Zavrsena"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnDatum_od = new global::System.Data.DataColumn("Datum od", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDatum_od);
                 this.columnDatum_do = new global::System.Data.DataColumn("Datum do", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDatum_do);
                 this.columnNapomena = new global::System.Data.DataColumn("Napomena", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNapomena);
-                this.columnAutomobil_ID = new global::System.Data.DataColumn("Automobil ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAutomobil_ID);
-                this.columnKorisnik_ID = new global::System.Data.DataColumn("Korisnik ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKorisnik_ID);
-                this.columnKlijent_ID = new global::System.Data.DataColumn("Klijent ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKlijent_ID);
+                this.columnAutomobil_id = new global::System.Data.DataColumn("Automobil id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAutomobil_id);
+                this.columnKorisnik_id = new global::System.Data.DataColumn("Korisnik id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKorisnik_id);
+                this.columnKlijent_id = new global::System.Data.DataColumn("Klijent id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKlijent_id);
                 this.columnZavrsena = new global::System.Data.DataColumn("Zavrsena", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnZavrsena);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
                 this.columnNapomena.MaxLength = 255;
             }
             
@@ -1815,23 +1821,23 @@ namespace PresentationLayer {
         ///</summary>
         public partial class AutomobiliRow : global::System.Data.DataRow {
             
-            private AutomobiliDataTable tableAutomobili;
+            private AutomobilidataTable tableAutomobili;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal AutomobiliRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableAutomobili = ((AutomobiliDataTable)(this.Table));
+                this.tableAutomobili = ((AutomobilidataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID {
+            public int id {
                 get {
-                    return ((int)(this[this.tableAutomobili.IDColumn]));
+                    return ((int)(this[this.tableAutomobili.idColumn]));
                 }
                 set {
-                    this[this.tableAutomobili.IDColumn] = value;
+                    this[this.tableAutomobili.idColumn] = value;
                 }
             }
             
@@ -2104,23 +2110,23 @@ namespace PresentationLayer {
         ///</summary>
         public partial class KlijentiRow : global::System.Data.DataRow {
             
-            private KlijentiDataTable tableKlijenti;
+            private KlijentidataTable tableKlijenti;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal KlijentiRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableKlijenti = ((KlijentiDataTable)(this.Table));
+                this.tableKlijenti = ((KlijentidataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID {
+            public int id {
                 get {
-                    return ((int)(this[this.tableKlijenti.IDColumn]));
+                    return ((int)(this[this.tableKlijenti.idColumn]));
                 }
                 set {
-                    this[this.tableKlijenti.IDColumn] = value;
+                    this[this.tableKlijenti.idColumn] = value;
                 }
             }
             
@@ -2320,23 +2326,23 @@ namespace PresentationLayer {
         ///</summary>
         public partial class KorisniciRow : global::System.Data.DataRow {
             
-            private KorisniciDataTable tableKorisnici;
+            private KorisnicidataTable tableKorisnici;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal KorisniciRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableKorisnici = ((KorisniciDataTable)(this.Table));
+                this.tableKorisnici = ((KorisnicidataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID {
+            public int id {
                 get {
-                    return ((int)(this[this.tableKorisnici.IDColumn]));
+                    return ((int)(this[this.tableKorisnici.idColumn]));
                 }
                 set {
-                    this[this.tableKorisnici.IDColumn] = value;
+                    this[this.tableKorisnici.idColumn] = value;
                 }
             }
             
@@ -2424,12 +2430,12 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID {
+            public int id {
                 get {
-                    return ((int)(this[this.tableRezervacije.IDColumn]));
+                    return ((int)(this[this.tableRezervacije.idColumn]));
                 }
                 set {
-                    this[this.tableRezervacije.IDColumn] = value;
+                    this[this.tableRezervacije.idColumn] = value;
                 }
             }
             
@@ -2483,49 +2489,49 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Automobil_ID {
+            public int Automobil_id {
                 get {
                     try {
-                        return ((int)(this[this.tableRezervacije.Automobil_IDColumn]));
+                        return ((int)(this[this.tableRezervacije.Automobil_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Automobil ID\' in table \'Rezervacije\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Automobil id\' in table \'Rezervacije\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRezervacije.Automobil_IDColumn] = value;
+                    this[this.tableRezervacije.Automobil_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Korisnik_ID {
+            public int Korisnik_id {
                 get {
                     try {
-                        return ((int)(this[this.tableRezervacije.Korisnik_IDColumn]));
+                        return ((int)(this[this.tableRezervacije.Korisnik_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Korisnik ID\' in table \'Rezervacije\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Korisnik id\' in table \'Rezervacije\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRezervacije.Korisnik_IDColumn] = value;
+                    this[this.tableRezervacije.Korisnik_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Klijent_ID {
+            public int Klijent_id {
                 get {
                     try {
-                        return ((int)(this[this.tableRezervacije.Klijent_IDColumn]));
+                        return ((int)(this[this.tableRezervacije.Klijent_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Klijent ID\' in table \'Rezervacije\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Klijent id\' in table \'Rezervacije\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRezervacije.Klijent_IDColumn] = value;
+                    this[this.tableRezervacije.Klijent_idColumn] = value;
                 }
             }
             
@@ -2627,38 +2633,38 @@ namespace PresentationLayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsAutomobil_IDNull() {
-                return this.IsNull(this.tableRezervacije.Automobil_IDColumn);
+            public bool IsAutomobil_idNull() {
+                return this.IsNull(this.tableRezervacije.Automobil_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetAutomobil_IDNull() {
-                this[this.tableRezervacije.Automobil_IDColumn] = global::System.Convert.DBNull;
+            public void SetAutomobil_idNull() {
+                this[this.tableRezervacije.Automobil_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsKorisnik_IDNull() {
-                return this.IsNull(this.tableRezervacije.Korisnik_IDColumn);
+            public bool IsKorisnik_idNull() {
+                return this.IsNull(this.tableRezervacije.Korisnik_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetKorisnik_IDNull() {
-                this[this.tableRezervacije.Korisnik_IDColumn] = global::System.Convert.DBNull;
+            public void SetKorisnik_idNull() {
+                this[this.tableRezervacije.Korisnik_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsKlijent_IDNull() {
-                return this.IsNull(this.tableRezervacije.Klijent_IDColumn);
+            public bool IsKlijent_idNull() {
+                return this.IsNull(this.tableRezervacije.Klijent_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetKlijent_IDNull() {
-                this[this.tableRezervacije.Klijent_IDColumn] = global::System.Convert.DBNull;
+            public void SetKlijent_idNull() {
+                this[this.tableRezervacije.Klijent_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2935,7 +2941,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Automobili";
-            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("Marka", "Marka");
             tableMapping.ColumnMappings.Add("Model", "Model");
             tableMapping.ColumnMappings.Add("Registarski broj", "Registarski broj");
@@ -2948,9 +2954,9 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Automobili` WHERE ((`ID` = ?) AND ((? = 1 AND `Marka` IS NULL) OR (`Marka` = ?)) AND ((? = 1 AND `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Registarski broj` IS NULL) OR (`Registarski broj` = ?)) AND ((? = 1 AND `Broj sasije` IS NULL) OR (`Broj sasije` = ?)) AND ((? = 1 AND `Napomena` IS NULL) OR (`Napomena` = ?)) AND ((? = 1 AND `Godiste` IS NULL) OR (`Godiste` = ?)) AND ((? = 1 AND `Tip` IS NULL) OR (`Tip` = ?)) AND ((? = 1 AND `Boja` IS NULL) OR (`Boja` = ?)) AND ((? = 1 AND `Stanje` IS NULL) OR (`Stanje` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Automobili` WHERE ((`id` = ?) AND ((? = 1 AND `Marka` IS NULL) OR (`Marka` = ?)) AND ((? = 1 AND `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Registarski broj` IS NULL) OR (`Registarski broj` = ?)) AND ((? = 1 AND `Broj sasije` IS NULL) OR (`Broj sasije` = ?)) AND ((? = 1 AND `Napomena` IS NULL) OR (`Napomena` = ?)) AND ((? = 1 AND `Godiste` IS NULL) OR (`Godiste` = ?)) AND ((? = 1 AND `Tip` IS NULL) OR (`Tip` = ?)) AND ((? = 1 AND `Boja` IS NULL) OR (`Boja` = ?)) AND ((? = 1 AND `Stanje` IS NULL) OR (`Stanje` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Marka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Marka", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Marka", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Marka", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Model", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Model", global::System.Data.DataRowVersion.Original, true, null));
@@ -2986,7 +2992,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Stanje", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Stanje", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Automobili` SET `Marka` = ?, `Model` = ?, `Registarski broj` = ?, `Broj sasije` = ?, `Napomena` = ?, `Godiste` = ?, `Tip` = ?, `Boja` = ?, `Stanje` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Marka` IS NULL) OR (`Marka` = ?)) AND ((? = 1 AND `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Registarski broj` IS NULL) OR (`Registarski broj` = ?)) AND ((? = 1 AND `Broj sasije` IS NULL) OR (`Broj sasije` = ?)) AND ((? = 1 AND `Napomena` IS NULL) OR (`Napomena` = ?)) AND ((? = 1 AND `Godiste` IS NULL) OR (`Godiste` = ?)) AND ((? = 1 AND `Tip` IS NULL) OR (`Tip` = ?)) AND ((? = 1 AND `Boja` IS NULL) OR (`Boja` = ?)) AND ((? = 1 AND `Stanje` IS NULL) OR (`Stanje` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Automobili` SET `Marka` = ?, `Model` = ?, `Registarski broj` = ?, `Broj sasije` = ?, `Napomena` = ?, `Godiste` = ?, `Tip` = ?, `Boja` = ?, `Stanje` = ? WHERE ((`id` = ?) AND ((? = 1 AND `Marka` IS NULL) OR (`Marka` = ?)) AND ((? = 1 AND `Model` IS NULL) OR (`Model` = ?)) AND ((? = 1 AND `Registarski broj` IS NULL) OR (`Registarski broj` = ?)) AND ((? = 1 AND `Broj sasije` IS NULL) OR (`Broj sasije` = ?)) AND ((? = 1 AND `Napomena` IS NULL) OR (`Napomena` = ?)) AND ((? = 1 AND `Godiste` IS NULL) OR (`Godiste` = ?)) AND ((? = 1 AND `Tip` IS NULL) OR (`Tip` = ?)) AND ((? = 1 AND `Boja` IS NULL) OR (`Boja` = ?)) AND ((? = 1 AND `Stanje` IS NULL) OR (`Stanje` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Marka", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Marka", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Model", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Model", global::System.Data.DataRowVersion.Current, false, null));
@@ -2997,7 +3003,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Tip", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tip", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Boja", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Boja", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Stanje", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Stanje", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Marka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Marka", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Marka", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Marka", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Model", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Model", global::System.Data.DataRowVersion.Original, true, null));
@@ -3031,7 +3037,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Marka, Model, [Registarski broj], [Broj sasije], Napomena, Godiste, Ti" +
+            this._commandCollection[0].CommandText = "SELECT id, Marka, Model, [Registarski broj], [Broj sasije], Napomena, Godiste, Ti" +
                 "p, Boja, Stanje FROM Automobili";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -3040,7 +3046,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(RentACar200311DataSet.AutomobiliDataTable dataTable) {
+        public virtual int Fill(RentACar200311DataSet.AutomobilidataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3053,9 +3059,9 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual RentACar200311DataSet.AutomobiliDataTable GetData() {
+        public virtual RentACar200311DataSet.AutomobilidataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            RentACar200311DataSet.AutomobiliDataTable dataTable = new RentACar200311DataSet.AutomobiliDataTable();
+            RentACar200311DataSet.AutomobilidataTable dataTable = new RentACar200311DataSet.AutomobilidataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3063,7 +3069,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RentACar200311DataSet.AutomobiliDataTable dataTable) {
+        public virtual int Update(RentACar200311DataSet.AutomobilidataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -3093,8 +3099,8 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_Marka, string Original_Model, string Original_Registarski_broj, string Original_Broj_sasije, string Original_Napomena, global::System.Nullable<int> Original_Godiste, string Original_Tip, string Original_Boja, bool Original_Stanje) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+        public virtual int Delete(int Original_id, string Original_Marka, string Original_Model, string Original_Registarski_broj, string Original_Broj_sasije, string Original_Napomena, global::System.Nullable<int> Original_Godiste, string Original_Tip, string Original_Boja, bool Original_Stanje) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_Marka == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -3261,7 +3267,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
                     string Tip, 
                     string Boja, 
                     bool Stanje, 
-                    int Original_ID, 
+                    int Original_id, 
                     string Original_Marka, 
                     string Original_Model, 
                     string Original_Registarski_broj, 
@@ -3320,7 +3326,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Boja));
             }
             this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(Stanje));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_id));
             if ((Original_Marka == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
@@ -3525,7 +3531,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Klijenti";
-            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("Ime", "Ime");
             tableMapping.ColumnMappings.Add("JMBG", "JMBG");
             tableMapping.ColumnMappings.Add("Adresa", "Adresa");
@@ -3535,9 +3541,9 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Klijenti` WHERE ((`ID` = ?) AND ((? = 1 AND `Ime` IS NULL) OR (`Ime` = ?)) AND ((? = 1 AND `JMBG` IS NULL) OR (`JMBG` = ?)) AND ((? = 1 AND `Adresa` IS NULL) OR (`Adresa` = ?)) AND ((? = 1 AND `Prezime` IS NULL) OR (`Prezime` = ?)) AND ((? = 1 AND `Mobilni broj` IS NULL) OR (`Mobilni broj` = ?)) AND ((? = 1 AND `Grad` IS NULL) OR (`Grad` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Klijenti` WHERE ((`id` = ?) AND ((? = 1 AND `Ime` IS NULL) OR (`Ime` = ?)) AND ((? = 1 AND `JMBG` IS NULL) OR (`JMBG` = ?)) AND ((? = 1 AND `Adresa` IS NULL) OR (`Adresa` = ?)) AND ((? = 1 AND `Prezime` IS NULL) OR (`Prezime` = ?)) AND ((? = 1 AND `Mobilni broj` IS NULL) OR (`Mobilni broj` = ?)) AND ((? = 1 AND `Grad` IS NULL) OR (`Grad` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Ime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ime", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Ime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ime", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_JMBG", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "JMBG", global::System.Data.DataRowVersion.Original, true, null));
@@ -3563,7 +3569,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Grad", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Grad", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Klijenti` SET `Ime` = ?, `JMBG` = ?, `Adresa` = ?, `Prezime` = ?, `Mobilni broj` = ?, `Grad` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Ime` IS NULL) OR (`Ime` = ?)) AND ((? = 1 AND `JMBG` IS NULL) OR (`JMBG` = ?)) AND ((? = 1 AND `Adresa` IS NULL) OR (`Adresa` = ?)) AND ((? = 1 AND `Prezime` IS NULL) OR (`Prezime` = ?)) AND ((? = 1 AND `Mobilni broj` IS NULL) OR (`Mobilni broj` = ?)) AND ((? = 1 AND `Grad` IS NULL) OR (`Grad` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Klijenti` SET `Ime` = ?, `JMBG` = ?, `Adresa` = ?, `Prezime` = ?, `Mobilni broj` = ?, `Grad` = ? WHERE ((`id` = ?) AND ((? = 1 AND `Ime` IS NULL) OR (`Ime` = ?)) AND ((? = 1 AND `JMBG` IS NULL) OR (`JMBG` = ?)) AND ((? = 1 AND `Adresa` IS NULL) OR (`Adresa` = ?)) AND ((? = 1 AND `Prezime` IS NULL) OR (`Prezime` = ?)) AND ((? = 1 AND `Mobilni broj` IS NULL) OR (`Mobilni broj` = ?)) AND ((? = 1 AND `Grad` IS NULL) OR (`Grad` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Ime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ime", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("JMBG", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "JMBG", global::System.Data.DataRowVersion.Current, false, null));
@@ -3571,7 +3577,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Prezime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Prezime", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Mobilni_broj", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Mobilni broj", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Grad", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Grad", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Ime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ime", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Ime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ime", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_JMBG", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "JMBG", global::System.Data.DataRowVersion.Original, true, null));
@@ -3599,7 +3605,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Ime, JMBG, Adresa, Prezime, [Mobilni broj], Grad FROM Klijenti";
+            this._commandCollection[0].CommandText = "SELECT id, Ime, JMBG, Adresa, Prezime, [Mobilni broj], Grad FROM Klijenti";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3607,7 +3613,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(RentACar200311DataSet.KlijentiDataTable dataTable) {
+        public virtual int Fill(RentACar200311DataSet.KlijentidataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3620,9 +3626,9 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual RentACar200311DataSet.KlijentiDataTable GetData() {
+        public virtual RentACar200311DataSet.KlijentidataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            RentACar200311DataSet.KlijentiDataTable dataTable = new RentACar200311DataSet.KlijentiDataTable();
+            RentACar200311DataSet.KlijentidataTable dataTable = new RentACar200311DataSet.KlijentidataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3630,7 +3636,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RentACar200311DataSet.KlijentiDataTable dataTable) {
+        public virtual int Update(RentACar200311DataSet.KlijentidataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -3660,8 +3666,8 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_Ime, string Original_JMBG, string Original_Adresa, string Original_Prezime, string Original_Mobilni_broj, string Original_Grad) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+        public virtual int Delete(int Original_id, string Original_Ime, string Original_JMBG, string Original_Adresa, string Original_Prezime, string Original_Mobilni_broj, string Original_Grad) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_Ime == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -3787,7 +3793,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Ime, string JMBG, string Adresa, string Prezime, string Mobilni_broj, string Grad, int Original_ID, string Original_Ime, string Original_JMBG, string Original_Adresa, string Original_Prezime, string Original_Mobilni_broj, string Original_Grad) {
+        public virtual int Update(string Ime, string JMBG, string Adresa, string Prezime, string Mobilni_broj, string Grad, int Original_id, string Original_Ime, string Original_JMBG, string Original_Adresa, string Original_Prezime, string Original_Mobilni_broj, string Original_Grad) {
             if ((Ime == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3824,7 +3830,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Grad));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id));
             if ((Original_Ime == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
@@ -4011,16 +4017,16 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Korisnici";
-            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("Korisnicko", "Korisnicko");
             tableMapping.ColumnMappings.Add("Sifra", "Sifra");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Korisnici` WHERE ((`ID` = ?) AND ((? = 1 AND `Korisnicko` IS NULL) O" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Korisnici` WHERE ((`id` = ?) AND ((? = 1 AND `Korisnicko` IS NULL) O" +
                 "R (`Korisnicko` = ?)) AND ((? = 1 AND `Sifra` IS NULL) OR (`Sifra` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Korisnicko", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnicko", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Korisnicko", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnicko", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Sifra", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sifra", global::System.Data.DataRowVersion.Original, true, null));
@@ -4033,13 +4039,13 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Sifra", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sifra", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `Korisnici` SET `Korisnicko` = ?, `Sifra` = ? WHERE ((`ID` = ?) AND ((? = " +
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Korisnici` SET `Korisnicko` = ?, `Sifra` = ? WHERE ((`id` = ?) AND ((? = " +
                 "1 AND `Korisnicko` IS NULL) OR (`Korisnicko` = ?)) AND ((? = 1 AND `Sifra` IS NU" +
                 "LL) OR (`Sifra` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Korisnicko", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnicko", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Sifra", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sifra", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Korisnicko", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnicko", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Korisnicko", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnicko", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Sifra", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sifra", global::System.Data.DataRowVersion.Original, true, null));
@@ -4059,7 +4065,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Korisnicko, Sifra FROM Korisnici";
+            this._commandCollection[0].CommandText = "SELECT id, Korisnicko, Sifra FROM Korisnici";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4067,7 +4073,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(RentACar200311DataSet.KorisniciDataTable dataTable) {
+        public virtual int Fill(RentACar200311DataSet.KorisnicidataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4080,9 +4086,9 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual RentACar200311DataSet.KorisniciDataTable GetData() {
+        public virtual RentACar200311DataSet.KorisnicidataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            RentACar200311DataSet.KorisniciDataTable dataTable = new RentACar200311DataSet.KorisniciDataTable();
+            RentACar200311DataSet.KorisnicidataTable dataTable = new RentACar200311DataSet.KorisnicidataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4090,7 +4096,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RentACar200311DataSet.KorisniciDataTable dataTable) {
+        public virtual int Update(RentACar200311DataSet.KorisnicidataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4120,8 +4126,8 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_Korisnicko, string Original_Sifra) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+        public virtual int Delete(int Original_id, string Original_Korisnicko, string Original_Sifra) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_Korisnicko == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -4191,7 +4197,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Korisnicko, string Sifra, int Original_ID, string Original_Korisnicko, string Original_Sifra) {
+        public virtual int Update(string Korisnicko, string Sifra, int Original_id, string Original_Korisnicko, string Original_Sifra) {
             if ((Korisnicko == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4204,7 +4210,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Sifra));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id));
             if ((Original_Korisnicko == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -4359,70 +4365,70 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Rezervacije";
-            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("Datum od", "Datum od");
             tableMapping.ColumnMappings.Add("Datum do", "Datum do");
             tableMapping.ColumnMappings.Add("Napomena", "Napomena");
-            tableMapping.ColumnMappings.Add("Automobil ID", "Automobil ID");
-            tableMapping.ColumnMappings.Add("Korisnik ID", "Korisnik ID");
-            tableMapping.ColumnMappings.Add("Klijent ID", "Klijent ID");
+            tableMapping.ColumnMappings.Add("Automobil id", "Automobil id");
+            tableMapping.ColumnMappings.Add("Korisnik id", "Korisnik id");
+            tableMapping.ColumnMappings.Add("Klijent id", "Klijent id");
             tableMapping.ColumnMappings.Add("Zavrsena", "Zavrsena");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Rezervacije` WHERE ((`ID` = ?) AND ((? = 1 AND `Datum od` IS NULL) OR (`Datum od` = ?)) AND ((? = 1 AND `Datum do` IS NULL) OR (`Datum do` = ?)) AND ((? = 1 AND `Napomena` IS NULL) OR (`Napomena` = ?)) AND ((? = 1 AND `Automobil ID` IS NULL) OR (`Automobil ID` = ?)) AND ((? = 1 AND `Korisnik ID` IS NULL) OR (`Korisnik ID` = ?)) AND ((? = 1 AND `Klijent ID` IS NULL) OR (`Klijent ID` = ?)) AND ((? = 1 AND `Zavrsena` IS NULL) OR (`Zavrsena` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Rezervacije` WHERE ((`id` = ?) AND ((? = 1 AND `Datum od` IS NULL) OR (`Datum od` = ?)) AND ((? = 1 AND `Datum do` IS NULL) OR (`Datum do` = ?)) AND ((? = 1 AND `Napomena` IS NULL) OR (`Napomena` = ?)) AND ((? = 1 AND `Automobil id` IS NULL) OR (`Automobil id` = ?)) AND ((? = 1 AND `Korisnik id` IS NULL) OR (`Korisnik id` = ?)) AND ((? = 1 AND `Klijent id` IS NULL) OR (`Klijent id` = ?)) AND ((? = 1 AND `Zavrsena` IS NULL) OR (`Zavrsena` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Datum_od", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum od", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Datum_od", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum od", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Datum_do", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum do", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Datum_do", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum do", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Napomena", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Napomena", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Napomena", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Napomena", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Automobil_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil ID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Automobil_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Korisnik_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik ID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Korisnik_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Klijent_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent ID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Klijent_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Automobil_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Automobil_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Korisnik_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Korisnik_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Klijent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Klijent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Zavrsena", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Zavrsena", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Zavrsena", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Zavrsena", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Rezervacije` (`Datum od`, `Datum do`, `Napomena`, `Automobil ID`, `K" +
-                "orisnik ID`, `Klijent ID`, `Zavrsena`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Rezervacije` (`Datum od`, `Datum do`, `Napomena`, `Automobil id`, `K" +
+                "orisnik id`, `Klijent id`, `Zavrsena`) VALUES (?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Datum_od", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum od", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Datum_do", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum do", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Napomena", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Napomena", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Automobil_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Korisnik_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Klijent_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Automobil_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Korisnik_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Klijent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent id", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Zavrsena", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Zavrsena", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Rezervacije` SET `Datum od` = ?, `Datum do` = ?, `Napomena` = ?, `Automobil ID` = ?, `Korisnik ID` = ?, `Klijent ID` = ?, `Zavrsena` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Datum od` IS NULL) OR (`Datum od` = ?)) AND ((? = 1 AND `Datum do` IS NULL) OR (`Datum do` = ?)) AND ((? = 1 AND `Napomena` IS NULL) OR (`Napomena` = ?)) AND ((? = 1 AND `Automobil ID` IS NULL) OR (`Automobil ID` = ?)) AND ((? = 1 AND `Korisnik ID` IS NULL) OR (`Korisnik ID` = ?)) AND ((? = 1 AND `Klijent ID` IS NULL) OR (`Klijent ID` = ?)) AND ((? = 1 AND `Zavrsena` IS NULL) OR (`Zavrsena` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Rezervacije` SET `Datum od` = ?, `Datum do` = ?, `Napomena` = ?, `Automobil id` = ?, `Korisnik id` = ?, `Klijent id` = ?, `Zavrsena` = ? WHERE ((`id` = ?) AND ((? = 1 AND `Datum od` IS NULL) OR (`Datum od` = ?)) AND ((? = 1 AND `Datum do` IS NULL) OR (`Datum do` = ?)) AND ((? = 1 AND `Napomena` IS NULL) OR (`Napomena` = ?)) AND ((? = 1 AND `Automobil id` IS NULL) OR (`Automobil id` = ?)) AND ((? = 1 AND `Korisnik id` IS NULL) OR (`Korisnik id` = ?)) AND ((? = 1 AND `Klijent id` IS NULL) OR (`Klijent id` = ?)) AND ((? = 1 AND `Zavrsena` IS NULL) OR (`Zavrsena` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Datum_od", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum od", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Datum_do", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum do", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Napomena", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Napomena", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Automobil_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Korisnik_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Klijent_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Automobil_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Korisnik_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik id", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Klijent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent id", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Zavrsena", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Zavrsena", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Datum_od", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum od", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Datum_od", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum od", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Datum_do", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum do", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Datum_do", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Datum do", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Napomena", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Napomena", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Napomena", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Napomena", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Automobil_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil ID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Automobil_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Korisnik_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik ID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Korisnik_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Klijent_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent ID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Klijent_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Automobil_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Automobil_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Automobil id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Korisnik_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Korisnik_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Korisnik id", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Klijent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent id", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Klijent_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Klijent id", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Zavrsena", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Zavrsena", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Zavrsena", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Zavrsena", global::System.Data.DataRowVersion.Original, false, null));
         }
@@ -4440,18 +4446,18 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, [Datum od], [Datum do], Napomena, [Automobil ID], [Korisnik ID], [Klij" +
-                "ent ID], Zavrsena FROM Rezervacije";
+            this._commandCollection[0].CommandText = "SELECT id, [Datum od], [Datum do], Napomena, [Automobil id], [Korisnik id], [Klij" +
+                "ent id], Zavrsena FROM Rezervacije";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT r.ID, r.[Datum od], r.[Datum do], r.Napomena, r.[Automobil ID], r.[Korisni" +
-                "k ID], r.[Klijent ID], r.Zavrsena FROM Rezervacije r";
+            this._commandCollection[1].CommandText = "SELECT r.id, r.[Datum od], r.[Datum do], r.Napomena, r.[Automobil id], r.[Korisni" +
+                "k id], r.[Klijent id], r.Zavrsena FROM Rezervacije r";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT r.ID, r.[Datum od], r.[Datum do], r.Napomena, r.[Automobil ID], r.[Korisni" +
-                "k ID], r.[Klijent ID], r.Zavrsena FROM Rezervacije r, Automobili a";
+            this._commandCollection[2].CommandText = "SELECT r.id, r.[Datum od], r.[Datum do], r.Napomena, r.[Automobil id], r.[Korisni" +
+                "k id], r.[Klijent id], r.Zavrsena FROM Rezervacije r, Automobili a";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4538,8 +4544,8 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, global::System.Nullable<global::System.DateTime> Original_Datum_od, global::System.Nullable<global::System.DateTime> Original_Datum_do, string Original_Napomena, global::System.Nullable<int> Original_Automobil_ID, global::System.Nullable<int> Original_Korisnik_ID, global::System.Nullable<int> Original_Klijent_ID, bool Original_Zavrsena) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+        public virtual int Delete(int Original_id, global::System.Nullable<global::System.DateTime> Original_Datum_od, global::System.Nullable<global::System.DateTime> Original_Datum_do, string Original_Napomena, global::System.Nullable<int> Original_Automobil_id, global::System.Nullable<int> Original_Korisnik_id, global::System.Nullable<int> Original_Klijent_id, bool Original_Zavrsena) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_Datum_od.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Datum_od.Value));
@@ -4564,25 +4570,25 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Napomena));
             }
-            if ((Original_Automobil_ID.HasValue == true)) {
+            if ((Original_Automobil_id.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Automobil_ID.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Automobil_id.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_Korisnik_ID.HasValue == true)) {
+            if ((Original_Korisnik_id.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Korisnik_ID.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Korisnik_id.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_Klijent_ID.HasValue == true)) {
+            if ((Original_Klijent_id.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_Klijent_ID.Value));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_Klijent_id.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
@@ -4610,7 +4616,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> Datum_od, global::System.Nullable<global::System.DateTime> Datum_do, string Napomena, global::System.Nullable<int> Automobil_ID, global::System.Nullable<int> Korisnik_ID, global::System.Nullable<int> Klijent_ID, bool Zavrsena) {
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> Datum_od, global::System.Nullable<global::System.DateTime> Datum_do, string Napomena, global::System.Nullable<int> Automobil_id, global::System.Nullable<int> Korisnik_id, global::System.Nullable<int> Klijent_id, bool Zavrsena) {
             if ((Datum_od.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Datum_od.Value));
             }
@@ -4629,20 +4635,20 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Napomena));
             }
-            if ((Automobil_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Automobil_ID.Value));
+            if ((Automobil_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Automobil_id.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Korisnik_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Korisnik_ID.Value));
+            if ((Korisnik_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Korisnik_id.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Klijent_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Klijent_ID.Value));
+            if ((Klijent_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Klijent_id.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
@@ -4668,7 +4674,7 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Datum_od, global::System.Nullable<global::System.DateTime> Datum_do, string Napomena, global::System.Nullable<int> Automobil_ID, global::System.Nullable<int> Korisnik_ID, global::System.Nullable<int> Klijent_ID, bool Zavrsena, int Original_ID, global::System.Nullable<global::System.DateTime> Original_Datum_od, global::System.Nullable<global::System.DateTime> Original_Datum_do, string Original_Napomena, global::System.Nullable<int> Original_Automobil_ID, global::System.Nullable<int> Original_Korisnik_ID, global::System.Nullable<int> Original_Klijent_ID, bool Original_Zavrsena) {
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Datum_od, global::System.Nullable<global::System.DateTime> Datum_do, string Napomena, global::System.Nullable<int> Automobil_id, global::System.Nullable<int> Korisnik_id, global::System.Nullable<int> Klijent_id, bool Zavrsena, int Original_id, global::System.Nullable<global::System.DateTime> Original_Datum_od, global::System.Nullable<global::System.DateTime> Original_Datum_do, string Original_Napomena, global::System.Nullable<int> Original_Automobil_id, global::System.Nullable<int> Original_Korisnik_id, global::System.Nullable<int> Original_Klijent_id, bool Original_Zavrsena) {
             if ((Datum_od.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Datum_od.Value));
             }
@@ -4687,26 +4693,26 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Napomena));
             }
-            if ((Automobil_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Automobil_ID.Value));
+            if ((Automobil_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Automobil_id.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Korisnik_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Korisnik_ID.Value));
+            if ((Korisnik_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Korisnik_id.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Klijent_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Klijent_ID.Value));
+            if ((Klijent_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Klijent_id.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Zavrsena));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id));
             if ((Original_Datum_od.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Datum_od.Value));
@@ -4731,25 +4737,25 @@ namespace PresentationLayer.RentACar200311DataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Napomena));
             }
-            if ((Original_Automobil_ID.HasValue == true)) {
+            if ((Original_Automobil_id.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Automobil_ID.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Automobil_id.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((Original_Korisnik_ID.HasValue == true)) {
+            if ((Original_Korisnik_id.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Korisnik_ID.Value));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Korisnik_id.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((Original_Klijent_ID.HasValue == true)) {
+            if ((Original_Klijent_id.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Klijent_ID.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Klijent_id.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));

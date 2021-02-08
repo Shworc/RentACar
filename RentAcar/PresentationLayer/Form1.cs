@@ -20,7 +20,7 @@ namespace PresentationLayer
         private readonly RezervacijaBusiness rezervacijaBusiness;
         private readonly KorisnikBusiness korisnikBusiness;
         private readonly AutoBusiness autoBusiness;
-        private readonly object textBoxUsername;
+        private readonly String textBoxUsername;
         public FormLogin formLogin;
         public FormRezervacija formRezervacija;
         DataRow dr2;
@@ -38,7 +38,8 @@ namespace PresentationLayer
         }
         public Form1(TextBox _textBoxUsername)
         {
-            textBoxUsername = _textBoxUsername;
+            textBoxUsername = _textBoxUsername.ToString();
+            InitializeComponent();
         }
 
 
@@ -46,8 +47,10 @@ namespace PresentationLayer
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Konekcija();
-            Query("select * From Rezervacije");
+            Query("select r.id,ki.Ime,ki.Prezime,ki.JMBG,a.Marka,a.Model,r.[Datum od],r.[Datum od],r.Napomena,a.[Registarski broj],r.Zavrsena  From Rezervacije r,Automobili a, Klijenti ki, Korisnici kr WHERE r.[Automobil ID]=a.[ID] AND r.[Klijent ID]=ki.ID AND r.[Korisnik ID]=kr.ID");
             RefreshTabele(dt, dataGridView2);
+            txtKorisnik.Text = FormLogin.ukorisnik;
+            txtCena.Text = cena.ToString();
         }
       
 
@@ -70,7 +73,7 @@ namespace PresentationLayer
         }
             
        
-        private void comboBoxAutoID_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxAutoid_SelectedIndexChanged(object sender, EventArgs e)
         {
           
         }
@@ -87,14 +90,14 @@ namespace PresentationLayer
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e) //Exit dugme
         {
             Application.Exit();
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e) //Otkazi rezervaciju dugme
         {
-         
+            Query("Delete FROM Rezervacije Where id=" + drS(0));
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -117,6 +120,11 @@ namespace PresentationLayer
         private void LogOut_Click(object sender, EventArgs e)
         {
             PorukaPotvrde(() => Application.Restart());
+        }
+
+        private void btnPodesiCenu_Click(object sender, EventArgs e)
+        {
+            cena = int.Parse(txtCena.Text);
         }
     }
 }

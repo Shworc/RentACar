@@ -34,7 +34,7 @@ namespace DataLayer
                 while (sqlDataReader.Read())
                 {
                     Korisnik k = new Korisnik();
-                    k.ID = sqlDataReader.GetInt32(0);
+                    k.id = sqlDataReader.GetInt32(0);
                     k.Korisnicko = sqlDataReader.GetString(1);
                     k.Sifra = sqlDataReader.GetString(2);
               

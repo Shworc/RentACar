@@ -32,38 +32,41 @@ namespace PresentationLayer
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRezervacija));
             this.buttonSaveReserve = new System.Windows.Forms.Button();
             this.JMBGTEXT = new System.Windows.Forms.Label();
             this.ImeText = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.PocetniDatumUnos = new System.Windows.Forms.DateTimePicker();
+            this.DatumDo = new System.Windows.Forms.DateTimePicker();
+            this.DatumOd = new System.Windows.Forms.DateTimePicker();
             this.labelDatumOd = new System.Windows.Forms.Label();
-            this.ZavrsniDatumUnos = new System.Windows.Forms.Label();
+            this.ZavrsnidatumUnos = new System.Windows.Forms.Label();
             this.buttonRevBack = new System.Windows.Forms.Button();
-            this.JMBGUNOS = new System.Windows.Forms.TextBox();
+            this.txtJMBG = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AdresaText = new System.Windows.Forms.Label();
             this.GradText = new System.Windows.Forms.Label();
             this.MobilniText = new System.Windows.Forms.Label();
-            this.ImeUnos = new System.Windows.Forms.TextBox();
-            this.PrezimeUnos = new System.Windows.Forms.TextBox();
-            this.AdresaUnos = new System.Windows.Forms.TextBox();
-            this.GradUnos = new System.Windows.Forms.TextBox();
-            this.MobilniUnos = new System.Windows.Forms.TextBox();
+            this.txtIme = new System.Windows.Forms.TextBox();
+            this.txtPrezime = new System.Windows.Forms.TextBox();
+            this.txtAdresa = new System.Windows.Forms.TextBox();
+            this.txtGrad = new System.Windows.Forms.TextBox();
+            this.txtMobilni = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.MarkaOdabir = new System.Windows.Forms.ComboBox();
-            this.ModelOdabir = new System.Windows.Forms.ComboBox();
+            this.cmbMarkaOdabir = new System.Windows.Forms.ComboBox();
+            this.cmbModelOdabir = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.OdabranAutoText = new System.Windows.Forms.Label();
-            this.OdabranAutoIspis = new System.Windows.Forms.TextBox();
+            this.txtOdabranAuto = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRegistarskiBroj = new System.Windows.Forms.TextBox();
             this.rentACar200311DataSet = new PresentationLayer.RentACar200311DataSet();
             this.rentACar200311DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
@@ -71,10 +74,21 @@ namespace PresentationLayer
             this.LogOut = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.automobiliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.automobiliTableAdapter = new PresentationLayer.RentACar200311DataSetTableAdapters.AutomobiliTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bojaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.godisteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.registarskiBrojDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.napomenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSaveReserve
@@ -113,24 +127,24 @@ namespace PresentationLayer
             this.ImeText.TabIndex = 3;
             this.ImeText.Text = "Ime:";
             // 
-            // dateTimePicker1
+            // DatumDo
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(890, 419);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(194, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.DatumDo.CalendarForeColor = System.Drawing.Color.Black;
+            this.DatumDo.CustomFormat = "yyyy-MM-dd";
+            this.DatumDo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DatumDo.Location = new System.Drawing.Point(890, 419);
+            this.DatumDo.Name = "DatumDo";
+            this.DatumDo.Size = new System.Drawing.Size(194, 20);
+            this.DatumDo.TabIndex = 6;
             // 
-            // PocetniDatumUnos
+            // DatumOd
             // 
-            this.PocetniDatumUnos.CustomFormat = "yyyy-MM-dd";
-            this.PocetniDatumUnos.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PocetniDatumUnos.Location = new System.Drawing.Point(889, 376);
-            this.PocetniDatumUnos.Name = "PocetniDatumUnos";
-            this.PocetniDatumUnos.Size = new System.Drawing.Size(193, 20);
-            this.PocetniDatumUnos.TabIndex = 7;
+            this.DatumOd.CustomFormat = "yyyy-MM-dd";
+            this.DatumOd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DatumOd.Location = new System.Drawing.Point(889, 376);
+            this.DatumOd.Name = "DatumOd";
+            this.DatumOd.Size = new System.Drawing.Size(193, 20);
+            this.DatumOd.TabIndex = 7;
             // 
             // labelDatumOd
             // 
@@ -143,16 +157,16 @@ namespace PresentationLayer
             this.labelDatumOd.TabIndex = 8;
             this.labelDatumOd.Text = "Pocetni datum";
             // 
-            // ZavrsniDatumUnos
+            // ZavrsnidatumUnos
             // 
-            this.ZavrsniDatumUnos.AutoSize = true;
-            this.ZavrsniDatumUnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZavrsniDatumUnos.ForeColor = System.Drawing.Color.White;
-            this.ZavrsniDatumUnos.Location = new System.Drawing.Point(887, 399);
-            this.ZavrsniDatumUnos.Name = "ZavrsniDatumUnos";
-            this.ZavrsniDatumUnos.Size = new System.Drawing.Size(98, 17);
-            this.ZavrsniDatumUnos.TabIndex = 9;
-            this.ZavrsniDatumUnos.Text = "Zavrsni datum";
+            this.ZavrsnidatumUnos.AutoSize = true;
+            this.ZavrsnidatumUnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZavrsnidatumUnos.ForeColor = System.Drawing.Color.White;
+            this.ZavrsnidatumUnos.Location = new System.Drawing.Point(887, 399);
+            this.ZavrsnidatumUnos.Name = "ZavrsnidatumUnos";
+            this.ZavrsnidatumUnos.Size = new System.Drawing.Size(98, 17);
+            this.ZavrsnidatumUnos.TabIndex = 9;
+            this.ZavrsnidatumUnos.Text = "Zavrsni datum";
             // 
             // buttonRevBack
             // 
@@ -168,12 +182,12 @@ namespace PresentationLayer
             this.buttonRevBack.UseVisualStyleBackColor = false;
             this.buttonRevBack.Click += new System.EventHandler(this.buttonRevBack_Click);
             // 
-            // JMBGUNOS
+            // txtJMBG
             // 
-            this.JMBGUNOS.Location = new System.Drawing.Point(889, 333);
-            this.JMBGUNOS.Name = "JMBGUNOS";
-            this.JMBGUNOS.Size = new System.Drawing.Size(194, 20);
-            this.JMBGUNOS.TabIndex = 12;
+            this.txtJMBG.Location = new System.Drawing.Point(889, 333);
+            this.txtJMBG.Name = "txtJMBG";
+            this.txtJMBG.Size = new System.Drawing.Size(194, 20);
+            this.txtJMBG.TabIndex = 12;
             // 
             // label1
             // 
@@ -219,40 +233,40 @@ namespace PresentationLayer
             this.MobilniText.TabIndex = 29;
             this.MobilniText.Text = "Mobilni broj:";
             // 
-            // ImeUnos
+            // txtIme
             // 
-            this.ImeUnos.Location = new System.Drawing.Point(889, 118);
-            this.ImeUnos.Name = "ImeUnos";
-            this.ImeUnos.Size = new System.Drawing.Size(194, 20);
-            this.ImeUnos.TabIndex = 30;
+            this.txtIme.Location = new System.Drawing.Point(889, 118);
+            this.txtIme.Name = "txtIme";
+            this.txtIme.Size = new System.Drawing.Size(194, 20);
+            this.txtIme.TabIndex = 30;
             // 
-            // PrezimeUnos
+            // txtPrezime
             // 
-            this.PrezimeUnos.Location = new System.Drawing.Point(889, 161);
-            this.PrezimeUnos.Name = "PrezimeUnos";
-            this.PrezimeUnos.Size = new System.Drawing.Size(194, 20);
-            this.PrezimeUnos.TabIndex = 31;
+            this.txtPrezime.Location = new System.Drawing.Point(889, 161);
+            this.txtPrezime.Name = "txtPrezime";
+            this.txtPrezime.Size = new System.Drawing.Size(194, 20);
+            this.txtPrezime.TabIndex = 31;
             // 
-            // AdresaUnos
+            // txtAdresa
             // 
-            this.AdresaUnos.Location = new System.Drawing.Point(889, 204);
-            this.AdresaUnos.Name = "AdresaUnos";
-            this.AdresaUnos.Size = new System.Drawing.Size(194, 20);
-            this.AdresaUnos.TabIndex = 32;
+            this.txtAdresa.Location = new System.Drawing.Point(889, 204);
+            this.txtAdresa.Name = "txtAdresa";
+            this.txtAdresa.Size = new System.Drawing.Size(194, 20);
+            this.txtAdresa.TabIndex = 32;
             // 
-            // GradUnos
+            // txtGrad
             // 
-            this.GradUnos.Location = new System.Drawing.Point(889, 247);
-            this.GradUnos.Name = "GradUnos";
-            this.GradUnos.Size = new System.Drawing.Size(194, 20);
-            this.GradUnos.TabIndex = 33;
+            this.txtGrad.Location = new System.Drawing.Point(889, 247);
+            this.txtGrad.Name = "txtGrad";
+            this.txtGrad.Size = new System.Drawing.Size(194, 20);
+            this.txtGrad.TabIndex = 33;
             // 
-            // MobilniUnos
+            // txtMobilni
             // 
-            this.MobilniUnos.Location = new System.Drawing.Point(889, 290);
-            this.MobilniUnos.Name = "MobilniUnos";
-            this.MobilniUnos.Size = new System.Drawing.Size(194, 20);
-            this.MobilniUnos.TabIndex = 34;
+            this.txtMobilni.Location = new System.Drawing.Point(889, 290);
+            this.txtMobilni.Name = "txtMobilni";
+            this.txtMobilni.Size = new System.Drawing.Size(194, 20);
+            this.txtMobilni.TabIndex = 34;
             // 
             // label2
             // 
@@ -276,21 +290,24 @@ namespace PresentationLayer
             this.label3.TabIndex = 37;
             this.label3.Text = "*izabrati ponudjeni";
             // 
-            // MarkaOdabir
+            // cmbMarkaOdabir
             // 
-            this.MarkaOdabir.FormattingEnabled = true;
-            this.MarkaOdabir.Location = new System.Drawing.Point(24, 117);
-            this.MarkaOdabir.Name = "MarkaOdabir";
-            this.MarkaOdabir.Size = new System.Drawing.Size(168, 21);
-            this.MarkaOdabir.TabIndex = 38;
+            this.cmbMarkaOdabir.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbMarkaOdabir.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbMarkaOdabir.FormattingEnabled = true;
+            this.cmbMarkaOdabir.Location = new System.Drawing.Point(24, 117);
+            this.cmbMarkaOdabir.Name = "cmbMarkaOdabir";
+            this.cmbMarkaOdabir.Size = new System.Drawing.Size(168, 21);
+            this.cmbMarkaOdabir.TabIndex = 38;
+            this.cmbMarkaOdabir.TextChanged += new System.EventHandler(this.ComboMarka);
             // 
-            // ModelOdabir
+            // cmbModelOdabir
             // 
-            this.ModelOdabir.FormattingEnabled = true;
-            this.ModelOdabir.Location = new System.Drawing.Point(24, 161);
-            this.ModelOdabir.Name = "ModelOdabir";
-            this.ModelOdabir.Size = new System.Drawing.Size(168, 21);
-            this.ModelOdabir.TabIndex = 39;
+            this.cmbModelOdabir.FormattingEnabled = true;
+            this.cmbModelOdabir.Location = new System.Drawing.Point(24, 161);
+            this.cmbModelOdabir.Name = "cmbModelOdabir";
+            this.cmbModelOdabir.Size = new System.Drawing.Size(168, 21);
+            this.cmbModelOdabir.TabIndex = 39;
             // 
             // label4
             // 
@@ -339,12 +356,13 @@ namespace PresentationLayer
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(24, 250);
+            this.button2.Location = new System.Drawing.Point(24, 247);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 37);
+            this.button2.Size = new System.Drawing.Size(168, 29);
             this.button2.TabIndex = 44;
             this.button2.Text = "Pretrazi";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // OdabranAutoText
             // 
@@ -357,12 +375,13 @@ namespace PresentationLayer
             this.OdabranAutoText.TabIndex = 45;
             this.OdabranAutoText.Text = "Odabran auto:";
             // 
-            // OdabranAutoIspis
+            // txtOdabranAuto
             // 
-            this.OdabranAutoIspis.Location = new System.Drawing.Point(26, 373);
-            this.OdabranAutoIspis.Name = "OdabranAutoIspis";
-            this.OdabranAutoIspis.Size = new System.Drawing.Size(166, 20);
-            this.OdabranAutoIspis.TabIndex = 46;
+            this.txtOdabranAuto.Location = new System.Drawing.Point(26, 373);
+            this.txtOdabranAuto.Name = "txtOdabranAuto";
+            this.txtOdabranAuto.ReadOnly = true;
+            this.txtOdabranAuto.Size = new System.Drawing.Size(166, 20);
+            this.txtOdabranAuto.TabIndex = 46;
             // 
             // label9
             // 
@@ -375,12 +394,13 @@ namespace PresentationLayer
             this.label9.TabIndex = 47;
             this.label9.Text = "Registarski broj";
             // 
-            // textBox1
+            // txtRegistarskiBroj
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 419);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 48;
+            this.txtRegistarskiBroj.Location = new System.Drawing.Point(26, 419);
+            this.txtRegistarskiBroj.Name = "txtRegistarskiBroj";
+            this.txtRegistarskiBroj.ReadOnly = true;
+            this.txtRegistarskiBroj.Size = new System.Drawing.Size(166, 20);
+            this.txtRegistarskiBroj.TabIndex = 48;
             // 
             // rentACar200311DataSet
             // 
@@ -450,32 +470,134 @@ namespace PresentationLayer
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.markaDataGridViewTextBoxColumn,
+            this.modelDataGridViewTextBoxColumn,
+            this.bojaDataGridViewTextBoxColumn,
+            this.godisteDataGridViewTextBoxColumn,
+            this.registarskiBrojDataGridViewTextBoxColumn,
+            this.napomenaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.automobiliBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(205, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(205, 0);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowTemplate.Height = 35;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(672, 574);
+            this.dataGridView1.Size = new System.Drawing.Size(672, 571);
             this.dataGridView1.TabIndex = 53;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UnosSelektovanogUPolja);
+            // 
+            // automobiliBindingSource
+            // 
+            this.automobiliBindingSource.DataMember = "Automobili";
+            this.automobiliBindingSource.DataSource = this.rentACar200311DataSetBindingSource;
+            // 
+            // automobiliTableAdapter
+            // 
+            this.automobiliTableAdapter.ClearBeforeFill = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "ID";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 40;
+            // 
+            // markaDataGridViewTextBoxColumn
+            // 
+            this.markaDataGridViewTextBoxColumn.DataPropertyName = "Marka";
+            this.markaDataGridViewTextBoxColumn.HeaderText = "Marka";
+            this.markaDataGridViewTextBoxColumn.Name = "markaDataGridViewTextBoxColumn";
+            this.markaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bojaDataGridViewTextBoxColumn
+            // 
+            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "Boja";
+            this.bojaDataGridViewTextBoxColumn.HeaderText = "Boja";
+            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
+            this.bojaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bojaDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // godisteDataGridViewTextBoxColumn
+            // 
+            this.godisteDataGridViewTextBoxColumn.DataPropertyName = "Godiste";
+            this.godisteDataGridViewTextBoxColumn.HeaderText = "Godiste";
+            this.godisteDataGridViewTextBoxColumn.Name = "godisteDataGridViewTextBoxColumn";
+            this.godisteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.godisteDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // registarskiBrojDataGridViewTextBoxColumn
+            // 
+            this.registarskiBrojDataGridViewTextBoxColumn.DataPropertyName = "Registarski broj";
+            this.registarskiBrojDataGridViewTextBoxColumn.HeaderText = "Registarski broj";
+            this.registarskiBrojDataGridViewTextBoxColumn.Name = "registarskiBrojDataGridViewTextBoxColumn";
+            this.registarskiBrojDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // napomenaDataGridViewTextBoxColumn
+            // 
+            this.napomenaDataGridViewTextBoxColumn.DataPropertyName = "Napomena";
+            this.napomenaDataGridViewTextBoxColumn.HeaderText = "Napomena";
+            this.napomenaDataGridViewTextBoxColumn.Name = "napomenaDataGridViewTextBoxColumn";
+            this.napomenaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.napomenaDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(24, 282);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(168, 28);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Isprazni polja";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormRezervacija
             // 
@@ -483,39 +605,40 @@ namespace PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1126, 571);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LogOut);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRegistarskiBroj);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.OdabranAutoIspis);
+            this.Controls.Add(this.txtOdabranAuto);
             this.Controls.Add(this.OdabranAutoText);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ModelOdabir);
-            this.Controls.Add(this.MarkaOdabir);
+            this.Controls.Add(this.cmbModelOdabir);
+            this.Controls.Add(this.cmbMarkaOdabir);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.MobilniUnos);
-            this.Controls.Add(this.GradUnos);
-            this.Controls.Add(this.AdresaUnos);
-            this.Controls.Add(this.PrezimeUnos);
-            this.Controls.Add(this.ImeUnos);
+            this.Controls.Add(this.txtMobilni);
+            this.Controls.Add(this.txtGrad);
+            this.Controls.Add(this.txtAdresa);
+            this.Controls.Add(this.txtPrezime);
+            this.Controls.Add(this.txtIme);
             this.Controls.Add(this.MobilniText);
             this.Controls.Add(this.GradText);
             this.Controls.Add(this.AdresaText);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.JMBGUNOS);
+            this.Controls.Add(this.txtJMBG);
             this.Controls.Add(this.buttonRevBack);
-            this.Controls.Add(this.ZavrsniDatumUnos);
+            this.Controls.Add(this.ZavrsnidatumUnos);
             this.Controls.Add(this.labelDatumOd);
-            this.Controls.Add(this.PocetniDatumUnos);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DatumOd);
+            this.Controls.Add(this.DatumDo);
             this.Controls.Add(this.ImeText);
             this.Controls.Add(this.JMBGTEXT);
             this.Controls.Add(this.buttonSaveReserve);
@@ -530,6 +653,7 @@ namespace PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.automobiliBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,34 +663,34 @@ namespace PresentationLayer
         private System.Windows.Forms.Button buttonSaveReserve;
         private System.Windows.Forms.Label JMBGTEXT;
         private System.Windows.Forms.Label ImeText;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker PocetniDatumUnos;
+        private System.Windows.Forms.DateTimePicker DatumDo;
+        private System.Windows.Forms.DateTimePicker DatumOd;
         private System.Windows.Forms.Label labelDatumOd;
-        private System.Windows.Forms.Label ZavrsniDatumUnos;
+        private System.Windows.Forms.Label ZavrsnidatumUnos;
         private System.Windows.Forms.Button buttonRevBack;
-        private System.Windows.Forms.TextBox JMBGUNOS;
+        private System.Windows.Forms.TextBox txtJMBG;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label AdresaText;
         private System.Windows.Forms.Label GradText;
         private System.Windows.Forms.Label MobilniText;
-        private System.Windows.Forms.TextBox ImeUnos;
-        private System.Windows.Forms.TextBox PrezimeUnos;
-        private System.Windows.Forms.TextBox AdresaUnos;
-        private System.Windows.Forms.TextBox GradUnos;
-        private System.Windows.Forms.TextBox MobilniUnos;
+        private System.Windows.Forms.TextBox txtIme;
+        private System.Windows.Forms.TextBox txtPrezime;
+        private System.Windows.Forms.TextBox txtAdresa;
+        private System.Windows.Forms.TextBox txtGrad;
+        private System.Windows.Forms.TextBox txtMobilni;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox MarkaOdabir;
-        private System.Windows.Forms.ComboBox ModelOdabir;
+        private System.Windows.Forms.ComboBox cmbMarkaOdabir;
+        private System.Windows.Forms.ComboBox cmbModelOdabir;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label OdabranAutoText;
-        private System.Windows.Forms.TextBox OdabranAutoIspis;
+        private System.Windows.Forms.TextBox txtOdabranAuto;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRegistarskiBroj;
         private RentACar200311DataSet rentACar200311DataSet;
         private System.Windows.Forms.BindingSource rentACar200311DataSetBindingSource;
         private System.Windows.Forms.Label label8;
@@ -574,5 +698,15 @@ namespace PresentationLayer
         private System.Windows.Forms.Button LogOut;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource automobiliBindingSource;
+        private RentACar200311DataSetTableAdapters.AutomobiliTableAdapter automobiliTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bojaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn godisteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registarskiBrojDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

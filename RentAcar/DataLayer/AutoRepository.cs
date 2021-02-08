@@ -10,15 +10,15 @@ namespace DataLayer
 {
     public class AutoRepository
     {
-        public List<Automobile> GetAllAutos()
+        public List<Automobil> GetAllAutos()
         {
-            List<Automobile> results = new List<Automobile>();
+            List<Automobil> results = new List<Automobil>();
             SqlDataReader sqlDataReader = DBConnection.GetData("SELECT * FROM Automobil");
 
             while(sqlDataReader.Read())
             {
-                Automobile a = new Automobile();
-                a.ID = sqlDataReader.GetInt32(0);
+                Automobil a = new Automobil();
+                a.id = sqlDataReader.GetInt32(0);
                 a.Marka = sqlDataReader.GetString(1);
                 a.Model = sqlDataReader.GetString(2);
 
@@ -29,7 +29,7 @@ namespace DataLayer
             return results;
         }
 
-        public int InsertAutomobile(Automobile a)
+        public int InsertAutomobil(Automobil a)
         {
             var result = DBConnection.EditData(string.Format("INSERT INTO Automobil VALUES ('{0}', '{1}')",
                     a.Marka, a.Model));
@@ -38,19 +38,19 @@ namespace DataLayer
             return result;
         }
 
-        public int UpdateAutomobile(Automobile a)
+        public int UpdateAutomobil(Automobil a)
         {
-            var result = DBConnection.EditData(string.Format("UPDATE Automobil SET Marka ='{0}', Naziv ='{1}'" + "WHERE ID={2}",
-                    a.Marka, a.Model, a.ID));
+            var result = DBConnection.EditData(string.Format("UPDATE Automobil SET Marka ='{0}', Naziv ='{1}'" + "WHERE id={2}",
+                    a.Marka, a.Model, a.id));
             DBConnection.CloseConnection();
 
             return result;
         }
 
-        public int DeleteAutomobile(Automobile a)
+        public int DeleteAutomobil(Automobil a)
         {
-            var result = DBConnection.EditData(string.Format("DELETE FROM Automobil WHERE ID={0}",
-                    a.ID));
+            var result = DBConnection.EditData(string.Format("DELETE FROM Automobil WHERE id={0}",
+                    a.id));
             DBConnection.CloseConnection();
 
             return result;

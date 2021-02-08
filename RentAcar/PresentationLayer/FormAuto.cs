@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using DataLayer.Models;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,7 +31,9 @@ namespace PresentationLayer
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Konekcija();
             Query("select * From Automobili");
-            RefreshTabele(dt, dataGridView1);      
+            RefreshTabele(dt, dataGridView1);
+            ComboLoad(cmbMarka, "Marka", "Marka", "select distinct Marka From Automobili");
+            cmbMarka.Text = "";
         }
         private void LogOut_Click(object sender, EventArgs e) //Logout
         {
@@ -53,11 +54,7 @@ namespace PresentationLayer
 
         private void Isprazni_Click(object sender, EventArgs e) //Prazni polja
         {
-            var t = this.Controls.OfType<TextBox>().AsEnumerable<TextBox>(); //Uzeto sa neta zbog manjeg koda
-            foreach (TextBox item in t)
-            {
-                item.Text = "";
-            }
+            Isprazni();
         }
 
         private void button1_Click(object sender, EventArgs e) //Obrisi  red u bazi (klik na dugme Obrisi)
@@ -83,8 +80,8 @@ namespace PresentationLayer
         }
         private void button3_Click(object sender, DataGridViewCellEventArgs e) //Unos selektovane kolone u polja
         {
-            txtSelektovanID.Text = drS(0);
-            txtMarka.Text= drS(1);
+            txtSelektovanid.Text = drS(0);
+            cmbMarka.Text= drS(1);
             txtModel.Text = drS(2);
             txtBoja.Text = drS(3);
             txtTip.Text = drS(4);
@@ -93,9 +90,9 @@ namespace PresentationLayer
             txtSasija.Text = drS(7);
             txtNapomena.Text = drS(8);
         }
-        private void button3_Click(object sender, DataGridViewCellMouseEventArgs e) //Header Klik Refresh ID
+        private void button3_Click(object sender, DataGridViewCellMouseEventArgs e) //Header Klik Refresh id (mora zbog greske pri sortiranju)
         {
-            txtSelektovanID.Text = drS(0);
+            txtSelektovanid.Text = drS(0);
         }
         private void button2_Click(object sender, EventArgs e) //Izmena napomene
         {
@@ -103,17 +100,18 @@ namespace PresentationLayer
             Refresh();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) //Dugme pretrage
         { 
-            if (txtMarka.Text.Length==0) {
+            if (cmbMarka.Text.Length==0) {
                 Query("SELECT * FROM Automobili");
                 RefreshTabele(dt, dataGridView1);
             }
   
             else
             {
-                Query("SELECT * FROM Automobili WHERE Marka='" + txtMarka.Text + "'");
+                Query("SELECT * FROM Automobili WHERE Marka='" + cmbMarka.Text + "'");
                 RefreshTabele(dt, dataGridView1);
+                Isprazni();
             }
         }
     }

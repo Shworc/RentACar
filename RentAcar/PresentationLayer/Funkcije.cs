@@ -19,27 +19,42 @@ namespace PresentationLayer
     {
         public SqlDataAdapter da;
         public SqlDataAdapter da2;
+        public SqlDataAdapter da3;
+        public SqlDataAdapter da4;
+        public SqlDataAdapter da5;
         public DataSet ds = new DataSet();
         public DataSet ds2 = new DataSet();
+        public DataSet ds3 = new DataSet();
+        public DataSet ds4 = new DataSet();
+        public DataSet ds5 = new DataSet();
         DataTable dt = new DataTable();
         DataTable dtc = new DataTable();
         DataGridView dataGridView1;
         public SqlDataReader dbr;
+        public SqlDataReader dbr2;
         public SqlConnection con;
         public SqlCommand cmd;
+        public SqlCommand cmd2;
         public String str;
         public String query;
+        public String query2;
+        public String query3;
+        public String query4;
+        public String query5;
         public String cmbquery;
         public static int cena;
+        public static String idKlijent;
+        public static Boolean prosliKlijent;
         public void Query(String query) //Upit
         {
             cmd.CommandText = query;
-            cmd.ExecuteNonQuery();
             dbr = cmd.ExecuteReader();
         }
+      
+    
         public void Konekcija() //Konekcija
         {
-            str = "Data Source=DESKTOP-NDCIMUS;Initial Catalog=RentACar2003111SQL;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            str = "unesi string";
             con = new SqlConnection(str);
             con.Open();
             cmd = new SqlCommand();
@@ -74,6 +89,26 @@ namespace PresentationLayer
             combobox.ValueMember = ID;
             combobox.DisplayMember = Name;
             combobox.DataSource = ds2.Tables[0];
+        }
+        public String idLoad(String cmbquery3) //Comboload sa clear funkcijom
+        {
+            ds3.Clear();
+            da3 = new SqlDataAdapter(cmbquery3, con);
+            da3.Fill(ds3);
+            return ds3.Tables[0].Rows[0][0].ToString();
+        }
+        public String JMBGload(String cmbquery5) //Comboload sa clear funkcijom
+        {
+            ds5.Clear();
+            da5 = new SqlDataAdapter(cmbquery5, con);
+            da5.Fill(ds5);
+            return ds5.Tables[0].Rows[0][0].ToString();
+        }
+        public void iQuery(String cmbquery4) //Comboload sa clear funkcijom
+        {
+            ds4.Clear();
+            da4 = new SqlDataAdapter(cmbquery4, con);
+            da4.Fill(ds4);
         }
         protected override void WndProc(ref Message m) //Omogucava pomeranje prozora
         {

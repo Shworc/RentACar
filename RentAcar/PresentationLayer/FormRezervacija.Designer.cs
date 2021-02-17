@@ -74,8 +74,6 @@ namespace PresentationLayer
             this.LogOut = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.automobiliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.automobiliTableAdapter = new PresentationLayer.RentACar200311DataSetTableAdapters.AutomobiliTableAdapter();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.markaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,7 +81,17 @@ namespace PresentationLayer
             this.godisteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.registarskiBrojDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.napomenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.automobiliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.automobiliTableAdapter = new PresentationLayer.RentACar200311DataSetTableAdapters.AutomobiliTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnNoviKlijent = new System.Windows.Forms.Button();
+            this.btnPostojeciKlijent = new System.Windows.Forms.Button();
+            this.btnProsliKlijent = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,7 +105,7 @@ namespace PresentationLayer
             this.buttonSaveReserve.FlatAppearance.BorderSize = 0;
             this.buttonSaveReserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveReserve.ForeColor = System.Drawing.Color.Black;
-            this.buttonSaveReserve.Location = new System.Drawing.Point(889, 490);
+            this.buttonSaveReserve.Location = new System.Drawing.Point(889, 520);
             this.buttonSaveReserve.Name = "buttonSaveReserve";
             this.buttonSaveReserve.Size = new System.Drawing.Size(195, 52);
             this.buttonSaveReserve.TabIndex = 1;
@@ -174,7 +182,7 @@ namespace PresentationLayer
             this.buttonRevBack.FlatAppearance.BorderSize = 0;
             this.buttonRevBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRevBack.ForeColor = System.Drawing.Color.Black;
-            this.buttonRevBack.Location = new System.Drawing.Point(26, 490);
+            this.buttonRevBack.Location = new System.Drawing.Point(26, 520);
             this.buttonRevBack.Name = "buttonRevBack";
             this.buttonRevBack.Size = new System.Drawing.Size(166, 52);
             this.buttonRevBack.TabIndex = 11;
@@ -184,6 +192,8 @@ namespace PresentationLayer
             // 
             // txtJMBG
             // 
+            this.txtJMBG.BackColor = System.Drawing.Color.Silver;
+            this.txtJMBG.Enabled = false;
             this.txtJMBG.Location = new System.Drawing.Point(889, 333);
             this.txtJMBG.Name = "txtJMBG";
             this.txtJMBG.Size = new System.Drawing.Size(194, 20);
@@ -235,6 +245,8 @@ namespace PresentationLayer
             // 
             // txtIme
             // 
+            this.txtIme.BackColor = System.Drawing.Color.Silver;
+            this.txtIme.Enabled = false;
             this.txtIme.Location = new System.Drawing.Point(889, 118);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(194, 20);
@@ -242,6 +254,8 @@ namespace PresentationLayer
             // 
             // txtPrezime
             // 
+            this.txtPrezime.BackColor = System.Drawing.Color.Silver;
+            this.txtPrezime.Enabled = false;
             this.txtPrezime.Location = new System.Drawing.Point(889, 161);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(194, 20);
@@ -249,6 +263,8 @@ namespace PresentationLayer
             // 
             // txtAdresa
             // 
+            this.txtAdresa.BackColor = System.Drawing.Color.Silver;
+            this.txtAdresa.Enabled = false;
             this.txtAdresa.Location = new System.Drawing.Point(889, 204);
             this.txtAdresa.Name = "txtAdresa";
             this.txtAdresa.Size = new System.Drawing.Size(194, 20);
@@ -256,6 +272,8 @@ namespace PresentationLayer
             // 
             // txtGrad
             // 
+            this.txtGrad.BackColor = System.Drawing.Color.Silver;
+            this.txtGrad.Enabled = false;
             this.txtGrad.Location = new System.Drawing.Point(889, 247);
             this.txtGrad.Name = "txtGrad";
             this.txtGrad.Size = new System.Drawing.Size(194, 20);
@@ -263,6 +281,8 @@ namespace PresentationLayer
             // 
             // txtMobilni
             // 
+            this.txtMobilni.BackColor = System.Drawing.Color.Silver;
+            this.txtMobilni.Enabled = false;
             this.txtMobilni.Location = new System.Drawing.Point(889, 290);
             this.txtMobilni.Name = "txtMobilni";
             this.txtMobilni.Size = new System.Drawing.Size(194, 20);
@@ -522,18 +542,9 @@ namespace PresentationLayer
             this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowTemplate.Height = 35;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(672, 571);
+            this.dataGridView1.Size = new System.Drawing.Size(672, 586);
             this.dataGridView1.TabIndex = 53;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UnosSelektovanogUPolja);
-            // 
-            // automobiliBindingSource
-            // 
-            this.automobiliBindingSource.DataMember = "Automobili";
-            this.automobiliBindingSource.DataSource = this.rentACar200311DataSetBindingSource;
-            // 
-            // automobiliTableAdapter
-            // 
-            this.automobiliTableAdapter.ClearBeforeFill = true;
             // 
             // Column1
             // 
@@ -588,6 +599,15 @@ namespace PresentationLayer
             this.napomenaDataGridViewTextBoxColumn.ReadOnly = true;
             this.napomenaDataGridViewTextBoxColumn.Width = 200;
             // 
+            // automobiliBindingSource
+            // 
+            this.automobiliBindingSource.DataMember = "Automobili";
+            this.automobiliBindingSource.DataSource = this.rentACar200311DataSetBindingSource;
+            // 
+            // automobiliTableAdapter
+            // 
+            this.automobiliTableAdapter.ClearBeforeFill = true;
+            // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.Black;
@@ -599,12 +619,57 @@ namespace PresentationLayer
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnNoviKlijent
+            // 
+            this.btnNoviKlijent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNoviKlijent.FlatAppearance.BorderSize = 0;
+            this.btnNoviKlijent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNoviKlijent.ForeColor = System.Drawing.Color.Black;
+            this.btnNoviKlijent.Location = new System.Drawing.Point(890, 450);
+            this.btnNoviKlijent.Name = "btnNoviKlijent";
+            this.btnNoviKlijent.Size = new System.Drawing.Size(89, 24);
+            this.btnNoviKlijent.TabIndex = 55;
+            this.btnNoviKlijent.Text = "Novi klijent";
+            this.btnNoviKlijent.UseVisualStyleBackColor = false;
+            this.btnNoviKlijent.Click += new System.EventHandler(this.btnNoviKlijent_Click);
+            // 
+            // btnPostojeciKlijent
+            // 
+            this.btnPostojeciKlijent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPostojeciKlijent.FlatAppearance.BorderSize = 0;
+            this.btnPostojeciKlijent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPostojeciKlijent.ForeColor = System.Drawing.Color.Black;
+            this.btnPostojeciKlijent.Location = new System.Drawing.Point(889, 485);
+            this.btnPostojeciKlijent.Name = "btnPostojeciKlijent";
+            this.btnPostojeciKlijent.Size = new System.Drawing.Size(195, 23);
+            this.btnPostojeciKlijent.TabIndex = 56;
+            this.btnPostojeciKlijent.Text = "Postojeci klijent";
+            this.btnPostojeciKlijent.UseVisualStyleBackColor = false;
+            this.btnPostojeciKlijent.Click += new System.EventHandler(this.btnPostojeciKlijent_Click);
+            // 
+            // btnProsliKlijent
+            // 
+            this.btnProsliKlijent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnProsliKlijent.FlatAppearance.BorderSize = 0;
+            this.btnProsliKlijent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProsliKlijent.ForeColor = System.Drawing.Color.Black;
+            this.btnProsliKlijent.Location = new System.Drawing.Point(993, 450);
+            this.btnProsliKlijent.Name = "btnProsliKlijent";
+            this.btnProsliKlijent.Size = new System.Drawing.Size(90, 24);
+            this.btnProsliKlijent.TabIndex = 57;
+            this.btnProsliKlijent.Text = "Prosli klijent";
+            this.btnProsliKlijent.UseVisualStyleBackColor = false;
+            this.btnProsliKlijent.Click += new System.EventHandler(this.btnProsliKlijent_Click);
+            // 
             // FormRezervacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1126, 571);
+            this.ClientSize = new System.Drawing.Size(1126, 587);
+            this.Controls.Add(this.btnProsliKlijent);
+            this.Controls.Add(this.btnPostojeciKlijent);
+            this.Controls.Add(this.btnNoviKlijent);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LogOut);
@@ -649,6 +714,11 @@ namespace PresentationLayer
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRezervacija";
             this.Load += new System.EventHandler(this.FormRezervacija_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentACar200311DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -708,5 +778,8 @@ namespace PresentationLayer
         private System.Windows.Forms.DataGridViewTextBoxColumn registarskiBrojDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNoviKlijent;
+        private System.Windows.Forms.Button btnPostojeciKlijent;
+        private System.Windows.Forms.Button btnProsliKlijent;
     }
 }

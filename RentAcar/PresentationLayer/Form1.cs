@@ -47,7 +47,7 @@ namespace PresentationLayer
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Konekcija();
-            Query("select r.id,ki.Ime,ki.Prezime,ki.JMBG,a.Marka,a.Model,r.[Datum od],r.[Datum od],r.Napomena,a.[Registarski broj],r.Zavrsena  From Rezervacije r,Automobili a, Klijenti ki, Korisnici kr WHERE r.[Automobil ID]=a.[ID] AND r.[Klijent ID]=ki.ID AND r.[Korisnik ID]=kr.ID");
+            Query("select r.id,ki.Ime,ki.Prezime,ki.JMBG,a.Marka,a.Model,r.[Datum od],r.[Datum do],r.Napomena,a.[Registarski broj],r.Zavrsena  From Rezervacije r,Automobili a, Klijenti ki, Korisnici kr WHERE r.[Automobil ID]=a.[ID] AND r.[Klijent ID]=ki.ID AND r.[Korisnik ID]=kr.ID");
             RefreshTabele(dt, dataGridView2);
             txtKorisnik.Text = FormLogin.ukorisnik;
             txtCena.Text = cena.ToString();
@@ -97,9 +97,20 @@ namespace PresentationLayer
 
         private void buttonDelete_Click(object sender, EventArgs e) //Otkazi rezervaciju dugme
         {
-            Query("Delete FROM Rezervacije Where id=" + drS(0));
+            PorukaPotvrde(() => BrisanjeRezervacije());
+           
         }
-
+        private void BrisanjeRezervacije()
+        {
+            Query("Delete FROM Rezervacije Where id=" + drS(0));
+            Refresh();
+        }
+        private void Refresh()  //Cudan refresh forme jer ne radi Refresh ni Update za grid ni formu, ni DataSource=null
+        {
+            Form1 a = new Form1();
+            a.Show();
+            this.Hide();
+        }
         private void buttonEdit_Click(object sender, EventArgs e)
         {
 

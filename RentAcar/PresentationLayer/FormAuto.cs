@@ -69,7 +69,7 @@ namespace PresentationLayer
 
         private void button3_Click(object sender, EventArgs e) //Unesi podatak u bazu (klik na dugme Unesi)
         {
-            Query("INSERT INTO Automobili (Marka, Model,[Registarski broj], [Broj sasije],Godiste,Tip,Boja) VALUES('"+txtMarka.Text+"','"+txtModel.Text+"','"+txtReg.Text + "','" + txtSasija.Text + "','" + txtGodiste.Text + "','"+ txtTip.Text+ "','" + txtBoja.Text+"')");
+            Query("INSERT INTO Automobili (Marka, Model,[Registarski broj], [Broj sasije],Godiste,Tip,Boja) VALUES('"+cmbMarka.Text+"','"+txtModel.Text+"','"+txtReg.Text + "','" + txtSasija.Text + "','" + txtGodiste.Text + "','"+ txtTip.Text+ "','" + txtBoja.Text+"')");
             Refresh();
         }
         private void Refresh()  //Cudan refresh forme jer ne radi Refresh ni Update za grid ni formu, ni DataSource=null

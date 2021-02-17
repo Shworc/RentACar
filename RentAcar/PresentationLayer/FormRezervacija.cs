@@ -137,6 +137,7 @@ namespace PresentationLayer
 
         private void btnProsliKlijent_Click(object sender, EventArgs e)
         {
+            OtkrivanjeTxtBoxa(false);
             txtJMBG.Enabled = false;
             txtJMBG.BackColor = Color.White;
             txtJMBG.Text = JMBGload("Select JMBG FROM Klijenti WHERE id='" + idKlijent + "'");

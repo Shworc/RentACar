@@ -54,7 +54,7 @@ namespace PresentationLayer
     
         public void Konekcija() //Konekcija
         {
-            str = "unesi string";
+            str = "string";
             con = new SqlConnection(str);
             con.Open();
             cmd = new SqlCommand();

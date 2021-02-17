@@ -29,6 +29,11 @@ namespace PresentationLayer
         DataTable dt2 = new DataTable();
         SqlDataReader dbr2;
         DataTable dt = new DataTable();
+        DateTime DatumOd2;
+        DateTime DatumDo2;
+        int UkupnoZaNaplatu;
+        int KasniDana;
+        int UkupnoDana;
         public Form1()
         {
            //this.rezervacijaBusiness = new RezervacijaBusiness();
@@ -113,7 +118,12 @@ namespace PresentationLayer
         }
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-
+            DatumOd2 = Convert.ToDateTime(drS(7));
+            DatumDo2 = Convert.ToDateTime(drS(8));
+            KasniDana = Convert.ToInt32((DateTime.UtcNow.Date - DatumDo2).TotalDays);
+            UkupnoDana = Convert.ToInt32((DateTime.UtcNow.Date - DatumOd2).TotalDays);
+            UkupnoZaNaplatu = cena * UkupnoDana;
+            MessageBox.Show("Ukupno za naplatu "+UkupnoZaNaplatu.ToString()+"evra, Klijent kasni " + KasniDana + "dana. Vozilo korisceno "+ UkupnoDana+" dana");
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
